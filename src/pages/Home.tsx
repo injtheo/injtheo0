@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, BookOpen, Award, CheckSquare, Trophy, Zap } from 'lucide-react';
+import { ArrowRight, BookOpen, Award, CheckSquare, Trophy, Zap, Play } from 'lucide-react';
 import CourseCard from '../components/CourseCard';
 import { useStore } from '../hooks/useStore';
 
@@ -48,6 +48,14 @@ export default function Home() {
     }
   ];
 
+  const getFirstChapterLink = (courseId: string) => {
+    const course = courses.find(c => c.id === courseId);
+    if (course && course.chapters.length > 0) {
+      return `/learn/${courseId}/${course.chapters[0].id}`;
+    }
+    return `/courses`;
+  };
+
   return (
     <div className="space-y-16">
       <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600 via-blue-700 to-cyan-600 text-white py-20 px-8">
@@ -63,10 +71,17 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/courses"
+              to={getFirstChapterLink('course-1')}
               className="inline-flex items-center justify-center gap-2 bg-white text-blue-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-all duration-300 hover:scale-105 shadow-lg"
             >
-              开始学习
+              <Play className="w-5 h-5" />
+              立即开始学习
+            </Link>
+            <Link
+              to="/courses"
+              className="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 hover:scale-105"
+            >
+              浏览全部课程
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
@@ -135,19 +150,30 @@ export default function Home() {
       <section>
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h2 className="text-3xl font-bold text-slate-800">推荐课程</h2>
-            <p className="text-slate-500 mt-2">开始你的数据分析学习</p>
+            <h2 className="text-3xl font-bold text-slate-800">全部课程</h2>
+            <p className="text-slate-500 mt-2">从基础到实战，完整的学习路径</p>
           </div>
-          <Link
-            to="/courses"
-            className="text-blue-600 font-medium hover:text-blue-700 flex items-center gap-1"
-          >
-            查看全部 <ArrowRight className="w-4 h-4" />
-          </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {courses.slice(0, 3).map(course => (
-            <CourseCard key={course.id} course={course} />
+          {courses.map(course => (
+            <div key={course.id} className="relative">
+              <CourseCard course={course} />
+              <div className="mt-4 flex gap-3">
+                <Link
+                  to={`/courses/${course.id}`}
+                  className="flex-1 text-center py-2 px-4 bg-blue-50 text-blue-600 rounded-lg font-medium hover:bg-blue-100 transition-colors"
+                >
+                  查看详情
+                </Link>
+                <Link
+                  to={getFirstChapterLink(course.id)}
+                  className="flex-1 text-center py-2 px-4 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center gap-2"
+                >
+                  <Play className="w-4 h-4" />
+                  开始学习
+                </Link>
+              </div>
+            </div>
           ))}
         </div>
       </section>
