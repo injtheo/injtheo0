@@ -24,6 +24,7 @@ interface AppState {
   saveQuizResult: (quizId: string, score: number, passed: boolean) => void;
   unlockBadge: (badgeId: string) => void;
   checkAndUpdateStreak: () => void;
+  checkBadges: () => void;
 }
 
 const defaultUser: User = {
@@ -170,7 +171,7 @@ export const useStore = create<AppState>((set, get) => ({
 
   checkBadges: () => {
     const state = get();
-    const { user, progress, completedExercises, quizResults, learningStreak, badges, userBadges } = state;
+    const { user, progress, badges, userBadges } = state;
     
     if (!user) return;
 
@@ -181,31 +182,24 @@ export const useStore = create<AppState>((set, get) => ({
       .reduce((sum, p) => sum + p.completedChapters.length, 0);
     
     const completedCoursesCount = progress.filter(p => p.userId === user.id && p.completed).length;
-    const passedQuizzesCount = Object.values(quizResults).filter(r => r.passed).length;
 
     if (completedChaptersCount >= 1 && !userBadgeIds.includes('badge-1')) {
       state.unlockBadge('badge-1');
     }
-    if (completedExercises.length >= 10 && !userBadgeIds.includes('badge-2')) {
+    if (completedChaptersCount >= 3 && !userBadgeIds.includes('badge-2')) {
       state.unlockBadge('badge-2');
     }
-    if (completedCoursesCount >= 3 && !userBadgeIds.includes('badge-3')) {
+    if (completedChaptersCount >= 6 && !userBadgeIds.includes('badge-3')) {
       state.unlockBadge('badge-3');
     }
-    if (passedQuizzesCount >= 1 && !userBadgeIds.includes('badge-4')) {
+    if (completedCoursesCount >= 1 && !userBadgeIds.includes('badge-4')) {
       state.unlockBadge('badge-4');
     }
-    if (user.points >= 1000 && !userBadgeIds.includes('badge-5')) {
+    if (completedCoursesCount >= 3 && !userBadgeIds.includes('badge-5')) {
       state.unlockBadge('badge-5');
     }
-    if (completedChaptersCount >= 5 && !userBadgeIds.includes('badge-6')) {
+    if (completedCoursesCount >= 6 && !userBadgeIds.includes('badge-6')) {
       state.unlockBadge('badge-6');
-    }
-    if (completedExercises.length >= 50 && !userBadgeIds.includes('badge-7')) {
-      state.unlockBadge('badge-7');
-    }
-    if (learningStreak.count >= 7 && !userBadgeIds.includes('badge-8')) {
-      state.unlockBadge('badge-8');
     }
   }
 }));
