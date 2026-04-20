@@ -7,6 +7,9 @@ import Learn from "./pages/Learn";
 import Practice from "./pages/Practice";
 import Quiz from "./pages/Quiz";
 import Achievements from "./pages/Achievements";
+import Projects from "./pages/Projects";
+import ProjectDetail from "./pages/ProjectDetail";
+import Exam from "./pages/Exam";
 
 export default function App() {
   return (
@@ -16,10 +19,13 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/courses/:id" element={<CourseDetail />} />
-          <Route path="/courses/:id/learn" element={<Learn />} />
+          <Route path="/learn/:courseId/:chapterId" element={<Learn />} />
           <Route path="/practice" element={<Practice />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/achievements" element={<Achievements />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:id" element={<ProjectDetail />} />
+          <Route path="/exam" element={<Exam />} />
         </Routes>
       </Layout>
     </Router>

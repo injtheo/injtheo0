@@ -32,6 +32,26 @@ export interface Exercise {
   points: number;
 }
 
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
+  difficulty: 1 | 2 | 3 | 4 | 5;
+  category: string;
+  thumbnail: string;
+  requirements: string[];
+  datasetDescription: string;
+  tasks: ProjectTask[];
+  solution: string;
+}
+
+export interface ProjectTask {
+  id: string;
+  title: string;
+  description: string;
+  steps: string[];
+}
+
 export interface Quiz {
   id: string;
   courseId: string;
@@ -44,7 +64,7 @@ export interface Quiz {
 export interface QuizQuestion {
   id: string;
   question: string;
-  type: 'choice' | 'code';
+  type: 'single' | 'multiple' | 'truefalse' | 'essay';
   options?: string[];
   answer: string;
   points: number;
@@ -57,6 +77,14 @@ export interface Progress {
   completedChapters: string[];
   percentage: number;
   completed: boolean;
+}
+
+export interface ProjectProgress {
+  id: string;
+  userId: string;
+  projectId: string;
+  completed: boolean;
+  completedAt?: string;
 }
 
 export interface Badge {

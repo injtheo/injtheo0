@@ -1,14 +1,17 @@
 import { create } from 'zustand';
-import type { User, Course, Progress, Badge, UserBadge } from '../types';
-import { initialCourses, initialBadges } from '../utils/data';
+import type { User, Course, Progress, Badge, UserBadge, Project, ProjectProgress, Quiz } from '../types';
+import { initialCourses, initialBadges, initialProjects, initialQuizzes } from '../utils/data';
 import { storage, STORAGE_KEYS } from '../utils/storage';
 
 interface AppState {
   user: User | null;
   courses: Course[];
+  projects: Project[];
+  quizzes: Quiz[];
   currentCourse: Course | null;
   currentChapterIndex: number;
   progress: Progress[];
+  projectProgress: ProjectProgress[];
   badges: Badge[];
   userBadges: UserBadge[];
   completedExercises: string[];
@@ -19,6 +22,7 @@ interface AppState {
   setCurrentCourse: (course: Course | null) => void;
   setCurrentChapterIndex: (index: number) => void;
   updateProgress: (courseId: string, chapterId: string) => void;
+  updateProjectProgress: (projectId: string, completed: boolean) => void;
   addPoints: (points: number) => void;
   completeExercise: (exerciseId: string) => void;
   saveQuizResult: (quizId: string, score: number, passed: boolean) => void;
@@ -38,9 +42,12 @@ const defaultUser: User = {
 export const useStore = create<AppState>((set, get) => ({
   user: storage.get<User | null>(STORAGE_KEYS.USER, defaultUser),
   courses: initialCourses,
+  projects: initialProjects,
+  quizzes: initialQuizzes,
   currentCourse: null,
   currentChapterIndex: 0,
   progress: storage.get<Progress[]>(STORAGE_KEYS.PROGRESS, []),
+  projectProgress: storage.get<ProjectProgress[]>(STORAGE_KEYS.PROJECT_PROGRESS, []),
   badges: initialBadges,
   userBadges: storage.get<UserBadge[]>(STORAGE_KEYS.USER_BADGES, []),
   completedExercises: storage.get<string[]>(STORAGE_KEYS.COMPLETED_EXERCISES, []),
@@ -129,6 +136,37 @@ export const useStore = create<AppState>((set, get) => ({
     get().checkBadges();
   },
 
+  updateProjectProgress: (projectId, completed) => {
+    set((state) => {
+      let projectProgress = [...state.projectProgress];
+      const existingIndex = projectProgress.findIndex(p => p.projectId === projectId && p.userId === state.user?.id);
+      
+      if (existingIndex >= 0) {
+        projectProgress[existingIndex] = {
+          ...projectProgress[existingIndex],
+          completed,
+          completedAt: completed ? new Date().toISOString() : undefined
+        };
+      } else if (completed) {
+        projectProgress.push({
+          id: `project-progress-${Date.now()}`,
+          userId: state.user?.id || '',
+          projectId,
+          completed: true,
+          completedAt: new Date().toISOString()
+        });
+      }
+      
+      storage.set(STORAGE_KEYS.PROJECT_PROGRESS, projectProgress);
+      return { ...state, projectProgress };
+    });
+    
+    if (completed) {
+      get().checkAndUpdateStreak();
+      get().checkBadges();
+    }
+  },
+
   unlockBadge: (badgeId) => {
     set((state) => {
       const existing = state.userBadges.find(ub => ub.badgeId === badgeId && ub.userId === state.user?.id);
@@ -171,7 +209,7 @@ export const useStore = create<AppState>((set, get) => ({
 
   checkBadges: () => {
     const state = get();
-    const { user, progress, badges, userBadges } = state;
+    const { user, progress, projectProgress, badges, userBadges } = state;
     
     if (!user) return;
 
@@ -182,6 +220,7 @@ export const useStore = create<AppState>((set, get) => ({
       .reduce((sum, p) => sum + p.completedChapters.length, 0);
     
     const completedCoursesCount = progress.filter(p => p.userId === user.id && p.completed).length;
+    const completedProjectsCount = projectProgress.filter(p => p.userId === user.id && p.completed).length;
 
     if (completedChaptersCount >= 1 && !userBadgeIds.includes('badge-1')) {
       state.unlockBadge('badge-1');
@@ -200,6 +239,15 @@ export const useStore = create<AppState>((set, get) => ({
     }
     if (completedCoursesCount >= 6 && !userBadgeIds.includes('badge-6')) {
       state.unlockBadge('badge-6');
+    }
+    if (completedProjectsCount >= 3 && !userBadgeIds.includes('badge-7')) {
+      state.unlockBadge('badge-7');
+    }
+    if (completedProjectsCount >= 6 && !userBadgeIds.includes('badge-8')) {
+      state.unlockBadge('badge-8');
+    }
+    if (completedProjectsCount >= 10 && !userBadgeIds.includes('badge-9')) {
+      state.unlockBadge('badge-9');
     }
   }
 }));

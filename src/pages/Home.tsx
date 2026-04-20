@@ -147,6 +147,34 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 快速入口 */}
+      <section className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-3xl p-8 text-white">
+        <h2 className="text-2xl font-bold mb-6">快速开始</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <Link
+            to="/courses"
+            className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-colors"
+          >
+            <h3 className="text-xl font-bold mb-2">开始学习</h3>
+            <p className="text-white/80">浏览10门专业课程，从基础到高级</p>
+          </Link>
+          <Link
+            to="/projects"
+            className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-colors"
+          >
+            <h3 className="text-xl font-bold mb-2">实战项目</h3>
+            <p className="text-white/80">完成10个真实数据分析项目，提升实战能力</p>
+          </Link>
+          <Link
+            to="/exam"
+            className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-colors"
+          >
+            <h3 className="text-xl font-bold mb-2">在线考试</h3>
+            <p className="text-white/80">测试你的数据分析能力，获取认证</p>
+          </Link>
+        </div>
+      </section>
+
       <section>
         <div className="flex items-center justify-between mb-8">
           <div>

@@ -4,7 +4,8 @@ export const STORAGE_KEYS = {
   USER_BADGES: 'data_edu_user_badges',
   COMPLETED_EXERCISES: 'data_edu_completed_exercises',
   QUIZ_RESULTS: 'data_edu_quiz_results',
-  LEARNING_STREAK: 'data_edu_learning_streak'
+  LEARNING_STREAK: 'data_edu_learning_streak',
+  PROJECT_PROGRESS: 'data_edu_project_progress'
 };
 
 export const storage = {

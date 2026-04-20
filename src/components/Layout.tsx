@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Home, BookOpen, Award, CheckSquare, Trophy } from 'lucide-react';
+import { Home, BookOpen, Award, CheckSquare, Trophy, Briefcase, FileText } from 'lucide-react';
 import { useStore } from '../hooks/useStore';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -9,8 +9,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const navItems = [
     { path: '/', icon: Home, label: '首页' },
     { path: '/courses', icon: BookOpen, label: '课程' },
+    { path: '/projects', icon: Briefcase, label: '项目' },
     { path: '/practice', icon: CheckSquare, label: '练习' },
-    { path: '/quiz', icon: Award, label: '测评' },
+    { path: '/exam', icon: FileText, label: '考试' },
     { path: '/achievements', icon: Trophy, label: '成就' }
   ];
 

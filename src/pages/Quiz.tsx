@@ -269,7 +269,7 @@ export default function Quiz() {
           {currentQuestionIndex + 1}. {currentQuestion.question}
         </h3>
 
-        {currentQuestion.type === 'choice' && currentQuestion.options && (
+        {currentQuestion.type === 'single' && currentQuestion.options && (
           <div className="space-y-3">
             {currentQuestion.options.map((option, index) => (
               <button
