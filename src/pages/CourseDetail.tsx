@@ -113,7 +113,7 @@ export default function CourseDetail() {
         <div className="space-y-6">
           <div className="bg-white rounded-2xl p-6 shadow-md sticky top-24">
             <Link
-              to={`/courses/${course.id}/learn`}
+              to={`/learn/${course.id}/0`}
               onClick={() => setCurrentCourse(course)}
               className="w-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-4 px-6 rounded-xl font-bold text-lg hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center gap-2"
             >

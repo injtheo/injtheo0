@@ -29,6 +29,46 @@ export const initialCourses: Course[] = [
             options: ['问题定义', '数据收集', '数据清洗', '数据存储'],
             answer: '数据存储',
             points: 10
+          },
+          {
+            id: 'ex-1-1-3',
+            question: '询问"为什么会发生？"属于哪种分析类型？',
+            type: 'single',
+            options: ['描述性分析', '诊断性分析', '预测性分析', '规范性分析'],
+            answer: '诊断性分析',
+            points: 10
+          },
+          {
+            id: 'ex-1-1-4',
+            question: '以下哪些是常用的数据分析工具？（多选）',
+            type: 'multiple',
+            options: ['Excel', 'Python', 'SQL', 'Tableau', 'Word'],
+            answer: ['Excel', 'Python', 'SQL', 'Tableau'],
+            points: 15
+          },
+          {
+            id: 'ex-1-1-5',
+            question: '数据分析流程的第一步是什么？',
+            type: 'single',
+            options: ['数据收集', '问题定义', '数据清洗', '数据可视化'],
+            answer: '问题定义',
+            points: 10
+          },
+          {
+            id: 'ex-1-1-6',
+            question: 'CRISP-DM方法论包含几个阶段？',
+            type: 'single',
+            options: ['4个', '5个', '6个', '7个'],
+            answer: '6个',
+            points: 10
+          },
+          {
+            id: 'ex-1-1-7',
+            question: '在实际工作中，数据分析的最终目的是什么？',
+            type: 'single',
+            options: ['生成报告', '支持决策', '处理数据', '创建图表'],
+            answer: '支持决策',
+            points: 10
           }
         ]
       },
@@ -43,6 +83,54 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['分析不同用户群体的留存率差异', '直接增加用户奖励', '忽略数据直接制定策略', '只关注新用户'],
             answer: '分析不同用户群体的留存率差异',
+            points: 10
+          },
+          {
+            id: 'ex-1-2-2',
+            question: 'MECE原则代表什么？',
+            type: 'single',
+            options: ['相互独立，完全穷尽', '多重假设，循环验证', '方法多样，效果显著', '数据驱动，决策优化'],
+            answer: '相互独立，完全穷尽',
+            points: 10
+          },
+          {
+            id: 'ex-1-2-3',
+            question: 'SMART原则中，S代表什么？',
+            type: 'single',
+            options: ['可衡量的', '具体的', '可实现的', '有时限的'],
+            answer: '具体的',
+            points: 10
+          },
+          {
+            id: 'ex-1-2-4',
+            question: 'OMTM指的是什么？',
+            type: 'single',
+            options: ['多维度指标体系', '唯一关键指标', '运营管理工具', '数据模型框架'],
+            answer: '唯一关键指标',
+            points: 10
+          },
+          {
+            id: 'ex-1-2-5',
+            question: '以下哪些属于5W1H分析法的要素？（多选）',
+            type: 'multiple',
+            options: ['What', 'Why', 'Where', 'When', 'Who', 'How'],
+            answer: ['What', 'Why', 'Where', 'When', 'Who', 'How'],
+            points: 15
+          },
+          {
+            id: 'ex-1-2-6',
+            question: '在假设驱动分析中，第一步应该做什么？',
+            type: 'single',
+            options: ['收集数据', '提出假设', '分析结果', '得出结论'],
+            answer: '提出假设',
+            points: 10
+          },
+          {
+            id: 'ex-1-2-7',
+            question: '以下哪个是领先指标的例子？',
+            type: 'single',
+            options: ['月度销售额', '新增注册用户数', '历史转化率', '季度利润'],
+            answer: '新增注册用户数',
             points: 10
           }
         ]
@@ -77,6 +165,46 @@ export const initialCourses: Course[] = [
             options: ['Ctrl+F', 'Ctrl+Shift+L', 'Ctrl+D', 'Ctrl+R'],
             answer: 'Ctrl+Shift+L',
             points: 10
+          },
+          {
+            id: 'ex-2-1-3',
+            question: '快速填充功能的快捷键是什么？',
+            type: 'single',
+            options: ['Ctrl+D', 'Ctrl+R', 'Ctrl+E', 'Ctrl+F'],
+            answer: 'Ctrl+E',
+            points: 10
+          },
+          {
+            id: 'ex-2-1-4',
+            question: '冻结窗格功能在哪个菜单下？',
+            type: 'single',
+            options: ['文件', '编辑', '视图', '插入'],
+            answer: '视图',
+            points: 10
+          },
+          {
+            id: 'ex-2-1-5',
+            question: '自动求和的快捷键是什么？',
+            type: 'single',
+            options: ['Alt+=', 'Ctrl+=', 'Shift+=', 'Ctrl+Shift+='],
+            answer: 'Alt+=',
+            points: 10
+          },
+          {
+            id: 'ex-2-1-6',
+            question: '跳转到最后一个有数据单元格的快捷键是什么？',
+            type: 'single',
+            options: ['Ctrl+Home', 'Ctrl+End', 'Ctrl+Down', 'End'],
+            answer: 'Ctrl+End',
+            points: 10
+          },
+          {
+            id: 'ex-2-1-7',
+            question: '以下哪些是常用的Excel条件格式类型？（多选）',
+            type: 'multiple',
+            options: ['数据条', '色阶', '图标集', '数据透视表'],
+            answer: ['数据条', '色阶', '图标集'],
+            points: 15
           }
         ]
       },
@@ -99,6 +227,46 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['VLOOKUP', 'HLOOKUP', 'INDEX/MATCH', 'XLOOKUP'],
             answer: 'INDEX/MATCH',
+            points: 10
+          },
+          {
+            id: 'ex-2-2-3',
+            question: 'IF函数的语法结构是什么？',
+            type: 'single',
+            options: ['IF(结果, 条件, 其他)', 'IF(条件, 结果, 其他)', 'IF(条件, 其他, 结果)', 'IF(结果, 其他, 条件)'],
+            answer: 'IF(条件, 结果, 其他)',
+            points: 10
+          },
+          {
+            id: 'ex-2-2-4',
+            question: 'VLOOKUP函数中，第四个参数FALSE表示什么？',
+            type: 'single',
+            options: ['近似匹配', '精确匹配', '模糊匹配', '反向匹配'],
+            answer: '精确匹配',
+            points: 10
+          },
+          {
+            id: 'ex-2-2-5',
+            question: 'INDEX/MATCH组合相比VLOOKUP的优势是什么？（多选）',
+            type: 'multiple',
+            options: ['支持从右向左查找', '更灵活', '性能更好', '语法更简单'],
+            answer: ['支持从右向左查找', '更灵活', '性能更好'],
+            points: 15
+          },
+          {
+            id: 'ex-2-2-6',
+            question: '处理公式错误的函数是什么？',
+            type: 'single',
+            options: ['IF', 'IFERROR', 'ERROR', 'HANDLE'],
+            answer: 'IFERROR',
+            points: 10
+          },
+          {
+            id: 'ex-2-2-7',
+            question: '计算两个日期之间相差的年数，应该使用哪个函数？',
+            type: 'single',
+            options: ['DATEDIF', 'DATE', 'YEAR', 'DAYS'],
+            answer: 'DATEDIF',
             points: 10
           }
         ]
@@ -133,6 +301,46 @@ export const initialCourses: Course[] = [
             options: ['def', 'lambda', 'function', 'return'],
             answer: 'lambda',
             points: 10
+          },
+          {
+            id: 'ex-3-1-3',
+            question: '以下哪个数据结构是不可变的？',
+            type: 'single',
+            options: ['列表', '字典', '元组', '集合'],
+            answer: '元组',
+            points: 10
+          },
+          {
+            id: 'ex-3-1-4',
+            question: 'Python中用于导入模块的关键字是？',
+            type: 'single',
+            options: ['import', 'include', 'require', 'load'],
+            answer: 'import',
+            points: 10
+          },
+          {
+            id: 'ex-3-1-5',
+            question: 'Jupyter Notebook中运行单元格的快捷键是什么？',
+            type: 'single',
+            options: ['Enter', 'Shift+Enter', 'Ctrl+Enter', 'Alt+Enter'],
+            answer: 'Shift+Enter',
+            points: 10
+          },
+          {
+            id: 'ex-3-1-6',
+            question: '以下哪些是Python数据分析常用库？（多选）',
+            type: 'multiple',
+            options: ['Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'Java'],
+            answer: ['Pandas', 'NumPy', 'Matplotlib', 'Seaborn'],
+            points: 15
+          },
+          {
+            id: 'ex-3-1-7',
+            question: '在循环中跳出循环的关键字是？',
+            type: 'single',
+            options: ['break', 'continue', 'exit', 'stop'],
+            answer: 'break',
+            points: 10
           }
         ]
       },
@@ -155,6 +363,46 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['head()', 'tail()', 'info()', 'describe()'],
             answer: 'head()',
+            points: 10
+          },
+          {
+            id: 'ex-3-2-3',
+            question: 'Pandas中DataFrame的shape属性返回什么？',
+            type: 'single',
+            options: ['数据类型', '(行数, 列数)', '列名', '索引'],
+            answer: '(行数, 列数)',
+            points: 10
+          },
+          {
+            id: 'ex-3-2-4',
+            question: 'Pandas中按索引选择行的方法是？',
+            type: 'single',
+            options: ['df.loc[]', 'df.iloc[]', 'df[]', 'df.row()'],
+            answer: 'df.loc[]',
+            points: 10
+          },
+          {
+            id: 'ex-3-2-5',
+            question: 'Pandas中按位置选择行的方法是？',
+            type: 'single',
+            options: ['df.loc[]', 'df.iloc[]', 'df[]', 'df.row()'],
+            answer: 'df.iloc[]',
+            points: 10
+          },
+          {
+            id: 'ex-3-2-6',
+            question: 'Pandas中用于查看数据统计信息的方法是？',
+            type: 'single',
+            options: ['head()', 'tail()', 'info()', 'describe()'],
+            answer: 'describe()',
+            points: 10
+          },
+          {
+            id: 'ex-3-2-7',
+            question: '将DataFrame导出为CSV文件的方法是？',
+            type: 'single',
+            options: ['df.to_csv()', 'df.save_csv()', 'df.export_csv()', 'df.write_csv()'],
+            answer: 'df.to_csv()',
             points: 10
           }
         ]
@@ -179,6 +427,46 @@ export const initialCourses: Course[] = [
             options: ['isna()', 'dropna()', 'fillna()', 'replace()'],
             answer: 'fillna()',
             points: 10
+          },
+          {
+            id: 'ex-3-3-3',
+            question: 'Pandas中用于检测缺失值的方法是？',
+            type: 'single',
+            options: ['isna()', 'duplicated()', 'dropna()', 'fillna()'],
+            answer: 'isna()',
+            points: 10
+          },
+          {
+            id: 'ex-3-3-4',
+            question: 'Pandas中用于删除重复值的方法是？',
+            type: 'single',
+            options: ['isna()', 'duplicated()', 'drop_duplicates()', 'fillna()'],
+            answer: 'drop_duplicates()',
+            points: 10
+          },
+          {
+            id: 'ex-3-3-5',
+            question: '将字符串列转换为日期时间类型应该使用哪个函数？',
+            type: 'single',
+            options: ['astype()', 'to_datetime()', 'to_date()', 'convert()'],
+            answer: 'to_datetime()',
+            points: 10
+          },
+          {
+            id: 'ex-3-3-6',
+            question: '去除字符串首尾空格应该使用哪个方法？',
+            type: 'single',
+            options: ['trim()', 'strip()', 'remove_space()', 'clean()'],
+            answer: 'strip()',
+            points: 10
+          },
+          {
+            id: 'ex-3-3-7',
+            question: '以下哪些是常用的缺失值填充方式？（多选）',
+            type: 'multiple',
+            options: ['均值填充', '中位数填充', '前向填充', '后向填充'],
+            answer: ['均值填充', '中位数填充', '前向填充', '后向填充'],
+            points: 15
           }
         ]
       },
@@ -202,6 +490,46 @@ export const initialCourses: Course[] = [
             options: ['groupby()', 'pivot_table()', 'merge()', 'resample()'],
             answer: 'pivot_table()',
             points: 10
+          },
+          {
+            id: 'ex-3-4-3',
+            question: 'Pandas中用于合并两个DataFrame的方法是？',
+            type: 'single',
+            options: ['groupby()', 'merge()', 'concat()', 'join()'],
+            answer: 'merge()',
+            points: 10
+          },
+          {
+            id: 'ex-3-4-4',
+            question: 'Pandas中用于连接多个DataFrame的方法是？',
+            type: 'single',
+            options: ['groupby()', 'merge()', 'concat()', 'join()'],
+            answer: 'concat()',
+            points: 10
+          },
+          {
+            id: 'ex-3-4-5',
+            question: '时间序列数据中，按天汇总数据应该使用什么频率参数？',
+            type: 'single',
+            options: ['"H"', '"D"', '"W"', '"M"'],
+            answer: '"D"',
+            points: 10
+          },
+          {
+            id: 'ex-3-4-6',
+            question: '计算7天移动平均应该使用哪个方法？',
+            type: 'single',
+            options: ['resample()', 'rolling()', 'shift()', 'diff()'],
+            answer: 'rolling()',
+            points: 10
+          },
+          {
+            id: 'ex-3-4-7',
+            question: 'merge()方法支持哪些连接类型？（多选）',
+            type: 'multiple',
+            options: ['内连接', '左连接', '右连接', '外连接'],
+            answer: ['内连接', '左连接', '右连接', '外连接'],
+            points: 15
           }
         ]
       }
@@ -243,6 +571,38 @@ export const initialCourses: Course[] = [
             options: ['柱状图', '折线图', '直方图', '散点图'],
             answer: '直方图',
             points: 10
+          },
+          {
+            id: 'ex-4-1-4',
+            question: '展示两个变量之间的关系，最适合使用哪种图表？',
+            type: 'single',
+            options: ['折线图', '柱状图', '饼图', '散点图'],
+            answer: '散点图',
+            points: 10
+          },
+          {
+            id: 'ex-4-1-5',
+            question: '展示各部分占总体比例，最适合使用哪种图表？',
+            type: 'single',
+            options: ['折线图', '柱状图', '饼图', '散点图'],
+            answer: '饼图',
+            points: 10
+          },
+          {
+            id: 'ex-4-1-6',
+            question: '饼图适合展示多少个类别？',
+            type: 'single',
+            options: ['不超过3个', '不超过6个', '不超过10个', '任意数量'],
+            answer: '不超过6个',
+            points: 10
+          },
+          {
+            id: 'ex-4-1-7',
+            question: '以下哪些是常用的可视化图表类型？（多选）',
+            type: 'multiple',
+            options: ['柱状图', '折线图', '饼图', '热力图', '流程图'],
+            answer: ['柱状图', '折线图', '饼图', '热力图'],
+            points: 15
           }
         ]
       },
@@ -265,6 +625,46 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['subplot()', 'plot()', 'scatter()', 'bar()'],
             answer: 'subplot()',
+            points: 10
+          },
+          {
+            id: 'ex-4-2-3',
+            question: 'Matplotlib中用于添加标题的函数是？',
+            type: 'single',
+            options: ['plt.title()', 'plt.label()', 'plt.header()', 'plt.caption()'],
+            answer: 'plt.title()',
+            points: 10
+          },
+          {
+            id: 'ex-4-2-4',
+            question: 'Matplotlib中用于绘制折线图的函数是？',
+            type: 'single',
+            options: ['plt.bar()', 'plt.plot()', 'plt.hist()', 'plt.scatter()'],
+            answer: 'plt.plot()',
+            points: 10
+          },
+          {
+            id: 'ex-4-2-5',
+            question: 'Seaborn中用于绘制箱线图的函数是？',
+            type: 'single',
+            options: ['heatmap()', 'scatterplot()', 'boxplot()', 'pairplot()'],
+            answer: 'boxplot()',
+            points: 10
+          },
+          {
+            id: 'ex-4-2-6',
+            question: 'Matplotlib中用于添加图例的函数是？',
+            type: 'single',
+            options: ['plt.legend()', 'plt.label()', 'plt.note()', 'plt.key()'],
+            answer: 'plt.legend()',
+            points: 10
+          },
+          {
+            id: 'ex-4-2-7',
+            question: 'Seaborn中用于绘制散点图的函数是？',
+            type: 'single',
+            options: ['lineplot()', 'scatterplot()', 'barplot()', 'histplot()'],
+            answer: 'scatterplot()',
             points: 10
           }
         ]
@@ -291,6 +691,54 @@ export const initialCourses: Course[] = [
             options: ['价格', '部署方式', '响应速度和灵活性', '数据存储方式'],
             answer: '响应速度和灵活性',
             points: 10
+          },
+          {
+            id: 'ex-5-1-2',
+            question: 'BI系统的核心组件不包括以下哪项？',
+            type: 'single',
+            options: ['数据仓库', 'ETL', '报表工具', '编程语言'],
+            answer: '编程语言',
+            points: 10
+          },
+          {
+            id: 'ex-5-1-3',
+            question: '以下哪些是BI系统的部署模式？（多选）',
+            type: 'multiple',
+            options: ['本地部署', '云端部署', '混合部署', '手动部署'],
+            answer: ['本地部署', '云端部署', '混合部署'],
+            points: 15
+          },
+          {
+            id: 'ex-5-1-4',
+            question: 'BI选型时需要考虑哪些因素？（多选）',
+            type: 'multiple',
+            options: ['功能需求', '性能要求', '成本预算', '技术支持'],
+            answer: ['功能需求', '性能要求', '成本预算', '技术支持'],
+            points: 15
+          },
+          {
+            id: 'ex-5-1-5',
+            question: 'ETL代表什么？',
+            type: 'single',
+            options: ['提取、转换、加载', '提取、传输、加载', '提取、转换、存储', '提取、传输、存储'],
+            answer: '提取、转换、加载',
+            points: 10
+          },
+          {
+            id: 'ex-5-1-6',
+            question: '数据仓库的主要作用是什么？',
+            type: 'single',
+            options: ['存储原始数据', '存储处理后的数据', '存储日志文件', '存储配置文件'],
+            answer: '存储处理后的数据',
+            points: 10
+          },
+          {
+            id: 'ex-5-1-7',
+            question: '现代BI平台的核心特性包括哪些？（多选）',
+            type: 'multiple',
+            options: ['自助分析', '实时数据', '移动端支持', 'AI辅助分析'],
+            answer: ['自助分析', '实时数据', '移动端支持', 'AI辅助分析'],
+            points: 15
           }
         ]
       },
@@ -306,6 +754,54 @@ export const initialCourses: Course[] = [
             options: ['SUM', 'CALCULATE', 'FILTER', 'ALL'],
             answer: 'CALCULATE',
             points: 10
+          },
+          {
+            id: 'ex-5-2-2',
+            question: 'DAX中的星型模型是什么？',
+            type: 'single',
+            options: ['一种数据模型结构', '一种图表类型', '一种编程语言', '一种存储方式'],
+            answer: '一种数据模型结构',
+            points: 10
+          },
+          {
+            id: 'ex-5-2-3',
+            question: 'DAX中的计算列和度量值有什么区别？',
+            type: 'single',
+            options: ['计算列在数据刷新时计算，度量值在查询时计算', '计算列在查询时计算，度量值在数据刷新时计算', '没有区别', '计算列只能用于文本'],
+            answer: '计算列在数据刷新时计算，度量值在查询时计算',
+            points: 10
+          },
+          {
+            id: 'ex-5-2-4',
+            question: 'DAX中用于清除上下文的函数是？',
+            type: 'single',
+            options: ['SUM', 'CALCULATE', 'FILTER', 'ALL'],
+            answer: 'ALL',
+            points: 10
+          },
+          {
+            id: 'ex-5-2-5',
+            question: 'DAX中用于条件过滤的函数是？',
+            type: 'single',
+            options: ['SUM', 'CALCULATE', 'FILTER', 'ALL'],
+            answer: 'FILTER',
+            points: 10
+          },
+          {
+            id: 'ex-5-2-6',
+            question: '以下哪些是DAX的时间智能函数？（多选）',
+            type: 'multiple',
+            options: ['TOTALYTD', 'SAMEPERIODLASTYEAR', 'SUM', 'COUNT'],
+            answer: ['TOTALYTD', 'SAMEPERIODLASTYEAR'],
+            points: 15
+          },
+          {
+            id: 'ex-5-2-7',
+            question: 'DAX中用于迭代计算的函数是？（多选）',
+            type: 'multiple',
+            options: ['SUMX', 'COUNTX', 'MAXX', 'MINX'],
+            answer: ['SUMX', 'COUNTX', 'MAXX', 'MINX'],
+            points: 15
           }
         ]
       }
@@ -331,6 +827,54 @@ export const initialCourses: Course[] = [
             options: ['MRR', 'churn率', 'LTV', 'GMV'],
             answer: ['MRR', 'churn率', 'LTV'],
             points: 10
+          },
+          {
+            id: 'ex-6-1-2',
+            question: 'OMTM指的是什么？',
+            type: 'single',
+            options: ['多维度指标体系', '唯一关键指标', '运营管理工具', '数据模型框架'],
+            answer: '唯一关键指标',
+            points: 10
+          },
+          {
+            id: 'ex-6-1-3',
+            question: '电子商务的核心指标包括哪些？（多选）',
+            type: 'multiple',
+            options: ['GMV', '转化率', '客单价', 'MRR'],
+            answer: ['GMV', '转化率', '客单价'],
+            points: 15
+          },
+          {
+            id: 'ex-6-1-4',
+            question: '免费移动应用的核心指标包括哪些？（多选）',
+            type: 'multiple',
+            options: ['DAU', '留存率', 'ARPU', 'LTV'],
+            answer: ['DAU', '留存率', 'ARPU', 'LTV'],
+            points: 15
+          },
+          {
+            id: 'ex-6-1-5',
+            question: '指标之间的关联关系很重要，以下哪个是正确的？',
+            type: 'single',
+            options: ['指标之间没有关联', '指标之间是独立的', '指标之间存在因果关系', '指标只能单独使用'],
+            answer: '指标之间存在因果关系',
+            points: 10
+          },
+          {
+            id: 'ex-6-1-6',
+            question: '指标优先级排序的原则是什么？',
+            type: 'single',
+            options: ['按字母顺序', '按重要性和影响程度', '按创建时间', '随机排序'],
+            answer: '按重要性和影响程度',
+            points: 10
+          },
+          {
+            id: 'ex-6-1-7',
+            question: '指标监控仪表盘的作用是什么？',
+            type: 'single',
+            options: ['存储数据', '实时监控关键指标', '编写代码', '设计图表'],
+            answer: '实时监控关键指标',
+            points: 10
           }
         ]
       },
@@ -346,6 +890,54 @@ export const initialCourses: Course[] = [
             options: ['销售预测', '客户分群', '库存优化', '市场分析'],
             answer: '客户分群',
             points: 10
+          },
+          {
+            id: 'ex-6-2-2',
+            question: 'RFM模型中的R表示什么？',
+            type: 'single',
+            options: ['消费金额', '消费频率', '最近一次消费', '客户价值'],
+            answer: '最近一次消费',
+            points: 10
+          },
+          {
+            id: 'ex-6-2-3',
+            question: '漏斗分析通常用于分析哪些业务场景？（多选）',
+            type: 'multiple',
+            options: ['用户注册流程', '购买转化流程', '产品使用流程', '员工离职流程'],
+            answer: ['用户注册流程', '购买转化流程', '产品使用流程'],
+            points: 15
+          },
+          {
+            id: 'ex-6-2-4',
+            question: 'A/B测试是一种什么方法？',
+            type: 'single',
+            options: ['数据存储方法', '通过对比不同方案来优化业务指标', '编程方法', '数据可视化方法'],
+            answer: '通过对比不同方案来优化业务指标',
+            points: 10
+          },
+          {
+            id: 'ex-6-2-5',
+            question: '留存分析通常关注哪些时间节点？（多选）',
+            type: 'multiple',
+            options: ['次日留存', '7日留存', '30日留存', '90日留存'],
+            answer: ['次日留存', '7日留存', '30日留存', '90日留存'],
+            points: 15
+          },
+          {
+            id: 'ex-6-2-6',
+            question: '用户行为路径分析的目的是什么？',
+            type: 'single',
+            options: ['存储用户数据', '了解用户如何使用产品', '编写代码', '设计界面'],
+            answer: '了解用户如何使用产品',
+            points: 10
+          },
+          {
+            id: 'ex-6-2-7',
+            question: '客户生命周期价值（CLV）的计算通常包括哪些因素？（多选）',
+            type: 'multiple',
+            options: ['平均购买频次', '平均客单价', '客户生命周期长度', '客户获取成本'],
+            answer: ['平均购买频次', '平均客单价', '客户生命周期长度', '客户获取成本'],
+            points: 15
           }
         ]
       }
@@ -379,6 +971,46 @@ export const initialCourses: Course[] = [
             options: ['中位数', '众数', '均值', '方差'],
             answer: '均值',
             points: 10
+          },
+          {
+            id: 'ex-7-1-3',
+            question: '以下哪些是衡量集中趋势的指标？（多选）',
+            type: 'multiple',
+            options: ['均值', '中位数', '众数', '标准差'],
+            answer: ['均值', '中位数', '众数'],
+            points: 15
+          },
+          {
+            id: 'ex-7-1-4',
+            question: '以下哪些是衡量离散程度的指标？（多选）',
+            type: 'multiple',
+            options: ['方差', '标准差', '极差', '中位数'],
+            answer: ['方差', '标准差', '极差'],
+            points: 15
+          },
+          {
+            id: 'ex-7-1-5',
+            question: '当数据存在极端值时，哪个指标更能代表数据的集中趋势？',
+            type: 'single',
+            options: ['均值', '中位数', '众数', '标准差'],
+            answer: '中位数',
+            points: 10
+          },
+          {
+            id: 'ex-7-1-6',
+            question: '正态分布的特点是什么？（多选）',
+            type: 'multiple',
+            options: ['对称分布', '均值=中位数=众数', '呈钟形曲线', '偏态分布'],
+            answer: ['对称分布', '均值=中位数=众数', '呈钟形曲线'],
+            points: 15
+          },
+          {
+            id: 'ex-7-1-7',
+            question: '中心极限定理表明什么？',
+            type: 'single',
+            options: ['样本均值的分布趋近于正态分布', '数据必须是正态分布', '样本量越小越好', '不需要抽样'],
+            answer: '样本均值的分布趋近于正态分布',
+            points: 10
           }
         ]
       },
@@ -402,6 +1034,54 @@ export const initialCourses: Course[] = [
             options: ['0.01和0.1', '0.05和0.1', '0.05和0.01', '0.5和0.1'],
             answer: '0.05和0.01',
             points: 10
+          },
+          {
+            id: 'ex-7-2-3',
+            question: '原假设（H0）通常表示什么？',
+            type: 'single',
+            options: ['存在差异或有关系', '没有差异或没有关系', '数据错误', '需要更多数据'],
+            answer: '没有差异或没有关系',
+            points: 10
+          },
+          {
+            id: 'ex-7-2-4',
+            question: '备择假设（H1）通常表示什么？',
+            type: 'single',
+            options: ['存在差异或有关系', '没有差异或没有关系', '数据错误', '需要更多数据'],
+            answer: '存在差异或有关系',
+            points: 10
+          },
+          {
+            id: 'ex-7-2-5',
+            question: '比较两个均值是否有显著差异应该使用什么检验？',
+            type: 'single',
+            options: ['t检验', '卡方检验', 'ANOVA', '回归分析'],
+            answer: 't检验',
+            points: 10
+          },
+          {
+            id: 'ex-7-2-6',
+            question: '检验分类变量之间的独立性应该使用什么检验？',
+            type: 'single',
+            options: ['t检验', '卡方检验', 'ANOVA', '回归分析'],
+            answer: '卡方检验',
+            points: 10
+          },
+          {
+            id: 'ex-7-2-7',
+            question: '比较多组均值是否有显著差异应该使用什么检验？',
+            type: 'single',
+            options: ['t检验', '卡方检验', 'ANOVA', '回归分析'],
+            answer: 'ANOVA',
+            points: 10
+          },
+          {
+            id: 'ex-7-2-8',
+            question: '常用的置信水平包括哪些？（多选）',
+            type: 'multiple',
+            options: ['90%', '95%', '99%', '100%'],
+            answer: ['90%', '95%', '99%'],
+            points: 15
           }
         ]
       }
@@ -443,6 +1123,46 @@ export const initialCourses: Course[] = [
             options: ['欠拟合', '过拟合', '无拟合', '正常现象'],
             answer: '过拟合',
             points: 10
+          },
+          {
+            id: 'ex-8-1-4',
+            question: '以下哪个是无监督学习的任务类型？',
+            type: 'single',
+            options: ['分类', '回归', '聚类', '预测'],
+            answer: '聚类',
+            points: 10
+          },
+          {
+            id: 'ex-8-1-5',
+            question: '以下哪些是监督学习的常见算法？（多选）',
+            type: 'multiple',
+            options: ['线性回归', '逻辑回归', '决策树', 'K-means'],
+            answer: ['线性回归', '逻辑回归', '决策树'],
+            points: 15
+          },
+          {
+            id: 'ex-8-1-6',
+            question: '以下哪些是无监督学习的常见算法？（多选）',
+            type: 'multiple',
+            options: ['K-means', 'PCA', '层次聚类', '线性回归'],
+            answer: ['K-means', 'PCA', '层次聚类'],
+            points: 15
+          },
+          {
+            id: 'ex-8-1-7',
+            question: '模型评估指标中，用于回归任务的是？（多选）',
+            type: 'multiple',
+            options: ['MSE', 'RMSE', 'R² score', '准确率'],
+            answer: ['MSE', 'RMSE', 'R² score'],
+            points: 15
+          },
+          {
+            id: 'ex-8-1-8',
+            question: '数据集通常分为哪几部分？（多选）',
+            type: 'multiple',
+            options: ['训练集', '验证集', '测试集', '数据集'],
+            answer: ['训练集', '验证集', '测试集'],
+            points: 15
           }
         ]
       },
@@ -466,6 +1186,46 @@ export const initialCourses: Course[] = [
             options: ['Ridge', 'Lasso', 'ElasticNet', 'SVM'],
             answer: 'Lasso',
             points: 10
+          },
+          {
+            id: 'ex-8-2-3',
+            question: 'L2正则化也被称为什么？',
+            type: 'single',
+            options: ['Ridge', 'Lasso', 'ElasticNet', 'SVM'],
+            answer: 'Ridge',
+            points: 10
+          },
+          {
+            id: 'ex-8-2-4',
+            question: '随机森林是一种什么类型的算法？',
+            type: 'single',
+            options: ['单一决策树', '集成学习算法', '聚类算法', '降维算法'],
+            answer: '集成学习算法',
+            points: 10
+          },
+          {
+            id: 'ex-8-2-5',
+            question: '决策树中用于选择特征的指标有哪些？（多选）',
+            type: 'multiple',
+            options: ['信息增益', '基尼系数', '信息增益比', '准确率'],
+            answer: ['信息增益', '基尼系数', '信息增益比'],
+            points: 15
+          },
+          {
+            id: 'ex-8-2-6',
+            question: '线性回归的目标是什么？',
+            type: 'single',
+            options: ['最小化预测值与实际值的差', '最大化准确率', '最小化方差', '最大化信息增益'],
+            answer: '最小化预测值与实际值的差',
+            points: 10
+          },
+          {
+            id: 'ex-8-2-7',
+            question: '以下哪些是集成学习算法？（多选）',
+            type: 'multiple',
+            options: ['随机森林', 'XGBoost', 'LightGBM', '线性回归'],
+            answer: ['随机森林', 'XGBoost', 'LightGBM'],
+            points: 15
           }
         ]
       },
@@ -489,6 +1249,46 @@ export const initialCourses: Course[] = [
             options: ['增加数据', '减少数据', '保留最大方差', '删除所有特征'],
             answer: '保留最大方差',
             points: 10
+          },
+          {
+            id: 'ex-8-3-3',
+            question: 'DBSCAN是一种什么类型的聚类算法？',
+            type: 'single',
+            options: ['基于距离的', '基于密度的', '基于层次的', '基于模型的'],
+            answer: '基于密度的',
+            points: 10
+          },
+          {
+            id: 'ex-8-3-4',
+            question: '层次聚类的两种方法是什么？（多选）',
+            type: 'multiple',
+            options: ['凝聚式', '分裂式', '基于密度的', '基于模型的'],
+            answer: ['凝聚式', '分裂式'],
+            points: 15
+          },
+          {
+            id: 'ex-8-3-5',
+            question: 't-SNE是一种什么类型的降维算法？',
+            type: 'single',
+            options: ['线性降维', '非线性降维', '基于距离的', '基于密度的'],
+            answer: '非线性降维',
+            points: 10
+          },
+          {
+            id: 'ex-8-3-6',
+            question: 'PCA的全称是什么？',
+            type: 'single',
+            options: ['主成分分析', '主成分回归', '概率主成分分析', '偏最小二乘'],
+            answer: '主成分分析',
+            points: 10
+          },
+          {
+            id: 'ex-8-3-7',
+            question: '以下哪些是常用的聚类算法？（多选）',
+            type: 'multiple',
+            options: ['K-means', 'DBSCAN', '层次聚类', 'PCA'],
+            answer: ['K-means', 'DBSCAN', '层次聚类'],
+            points: 15
           }
         ]
       }
@@ -530,6 +1330,38 @@ export const initialCourses: Course[] = [
             options: ['WHERE', 'GROUP BY', 'ORDER BY', 'LIMIT'],
             answer: 'ORDER BY',
             points: 10
+          },
+          {
+            id: 'ex-9-1-4',
+            question: 'SQL中用于限制返回行数的关键字是？',
+            type: 'single',
+            options: ['WHERE', 'GROUP BY', 'ORDER BY', 'LIMIT'],
+            answer: 'LIMIT',
+            points: 10
+          },
+          {
+            id: 'ex-9-1-5',
+            question: 'SQL中常用的聚合函数有哪些？（多选）',
+            type: 'multiple',
+            options: ['COUNT', 'SUM', 'AVG', 'MAX', 'MIN'],
+            answer: ['COUNT', 'SUM', 'AVG', 'MAX', 'MIN'],
+            points: 15
+          },
+          {
+            id: 'ex-9-1-6',
+            question: 'SQL查询语句的执行顺序是？',
+            type: 'single',
+            options: ['SELECT -> FROM -> WHERE -> GROUP BY -> HAVING -> ORDER BY', 'FROM -> WHERE -> GROUP BY -> HAVING -> SELECT -> ORDER BY', 'FROM -> SELECT -> WHERE -> GROUP BY -> HAVING -> ORDER BY', 'WHERE -> FROM -> GROUP BY -> HAVING -> SELECT -> ORDER BY'],
+            answer: 'FROM -> WHERE -> GROUP BY -> HAVING -> SELECT -> ORDER BY',
+            points: 10
+          },
+          {
+            id: 'ex-9-1-7',
+            question: 'SQL中用于匹配模式的关键字是？',
+            type: 'single',
+            options: ['LIKE', 'MATCH', 'SEARCH', 'FIND'],
+            answer: 'LIKE',
+            points: 10
           }
         ]
       },
@@ -561,6 +1393,38 @@ export const initialCourses: Course[] = [
             options: ['NOW()', 'DATE()', 'DATEDIFF()', 'YEAR()'],
             answer: 'DATEDIFF()',
             points: 10
+          },
+          {
+            id: 'ex-9-2-4',
+            question: 'SQL中返回两个表交集的JOIN类型是？',
+            type: 'single',
+            options: ['INNER JOIN', 'LEFT JOIN', 'RIGHT JOIN', 'FULL OUTER JOIN'],
+            answer: 'INNER JOIN',
+            points: 10
+          },
+          {
+            id: 'ex-9-2-5',
+            question: 'SQL窗口函数中，用于获取前一行数据的函数是？',
+            type: 'single',
+            options: ['LAG()', 'LEAD()', 'ROW_NUMBER()', 'RANK()'],
+            answer: 'LAG()',
+            points: 10
+          },
+          {
+            id: 'ex-9-2-6',
+            question: 'SQL窗口函数中，用于获取后一行数据的函数是？',
+            type: 'single',
+            options: ['LAG()', 'LEAD()', 'ROW_NUMBER()', 'RANK()'],
+            answer: 'LEAD()',
+            points: 10
+          },
+          {
+            id: 'ex-9-2-7',
+            question: '以下哪些是SQL窗口函数？（多选）',
+            type: 'multiple',
+            options: ['ROW_NUMBER()', 'RANK()', 'DENSE_RANK()', 'LAG()', 'LEAD()'],
+            answer: ['ROW_NUMBER()', 'RANK()', 'DENSE_RANK()', 'LAG()', 'LEAD()'],
+            points: 15
           }
         ]
       }
@@ -586,6 +1450,54 @@ export const initialCourses: Course[] = [
             options: ['依靠直觉', '依靠数据', '依靠经验', '依靠运气'],
             answer: '依靠数据',
             points: 10
+          },
+          {
+            id: 'ex-10-1-2',
+            question: '从直觉决策到数据决策的转变需要什么？',
+            type: 'single',
+            options: ['只需要技术', '只需要数据', '数据、技术和文化的转变', '不需要任何改变'],
+            answer: '数据、技术和文化的转变',
+            points: 10
+          },
+          {
+            id: 'ex-10-1-3',
+            question: '数据讲故事的目的是什么？',
+            type: 'single',
+            options: ['娱乐观众', '将技术数据转化为业务洞察', '编写代码', '存储数据'],
+            answer: '将技术数据转化为业务洞察',
+            points: 10
+          },
+          {
+            id: 'ex-10-1-4',
+            question: '增长黑客框架的核心是什么？',
+            type: 'single',
+            options: ['随机尝试', '数据驱动的快速迭代', '传统营销', '不依赖数据'],
+            answer: '数据驱动的快速迭代',
+            points: 10
+          },
+          {
+            id: 'ex-10-1-5',
+            question: 'OKR与数据的关系是什么？',
+            type: 'single',
+            options: ['OKR与数据无关', 'OKR需要数据来衡量和跟踪', 'OKR只需要定性描述', '数据会干扰OKR'],
+            answer: 'OKR需要数据来衡量和跟踪',
+            points: 10
+          },
+          {
+            id: 'ex-10-1-6',
+            question: 'ROI计算的目的是什么？',
+            type: 'single',
+            options: ['计算投资回报率', '存储数据', '编写代码', '设计图表'],
+            answer: '计算投资回报率',
+            points: 10
+          },
+          {
+            id: 'ex-10-1-7',
+            question: '技术向业务转化的关键是什么？（多选）',
+            type: 'multiple',
+            options: ['使用业务语言', '关注业务价值', '提供可操作的建议', '只展示技术细节'],
+            answer: ['使用业务语言', '关注业务价值', '提供可操作的建议'],
+            points: 15
           }
         ]
       },
@@ -601,6 +1513,54 @@ export const initialCourses: Course[] = [
             options: ['用户行为分析', '商品推荐系统', '库存优化', '所有选项'],
             answer: ['用户行为分析', '商品推荐系统', '库存优化'],
             points: 10
+          },
+          {
+            id: 'ex-10-2-2',
+            question: '金融行业数据分析的核心关注点包括哪些？（多选）',
+            type: 'multiple',
+            options: ['信用评分', '风险控制', '客户流失预测', '欺诈检测'],
+            answer: ['信用评分', '风险控制', '客户流失预测', '欺诈检测'],
+            points: 15
+          },
+          {
+            id: 'ex-10-2-3',
+            question: '运营行业数据分析的核心关注点包括哪些？（多选）',
+            type: 'multiple',
+            options: ['用户增长分析', '留存分析', '活动效果评估', '成本效益分析'],
+            answer: ['用户增长分析', '留存分析', '活动效果评估', '成本效益分析'],
+            points: 15
+          },
+          {
+            id: 'ex-10-2-4',
+            question: 'A/B测试的步骤包括哪些？（多选）',
+            type: 'multiple',
+            options: ['问题定义', '假设提出', '实验设计', '结果分析', '结论应用'],
+            answer: ['问题定义', '假设提出', '实验设计', '结果分析', '结论应用'],
+            points: 15
+          },
+          {
+            id: 'ex-10-2-5',
+            question: '信用评分模型常用的评估指标有哪些？（多选）',
+            type: 'multiple',
+            options: ['KS值', 'AUC', '准确率', '召回率'],
+            answer: ['KS值', 'AUC'],
+            points: 15
+          },
+          {
+            id: 'ex-10-2-6',
+            question: '用户增长分析的常用方法有哪些？（多选）',
+            type: 'multiple',
+            options: ['漏斗分析', '留存分析', '用户分群', '渠道分析'],
+            answer: ['漏斗分析', '留存分析', '用户分群', '渠道分析'],
+            points: 15
+          },
+          {
+            id: 'ex-10-2-7',
+            question: '营销效果评估的关键指标有哪些？（多选）',
+            type: 'multiple',
+            options: ['ROI', '转化率', '点击率', '曝光量'],
+            answer: ['ROI', '转化率', '点击率', '曝光量'],
+            points: 15
           }
         ]
       }

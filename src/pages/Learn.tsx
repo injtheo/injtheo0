@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle2, ChevronRight, ChevronLeft, BookOpen } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import { useStore } from '../hooks/useStore';
 
 export default function Learn() {
-  const { id } = useParams<{ id: string }>();
+  const { courseId, chapterId } = useParams<{ courseId: string; chapterId: string }>();
   const courses = useStore(state => state.courses);
   const currentChapterIndex = useStore(state => state.currentChapterIndex);
   const setCurrentChapterIndex = useStore(state => state.setCurrentChapterIndex);
@@ -16,7 +16,14 @@ export default function Learn() {
   const [showSuccess, setShowSuccess] = useState(false);
   const [selectedAnswers, setSelectedAnswers] = useState<{ [key: string]: string }>({});
 
-  const course = courses.find(c => c.id === id);
+  const course = courses.find(c => c.id === courseId);
+  const initialChapterIndex = parseInt(chapterId || '0');
+  
+  useEffect(() => {
+    if (!isNaN(initialChapterIndex) && initialChapterIndex !== currentChapterIndex) {
+      setCurrentChapterIndex(initialChapterIndex);
+    }
+  }, [initialChapterIndex, currentChapterIndex, setCurrentChapterIndex]);
 
   if (!course) {
     return (
@@ -65,7 +72,7 @@ export default function Learn() {
   return (
     <div className="space-y-6">
       <Link
-        to={`/courses/${course.id}`}
+        to={`/courses/${courseId}`}
         className="inline-flex items-center gap-2 text-slate-600 hover:text-slate-800"
       >
         <ArrowLeft className="w-5 h-5" />
