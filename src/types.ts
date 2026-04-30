@@ -26,9 +26,9 @@ export interface Chapter {
 export interface Exercise {
   id: string;
   question: string;
-  type: 'choice' | 'code' | 'truefalse';
+  type: 'single' | 'multiple' | 'truefalse' | 'essay';
   options?: string[];
-  answer: string;
+  answer: string | string[];
   points: number;
 }
 
@@ -38,11 +38,8 @@ export interface Project {
   description: string;
   difficulty: 1 | 2 | 3 | 4 | 5;
   category: string;
-  thumbnail: string;
-  requirements: string[];
-  datasetDescription: string;
+  estimatedTime?: string;
   tasks: ProjectTask[];
-  solution: string;
 }
 
 export interface ProjectTask {
@@ -50,6 +47,7 @@ export interface ProjectTask {
   title: string;
   description: string;
   steps: string[];
+  solution: string;
 }
 
 export interface Quiz {
@@ -92,7 +90,11 @@ export interface Badge {
   name: string;
   description: string;
   icon: string;
-  condition: string;
+  requirement: {
+    type: 'course_complete' | 'project_complete' | 'quiz_complete' | 'quiz_score';
+    count?: number;
+    score?: number;
+  };
 }
 
 export interface UserBadge {
