@@ -7,7 +7,7 @@ export const initialCourses: Course[] = [
     description: '掌握数据分析的核心概念、方法和工具，从数据收集到可视化呈现的完整流程。',
     category: '基础课程',
     difficulty: 1,
-    thumbnail: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=data%20analysis%20concepts%20and%20charts%20professional%20business%20style&image_size=square_hd',
+    thumbnail: 'https://picsum.photos/seed/data-analysis/400/400',
     chapters: [
       {
         id: 'chapter-1-1',
@@ -185,7 +185,7 @@ export const initialCourses: Course[] = [
     description: '精通Excel这一最普及的数据处理工具，实现高效的数据操作、分析与初步可视化。',
     category: '工具课程',
     difficulty: 1,
-    thumbnail: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=excel%20spreadsheet%20with%20charts%20and%20data%20professional%20business%20style&image_size=square_hd',
+    thumbnail: 'https://picsum.photos/seed/excel/400/400',
     chapters: [
       {
         id: 'chapter-2-1',
@@ -363,7 +363,7 @@ export const initialCourses: Course[] = [
     description: '掌握使用Python（Pandas库）进行数据操控的核心能力，处理更复杂、更大规模的数据。',
     category: '编程课程',
     difficulty: 2,
-    thumbnail: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=python%20programming%20code%20with%20data%20visualization%20charts%20professional&image_size=square_hd',
+    thumbnail: 'https://picsum.photos/seed/python/400/400',
     chapters: [
       {
         id: 'chapter-3-1',
@@ -709,7 +709,7 @@ export const initialCourses: Course[] = [
     description: '掌握可视化设计原则，并能用多种工具（Python、Excel、BI）有效传达数据洞察。',
     category: '技能课程',
     difficulty: 2,
-    thumbnail: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=business%20data%20visualization%20dashboards%20charts%20professional%20style&image_size=square_hd',
+    thumbnail: 'https://picsum.photos/seed/visualization/400/400',
     chapters: [
       {
         id: 'chapter-4-1',
@@ -887,7 +887,7 @@ export const initialCourses: Course[] = [
     description: '构建可复用、自动化的数据报表系统，实现数据驱动的日常决策支持。',
     category: '实战课程',
     difficulty: 3,
-    thumbnail: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=business%20intelligence%20dashboard%20analytics%20report%20professional%20style&image_size=square_hd',
+    thumbnail: 'https://picsum.photos/seed/bi/400/400',
     chapters: [
       {
         id: 'chapter-5-1',
@@ -1065,7 +1065,7 @@ export const initialCourses: Course[] = [
     description: '整合前5门课程技能，在真实的商业场景中解决复杂问题，并量化分析价值。',
     category: '实战课程',
     difficulty: 3,
-    thumbnail: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=business%20analytics%20case%20study%20meeting%20professional%20style&image_size=square_hd',
+    thumbnail: 'https://picsum.photos/seed/business/400/400',
     chapters: [
       {
         id: 'chapter-6-1',
@@ -1243,7 +1243,7 @@ export const initialCourses: Course[] = [
     description: '掌握统计学基础，包括描述统计、推断统计，以及在数据分析中的应用。',
     category: '理论课程',
     difficulty: 2,
-    thumbnail: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=statistics%20charts%20probability%20distribution%20professional%20style&image_size=square_hd',
+    thumbnail: 'https://picsum.photos/seed/statistics/400/400',
     chapters: [
       {
         id: 'chapter-7-1',
@@ -1432,7 +1432,7 @@ export const initialCourses: Course[] = [
     description: '学习机器学习基础，包括监督学习、无监督学习，以及常见算法的应用。',
     category: '进阶课程',
     difficulty: 3,
-    thumbnail: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=machine%20learning%20algorithms%20neural%20networks%20professional%20style&image_size=square_hd',
+    thumbnail: 'https://picsum.photos/seed/ml/400/400',
     chapters: [
       {
         id: 'chapter-8-1',
@@ -1705,7 +1705,7 @@ export const initialCourses: Course[] = [
     description: '掌握SQL查询语言，能够从数据库中高效提取和操作数据。',
     category: '工具课程',
     difficulty: 2,
-    thumbnail: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=database%20SQL%20queries%20tables%20professional%20style&image_size=square_hd',
+    thumbnail: 'https://picsum.photos/seed/sql/400/400',
     chapters: [
       {
         id: 'chapter-9-1',
@@ -1883,7 +1883,7 @@ export const initialCourses: Course[] = [
     description: '培养数据驱动的问题解决思维，了解数据分析在各行业的实际应用场景。',
     category: '思维课程',
     difficulty: 3,
-    thumbnail: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=data%20thinking%20business%20intelligence%20strategy%20professional%20style&image_size=square_hd',
+    thumbnail: 'https://picsum.photos/seed/thinking/400/400',
     chapters: [
       {
         id: 'chapter-10-1',
