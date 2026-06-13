@@ -26,9 +26,9 @@ export interface Chapter {
 export interface Exercise {
   id: string;
   question: string;
-  type: 'single' | 'multiple' | 'truefalse' | 'essay';
+  type: 'single' | 'multiple' | 'truefalse' | 'essay' | 'choice' | 'true-false';
   options?: string[];
-  answer: string | string[];
+  answer: string | string[] | boolean;
   points: number;
   explanation?: string;
   tags?: string[];
@@ -42,6 +42,12 @@ export interface Project {
   difficulty: 1 | 2 | 3 | 4 | 5;
   category: string;
   estimatedTime?: string;
+  datasetUrl?: string;
+  thumbnail?: string;
+  requirements?: string[];
+  solution?: string;
+  datasetDescription?: string;
+  businessContext?: string;
   tasks: ProjectTask[];
 }
 
@@ -64,17 +70,19 @@ export interface Quiz {
   id: string;
   courseId: string;
   title: string;
-  duration: number;
+  duration?: number;
+  timeLimit?: number;
   questions: QuizQuestion[];
-  passScore: number;
+  passScore?: number;
+  passingScore?: number;
 }
 
 export interface QuizQuestion {
   id: string;
   question: string;
-  type: 'single' | 'multiple' | 'truefalse' | 'essay';
+  type: 'single' | 'multiple' | 'truefalse' | 'essay' | 'choice' | 'true-false';
   options?: string[];
-  answer: string | string[] | boolean;
+  answer?: string | string[] | boolean;
   points: number;
   explanation?: string;
   tags?: string[];
@@ -103,6 +111,7 @@ export interface Badge {
   name: string;
   description: string;
   icon: string;
+  condition?: string;
   requirement: {
     type: 'course_complete' | 'project_complete' | 'quiz_complete' | 'quiz_score';
     count?: number;

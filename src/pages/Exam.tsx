@@ -12,6 +12,12 @@ export default function Exam() {
   const [score, setScore] = useState(0);
   const [showResults, setShowResults] = useState(false);
   
+  const getAnswerArray = (ans: string | string[] | boolean): string[] => {
+    if (Array.isArray(ans)) return ans;
+    if (typeof ans === 'boolean') return [ans ? 'true' : 'false'];
+    return ans.split(',').filter(x => x);
+  };
+  
   const quizzes = useStore(state => state.quizzes);
   const quiz = quizzes[0];
 
@@ -65,7 +71,7 @@ export default function Exam() {
       } else if (question.type === 'multiple') {
         // 多选：部分对给部分分
         const userAnswers = (userAnswer || '').split(',').filter(x => x);
-        const correctAnswers = question.answer.split(',');
+        const correctAnswers = getAnswerArray(question.answer);
         const allCorrect = userAnswers.length === correctAnswers.length && 
           userAnswers.every(x => correctAnswers.includes(x));
         if (allCorrect) {
@@ -304,7 +310,7 @@ export default function Exam() {
                   const isCorrect = userAnswer === question.answer || 
                     (question.type === 'multiple' && (() => {
                       const userAnswers = (userAnswer || '').split(',').filter(x => x);
-                      const correctAnswers = question.answer.split(',');
+                      const correctAnswers = getAnswerArray(question.answer);
                       return userAnswers.length === correctAnswers.length && 
                         userAnswers.every(x => correctAnswers.includes(x));
                     })());
@@ -339,7 +345,7 @@ export default function Exam() {
                           <div>
                             <p className="text-sm text-slate-600 mb-2">正确答案：</p>
                             <p className="text-green-700 font-medium">
-                              {question.answer.split(',').map(i => question.options?.[parseInt(i)]).join(', ')}
+                              {getAnswerArray(question.answer).map((i: string) => question.options?.[parseInt(i)]).join(', ')}
                             </p>
                           </div>
                         </>
