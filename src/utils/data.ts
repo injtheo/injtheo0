@@ -20,7 +20,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['描述性分析', '诊断性分析', '预测性分析', '规范性分析'],
             answer: ['描述性分析', '诊断性分析', '预测性分析', '规范性分析'],
-            points: 10
+            points: 10,
+            explanation: `【答案】描述性分析、诊断性分析、预测性分析等。【解析】描述性分析回答"发生了什么"，通过汇总数据呈现现状这一知识点在数据分析基础中具有重要地位。`,
+            tags: ['数据分析', '业务分析', '分析方法', '描述性分析', '诊断性分析', '预测性分析'],
+            difficulty: 1
           },
           {
             id: 'ex-1-1-2',
@@ -28,7 +31,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['问题定义', '数据收集', '数据清洗', '数据存储'],
             answer: '数据存储',
-            points: 10
+            points: 10,
+            explanation: `【答案】数据存储。【解析】数据分析标准流程：问题定义→数据收集→数据清洗→数据探索→数据建模→可视化→呈现这一知识点在数据分析基础中具有重要地位。`,
+            tags: ['数据分析', '业务分析', '分析方法', '分析流程', '业务理解', '问题定义'],
+            difficulty: 1
           },
           {
             id: 'ex-1-1-3',
@@ -36,7 +42,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['描述性分析', '诊断性分析', '预测性分析', '规范性分析'],
             answer: '诊断性分析',
-            points: 10
+            points: 10,
+            explanation: `【答案】诊断性分析。【解析】诊断性分析回答"为什么发生"，通过数据挖掘找出原因这一知识点在数据分析基础中具有重要地位。`,
+            tags: ['数据分析', '业务分析', '分析方法', '描述性分析', '诊断性分析', '预测性分析'],
+            difficulty: 1
           },
           {
             id: 'ex-1-1-4',
@@ -44,7 +53,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['Excel', 'Python', 'SQL', 'Tableau', 'Word'],
             answer: ['Excel', 'Python', 'SQL', 'Tableau'],
-            points: 15
+            points: 15,
+            explanation: `【答案】Excel、Python、SQL等。【解析】Excel适合基础分析，Python/SQL适合复杂处理，BI工具适合交互式可视化这一知识点在数据分析基础中具有重要地位。`,
+            tags: ['数据分析', '业务分析', '分析方法', '分析工具', '多选题'],
+            difficulty: 2
           },
           {
             id: 'ex-1-1-5',
@@ -52,7 +64,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['数据收集', '问题定义', '数据清洗', '数据可视化'],
             answer: '问题定义',
-            points: 10
+            points: 10,
+            explanation: `【答案】问题定义。【解析】业务理解是数据分析第一步，需要将模糊需求转化为可分析的数据问题这一知识点在数据分析基础中具有重要地位。`,
+            tags: ['数据分析', '业务分析', '分析方法', '分析流程', '业务理解', '问题定义'],
+            difficulty: 1
           },
           {
             id: 'ex-1-1-6',
@@ -60,7 +75,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['4个', '5个', '6个', '7个'],
             answer: '6个',
-            points: 10
+            points: 10,
+            explanation: `【答案】6个。【解析】CRISP-DM包含6个阶段：业务理解、数据理解、数据准备、建模、评估、部署这一知识点在数据分析基础中具有重要地位。`,
+            tags: ['数据分析', '业务分析', '分析方法', 'CRISP-DM', '单选题'],
+            difficulty: 1
           },
           {
             id: 'ex-1-1-7',
@@ -68,7 +86,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['生成报告', '支持决策', '处理数据', '创建图表'],
             answer: '支持决策',
-            points: 10
+            points: 10,
+            explanation: `【答案】支持决策。【解析】数据分析的最终目的是支持业务决策，让数据说话这一知识点在数据分析基础中具有重要地位。`,
+            tags: ['数据分析', '业务分析', '分析方法', '数据驱动决策', '单选题'],
+            difficulty: 1
           }
         ]
       },
@@ -83,7 +104,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['分析不同用户群体的留存率差异', '直接增加用户奖励', '忽略数据直接制定策略', '只关注新用户'],
             answer: '分析不同用户群体的留存率差异',
-            points: 10
+            points: 10,
+            explanation: `【答案】分析不同用户群体的留存率差异。【解析】本题考查数据分析基础核心知识点。正确选项准确描述了该概念的核心内涵。`,
+            tags: ['数据分析', '业务分析', '分析方法', '单选题'],
+            difficulty: 1
           },
           {
             id: 'ex-1-2-2',
@@ -91,7 +115,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['相互独立，完全穷尽', '多重假设，循环验证', '方法多样，效果显著', '数据驱动，决策优化'],
             answer: '相互独立，完全穷尽',
-            points: 10
+            points: 10,
+            explanation: `【答案】相互独立，完全穷尽。【解析】MECE即"相互独立，完全穷尽"，确保分析维度不重叠、不遗漏这一知识点在数据分析基础中具有重要地位。`,
+            tags: ['数据分析', '业务分析', '分析方法', 'MECE原则', '假设驱动', '数据驱动决策'],
+            difficulty: 1
           },
           {
             id: 'ex-1-2-3',
@@ -99,7 +126,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['可衡量的', '具体的', '可实现的', '有时限的'],
             answer: '具体的',
-            points: 10
+            points: 10,
+            explanation: `【答案】具体的。【解析】SMART：Specific具体、Measurable可衡量、Achievable可实现、Relevant相关、Time-bound有时限这一知识点在数据分析基础中具有重要地位。`,
+            tags: ['数据分析', '业务分析', '分析方法', 'SMART原则', '单选题'],
+            difficulty: 1
           },
           {
             id: 'ex-1-2-4',
@@ -107,7 +137,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['多维度指标体系', '唯一关键指标', '运营管理工具', '数据模型框架'],
             answer: '唯一关键指标',
-            points: 10
+            points: 10,
+            explanation: `【答案】唯一关键指标。【解析】领先指标预测未来，滞后指标反映过去，共同构成业务监控体系这一知识点在数据分析基础中具有重要地位。`,
+            tags: ['数据分析', '业务分析', '分析方法', '分析工具', '北极星指标', '指标体系'],
+            difficulty: 1
           },
           {
             id: 'ex-1-2-5',
@@ -115,7 +148,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['What', 'Why', 'Where', 'When', 'Who', 'How'],
             answer: ['What', 'Why', 'Where', 'When', 'Who', 'How'],
-            points: 15
+            points: 15,
+            explanation: `【答案】What、Why、Where等。【解析】5W1H从六个维度全面分析问题这一知识点在数据分析基础中具有重要地位。`,
+            tags: ['数据分析', '业务分析', '分析方法', '5W1H分析', '多选题'],
+            difficulty: 2
           },
           {
             id: 'ex-1-2-6',
@@ -123,7 +159,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['收集数据', '提出假设', '分析结果', '得出结论'],
             answer: '提出假设',
-            points: 10
+            points: 10,
+            explanation: `【答案】提出假设。【解析】假设驱动分析：提出假设→设计验证→收集数据→验证结论这一知识点在数据分析基础中具有重要地位。`,
+            tags: ['数据分析', '业务分析', '分析方法', '假设驱动', '问题定义', '单选题'],
+            difficulty: 1
           },
           {
             id: 'ex-1-2-7',
@@ -131,7 +170,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['月度销售额', '新增注册用户数', '历史转化率', '季度利润'],
             answer: '新增注册用户数',
-            points: 10
+            points: 10,
+            explanation: `【答案】新增注册用户数。【解析】领先指标预测未来，滞后指标反映过去，共同构成业务监控体系这一知识点在数据分析基础中具有重要地位。`,
+            tags: ['数据分析', '业务分析', '分析方法', '指标体系', '单选题'],
+            difficulty: 1
           }
         ]
       }
@@ -156,7 +198,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['使用数据有效性', '手动输入', '使用函数', '使用宏'],
             answer: '使用数据有效性',
-            points: 10
+            points: 10,
+            explanation: `【答案】使用数据有效性。【解析】Ctrl+Shift+L快速筛选数据，可按多条件过滤这一知识点在Excel数据处理中具有重要地位。`,
+            tags: ['Excel', '数据处理', '表格操作', '数据有效性', '数据筛选', '统计函数'],
+            difficulty: 1
           },
           {
             id: 'ex-2-1-2',
@@ -164,7 +209,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['Ctrl+F', 'Ctrl+Shift+L', 'Ctrl+D', 'Ctrl+R'],
             answer: 'Ctrl+Shift+L',
-            points: 10
+            points: 10,
+            explanation: `【答案】Ctrl+Shift+L。【解析】Ctrl+Shift+L快速筛选数据，可按多条件过滤这一知识点在Excel数据处理中具有重要地位。`,
+            tags: ['Excel', '数据处理', '表格操作', '数据筛选', 'IF函数', '单选题'],
+            difficulty: 1
           },
           {
             id: 'ex-2-1-3',
@@ -172,7 +220,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['Ctrl+D', 'Ctrl+R', 'Ctrl+E', 'Ctrl+F'],
             answer: 'Ctrl+E',
-            points: 10
+            points: 10,
+            explanation: `【答案】Ctrl+E。【解析】Ctrl+Shift+L快速筛选数据，可按多条件过滤这一知识点在Excel数据处理中具有重要地位。`,
+            tags: ['Excel', '数据处理', '表格操作', '数据筛选', '快速填充', '单选题'],
+            difficulty: 1
           },
           {
             id: 'ex-2-1-4',
@@ -180,7 +231,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['文件', '编辑', '视图', '插入'],
             answer: '视图',
-            points: 10
+            points: 10,
+            explanation: `【答案】视图。【解析】Ctrl+Shift+L快速筛选数据，可按多条件过滤这一知识点在Excel数据处理中具有重要地位。`,
+            tags: ['Excel', '数据处理', '表格操作', '数据筛选', '冻结窗格', '图表制作'],
+            difficulty: 1
           },
           {
             id: 'ex-2-1-5',
@@ -188,7 +242,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['Alt+=', 'Ctrl+=', 'Shift+=', 'Ctrl+Shift+='],
             answer: 'Alt+=',
-            points: 10
+            points: 10,
+            explanation: `【答案】Alt+=。【解析】Ctrl+Shift+L快速筛选数据，可按多条件过滤这一知识点在Excel数据处理中具有重要地位。`,
+            tags: ['Excel', '数据处理', '表格操作', '数据筛选', '自动求和', 'IF函数'],
+            difficulty: 1
           },
           {
             id: 'ex-2-1-6',
@@ -196,7 +253,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['Ctrl+Home', 'Ctrl+End', 'Ctrl+Down', 'End'],
             answer: 'Ctrl+End',
-            points: 10
+            points: 10,
+            explanation: `【答案】Ctrl+End。【解析】Ctrl+Shift+L快速筛选数据，可按多条件过滤这一知识点在Excel数据处理中具有重要地位。`,
+            tags: ['Excel', '数据处理', '表格操作', '数据筛选', '快速填充', '快捷导航'],
+            difficulty: 1
           },
           {
             id: 'ex-2-1-7',
@@ -204,7 +264,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['数据条', '色阶', '图标集', '数据透视表'],
             answer: ['数据条', '色阶', '图标集'],
-            points: 15
+            points: 15,
+            explanation: `【答案】数据条、色阶、图标集。【解析】Ctrl+Shift+L快速筛选数据，可按多条件过滤这一知识点在Excel数据处理中具有重要地位。`,
+            tags: ['Excel', '数据处理', '表格操作', '数据筛选', '条件函数', '数据透视表'],
+            difficulty: 2
           }
         ]
       },
@@ -219,7 +282,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['SUM', 'SUMIF', 'SUMIFS', 'COUNTIFS'],
             answer: 'SUMIFS',
-            points: 10
+            points: 10,
+            explanation: `【答案】SUMIFS。【解析】Ctrl+Shift+L快速筛选数据，可按多条件过滤这一知识点在Excel数据处理中具有重要地位。`,
+            tags: ['Excel', '数据处理', '表格操作', '数据筛选', '自动求和', '条件函数'],
+            difficulty: 1
           },
           {
             id: 'ex-2-2-2',
@@ -227,7 +293,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['VLOOKUP', 'HLOOKUP', 'INDEX/MATCH', 'XLOOKUP'],
             answer: 'INDEX/MATCH',
-            points: 10
+            points: 10,
+            explanation: `【答案】INDEX/MATCH。【解析】Ctrl+Shift+L快速筛选数据，可按多条件过滤这一知识点在Excel数据处理中具有重要地位。`,
+            tags: ['Excel', '数据处理', '表格操作', '数据筛选', 'VLOOKUP函数', 'INDEX-MATCH'],
+            difficulty: 1
           },
           {
             id: 'ex-2-2-3',
@@ -235,7 +304,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['IF(结果, 条件, 其他)', 'IF(条件, 结果, 其他)', 'IF(条件, 其他, 结果)', 'IF(结果, 其他, 条件)'],
             answer: 'IF(条件, 结果, 其他)',
-            points: 10
+            points: 10,
+            explanation: `【答案】。【解析】Ctrl+Shift+L快速筛选数据，可按多条件过滤这一知识点在Excel数据处理中具有重要地位。`,
+            tags: ['Excel', '数据处理', '表格操作', '数据筛选', '条件函数', 'IF函数'],
+            difficulty: 1
           },
           {
             id: 'ex-2-2-4',
@@ -243,7 +315,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['近似匹配', '精确匹配', '模糊匹配', '反向匹配'],
             answer: '精确匹配',
-            points: 10
+            points: 10,
+            explanation: `【答案】精确匹配。【解析】Ctrl+Shift+L快速筛选数据，可按多条件过滤这一知识点在Excel数据处理中具有重要地位。`,
+            tags: ['Excel', '数据处理', '表格操作', '数据筛选', 'VLOOKUP函数', '统计函数'],
+            difficulty: 1
           },
           {
             id: 'ex-2-2-5',
@@ -251,7 +326,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['支持从右向左查找', '更灵活', '性能更好', '语法更简单'],
             answer: ['支持从右向左查找', '更灵活', '性能更好'],
-            points: 15
+            points: 15,
+            explanation: `【答案】支持从右向左查找、更灵活、性能更好。【解析】Ctrl+Shift+L快速筛选数据，可按多条件过滤这一知识点在Excel数据处理中具有重要地位。`,
+            tags: ['Excel', '数据处理', '表格操作', '数据筛选', 'VLOOKUP函数', 'INDEX-MATCH'],
+            difficulty: 2
           },
           {
             id: 'ex-2-2-6',
@@ -259,7 +337,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['IF', 'IFERROR', 'ERROR', 'HANDLE'],
             answer: 'IFERROR',
-            points: 10
+            points: 10,
+            explanation: `【答案】IFERROR。【解析】Ctrl+Shift+L快速筛选数据，可按多条件过滤这一知识点在Excel数据处理中具有重要地位。`,
+            tags: ['Excel', '数据处理', '表格操作', '数据筛选', 'IF函数', '统计函数'],
+            difficulty: 1
           },
           {
             id: 'ex-2-2-7',
@@ -267,7 +348,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['DATEDIF', 'DATE', 'YEAR', 'DAYS'],
             answer: 'DATEDIF',
-            points: 10
+            points: 10,
+            explanation: `【答案】DATEDIF。【解析】Ctrl+Shift+L快速筛选数据，可按多条件过滤这一知识点在Excel数据处理中具有重要地位。`,
+            tags: ['Excel', '数据处理', '表格操作', '数据筛选', 'IF函数', '统计函数'],
+            difficulty: 1
           }
         ]
       }
@@ -292,7 +376,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['列表', '字典', '元组', '集合'],
             answer: '字典',
-            points: 10
+            points: 10,
+            explanation: `【答案】字典。【解析】列表可变有序，字典键值对，元组不可变，集合自动去重这一知识点在Python数据分析中具有重要地位。`,
+            tags: ['Python', '编程基础', '数据分析', '数据结构', '数据类型', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-3-1-2',
@@ -300,7 +387,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['def', 'lambda', 'function', 'return'],
             answer: 'lambda',
-            points: 10
+            points: 10,
+            explanation: `【答案】lambda。【解析】def定义命名函数，lambda创建匿名函数，可设置默认参数和可变参数这一知识点在Python数据分析中具有重要地位。`,
+            tags: ['Python', '编程基础', '数据分析', '函数定义', '单选题'],
+            difficulty: 1
           },
           {
             id: 'ex-3-1-3',
@@ -308,7 +398,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['列表', '字典', '元组', '集合'],
             answer: '元组',
-            points: 10
+            points: 10,
+            explanation: `【答案】元组。【解析】列表可变有序，字典键值对，元组不可变，集合自动去重这一知识点在Python数据分析中具有重要地位。`,
+            tags: ['Python', '编程基础', '数据分析', '数据结构', '数据类型', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-3-1-4',
@@ -316,7 +409,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['import', 'include', 'require', 'load'],
             answer: 'import',
-            points: 10
+            points: 10,
+            explanation: `【答案】import。【解析】pd.read_csv()读取CSV，pd.read_excel()读取Excel文件这一知识点在Python数据分析中具有重要地位。`,
+            tags: ['Python', '编程基础', '数据分析', '数据读取', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-3-1-5',
@@ -324,7 +420,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['Enter', 'Shift+Enter', 'Ctrl+Enter', 'Alt+Enter'],
             answer: 'Shift+Enter',
-            points: 10
+            points: 10,
+            explanation: `【答案】Shift+Enter。【解析】本题考查Python数据分析核心知识点。正确选项准确描述了该概念的核心内涵。`,
+            tags: ['Python', '编程基础', '数据分析', '单选题'],
+            difficulty: 1
           },
           {
             id: 'ex-3-1-6',
@@ -332,7 +431,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'Java'],
             answer: ['Pandas', 'NumPy', 'Matplotlib', 'Seaborn'],
-            points: 15
+            points: 15,
+            explanation: `【答案】Pandas、NumPy、Matplotlib等。【解析】Matplotlib基础绘图库，Seaborn提供更美观的统计图表接口这一知识点在Python数据分析中具有重要地位。`,
+            tags: ['Python', '编程基础', '数据分析', 'Pandas', 'NumPy', '可视化'],
+            difficulty: 2
           },
           {
             id: 'ex-3-1-7',
@@ -340,7 +442,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['break', 'continue', 'exit', 'stop'],
             answer: 'break',
-            points: 10
+            points: 10,
+            explanation: `【答案】break。【解析】for循环遍历序列，while循环按条件迭代，优先使用列表推导式这一知识点在Python数据分析中具有重要地位。`,
+            tags: ['Python', '编程基础', '数据分析', '循环控制', '单选题'],
+            difficulty: 2
           }
         ]
       },
@@ -355,7 +460,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['read_csv()', 'read_excel()', 'read_json()', 'read_sql()'],
             answer: 'read_csv()',
-            points: 10
+            points: 10,
+            explanation: `【答案】read_csv()。【解析】pd.read_csv()读取CSV，pd.read_excel()读取Excel文件这一知识点在Python数据分析中具有重要地位。`,
+            tags: ['Python', '编程基础', '数据分析', 'Pandas', '数据读取', '函数定义'],
+            difficulty: 1
           },
           {
             id: 'ex-3-2-2',
@@ -363,7 +471,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['head()', 'tail()', 'info()', 'describe()'],
             answer: 'head()',
-            points: 10
+            points: 10,
+            explanation: `【答案】head()。【解析】df.head()查看前几行，df.describe()统计摘要，df.info()查看结构这一知识点在Python数据分析中具有重要地位。`,
+            tags: ['Python', '编程基础', '数据分析', 'Pandas', '探索性分析', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-3-2-3',
@@ -371,7 +482,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['数据类型', '(行数, 列数)', '列名', '索引'],
             answer: '(行数, 列数)',
-            points: 10
+            points: 10,
+            explanation: `【答案】。【解析】DataFrame是二维表格，Series是一维数组，是Pandas核心数据结构这一知识点在Python数据分析中具有重要地位。`,
+            tags: ['Python', '编程基础', '数据分析', 'Pandas', '数据结构', '数据类型'],
+            difficulty: 2
           },
           {
             id: 'ex-3-2-4',
@@ -379,7 +493,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['df.loc[]', 'df.iloc[]', 'df[]', 'df.row()'],
             answer: 'df.loc[]',
-            points: 10
+            points: 10,
+            explanation: `【答案】df.loc[]。【解析】df.loc[]基于标签索引，df.iloc[]基于位置索引，布尔索引按条件筛选这一知识点在Python数据分析中具有重要地位。`,
+            tags: ['Python', '编程基础', '数据分析', 'Pandas', '数据筛选', '索引切片'],
+            difficulty: 2
           },
           {
             id: 'ex-3-2-5',
@@ -387,7 +504,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['df.loc[]', 'df.iloc[]', 'df[]', 'df.row()'],
             answer: 'df.iloc[]',
-            points: 10
+            points: 10,
+            explanation: `【答案】df.iloc[]。【解析】df.loc[]基于标签索引，df.iloc[]基于位置索引，布尔索引按条件筛选这一知识点在Python数据分析中具有重要地位。`,
+            tags: ['Python', '编程基础', '数据分析', 'Pandas', '数据筛选', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-3-2-6',
@@ -395,7 +515,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['head()', 'tail()', 'info()', 'describe()'],
             answer: 'describe()',
-            points: 10
+            points: 10,
+            explanation: `【答案】describe()。【解析】df.head()查看前几行，df.describe()统计摘要，df.info()查看结构这一知识点在Python数据分析中具有重要地位。`,
+            tags: ['Python', '编程基础', '数据分析', 'Pandas', '探索性分析', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-3-2-7',
@@ -403,7 +526,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['df.to_csv()', 'df.save_csv()', 'df.export_csv()', 'df.write_csv()'],
             answer: 'df.to_csv()',
-            points: 10
+            points: 10,
+            explanation: `【答案】df.to_csv()。【解析】DataFrame是二维表格，Series是一维数组，是Pandas核心数据结构这一知识点在Python数据分析中具有重要地位。`,
+            tags: ['Python', '编程基础', '数据分析', '数据结构', '单选题'],
+            difficulty: 2
           }
         ]
       },
@@ -418,7 +544,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['isna()', 'duplicated()', 'drop_duplicates()', 'fillna()'],
             answer: 'duplicated()',
-            points: 10
+            points: 10,
+            explanation: `【答案】duplicated()。【解析】Pandas是Python数据分析核心库，提供DataFrame和Series数据结构这一知识点在Python数据分析中具有重要地位。`,
+            tags: ['Python', '编程基础', '数据分析', 'Pandas', '数据清洗', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-3-3-2',
@@ -426,7 +555,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['isna()', 'dropna()', 'fillna()', 'replace()'],
             answer: 'fillna()',
-            points: 10
+            points: 10,
+            explanation: `【答案】fillna()。【解析】处理缺失值：isnull检测、dropna删除、fillna填充；drop_duplicates去重这一知识点在Python数据分析中具有重要地位。`,
+            tags: ['Python', '编程基础', '数据分析', 'Pandas', '数据清洗', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-3-3-3',
@@ -434,7 +566,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['isna()', 'duplicated()', 'dropna()', 'fillna()'],
             answer: 'isna()',
-            points: 10
+            points: 10,
+            explanation: `【答案】isna()。【解析】Pandas是Python数据分析核心库，提供DataFrame和Series数据结构这一知识点在Python数据分析中具有重要地位。`,
+            tags: ['Python', '编程基础', '数据分析', 'Pandas', '数据清洗', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-3-3-4',
@@ -442,7 +577,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['isna()', 'duplicated()', 'drop_duplicates()', 'fillna()'],
             answer: 'drop_duplicates()',
-            points: 10
+            points: 10,
+            explanation: `【答案】drop_duplicates()。【解析】Pandas是Python数据分析核心库，提供DataFrame和Series数据结构这一知识点在Python数据分析中具有重要地位。`,
+            tags: ['Python', '编程基础', '数据分析', 'Pandas', '数据清洗', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-3-3-5',
@@ -450,7 +588,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['astype()', 'to_datetime()', 'to_date()', 'convert()'],
             answer: 'to_datetime()',
-            points: 10
+            points: 10,
+            explanation: `【答案】to_datetime()。【解析】pd.to_datetime()转换日期，dt.year/month/day/weekday提取时间维度这一知识点在Python数据分析中具有重要地位。`,
+            tags: ['Python', '编程基础', '数据分析', '函数定义', '时间处理', '单选题'],
+            difficulty: 1
           },
           {
             id: 'ex-3-3-6',
@@ -458,7 +599,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['trim()', 'strip()', 'remove_space()', 'clean()'],
             answer: 'strip()',
-            points: 10
+            points: 10,
+            explanation: `【答案】strip()。【解析】本题考查Python数据分析核心知识点。正确选项准确描述了该概念的核心内涵。`,
+            tags: ['Python', '编程基础', '数据分析', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-3-3-7',
@@ -466,7 +610,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['均值填充', '中位数填充', '前向填充', '后向填充'],
             answer: ['均值填充', '中位数填充', '前向填充', '后向填充'],
-            points: 15
+            points: 15,
+            explanation: `【答案】均值填充、中位数填充、前向填充等。【解析】处理缺失值：isnull检测、dropna删除、fillna填充；drop_duplicates去重这一知识点在Python数据分析中具有重要地位。`,
+            tags: ['Python', '编程基础', '数据分析', '数据清洗', '多选题'],
+            difficulty: 2
           }
         ]
       },
@@ -481,7 +628,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['groupby()', 'pivot_table()', 'merge()', 'concat()'],
             answer: 'groupby()',
-            points: 10
+            points: 10,
+            explanation: `【答案】groupby()。【解析】groupby分组后配合聚合函数，类似SQL的GROUP BY这一知识点在Python数据分析中具有重要地位。`,
+            tags: ['Python', '编程基础', '数据分析', 'Pandas', '数据聚合', '数据合并'],
+            difficulty: 2
           },
           {
             id: 'ex-3-4-2',
@@ -489,7 +639,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['groupby()', 'pivot_table()', 'merge()', 'resample()'],
             answer: 'pivot_table()',
-            points: 10
+            points: 10,
+            explanation: `【答案】pivot_table()。【解析】pivot_table创建透视表，melt将宽表转为长表，类似Excel透视功能这一知识点在Python数据分析中具有重要地位。`,
+            tags: ['Python', '编程基础', '数据分析', '数据聚合', '数据合并', '函数定义'],
+            difficulty: 1
           },
           {
             id: 'ex-3-4-3',
@@ -497,7 +650,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['groupby()', 'merge()', 'concat()', 'join()'],
             answer: 'merge()',
-            points: 10
+            points: 10,
+            explanation: `【答案】merge()。【解析】pd.merge类似SQL JOIN，pd.concat沿轴堆叠数据，df.join按索引合并这一知识点在Python数据分析中具有重要地位。`,
+            tags: ['Python', '编程基础', '数据分析', 'Pandas', '数据结构', '数据聚合'],
+            difficulty: 2
           },
           {
             id: 'ex-3-4-4',
@@ -505,7 +661,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['groupby()', 'merge()', 'concat()', 'join()'],
             answer: 'concat()',
-            points: 10
+            points: 10,
+            explanation: `【答案】concat()。【解析】pd.merge类似SQL JOIN，pd.concat沿轴堆叠数据，df.join按索引合并这一知识点在Python数据分析中具有重要地位。`,
+            tags: ['Python', '编程基础', '数据分析', 'Pandas', '数据结构', '数据聚合'],
+            difficulty: 2
           },
           {
             id: 'ex-3-4-5',
@@ -513,7 +672,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['"H"', '"D"', '"W"', '"M"'],
             answer: '"D"',
-            points: 10
+            points: 10,
+            explanation: `【答案】。【解析】pd.to_datetime()转换日期，dt.year/month/day/weekday提取时间维度这一知识点在Python数据分析中具有重要地位。`,
+            tags: ['Python', '编程基础', '数据分析', '函数定义', '时间处理', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-3-4-6',
@@ -521,7 +683,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['resample()', 'rolling()', 'shift()', 'diff()'],
             answer: 'rolling()',
-            points: 10
+            points: 10,
+            explanation: `【答案】rolling()。【解析】本题考查Python数据分析核心知识点。正确选项准确描述了该概念的核心内涵。`,
+            tags: ['Python', '编程基础', '数据分析', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-3-4-7',
@@ -529,7 +694,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['内连接', '左连接', '右连接', '外连接'],
             answer: ['内连接', '左连接', '右连接', '外连接'],
-            points: 15
+            points: 15,
+            explanation: `【答案】内连接、左连接、右连接等。【解析】pd.merge类似SQL JOIN，pd.concat沿轴堆叠数据，df.join按索引合并这一知识点在Python数据分析中具有重要地位。`,
+            tags: ['Python', '编程基础', '数据分析', '数据合并', '多选题'],
+            difficulty: 2
           }
         ]
       }
@@ -554,7 +722,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['折线图', '柱状图', '饼图', '散点图'],
             answer: '柱状图',
-            points: 10
+            points: 10,
+            explanation: `【答案】柱状图。【解析】柱状图用于对比不同类别数据的大小，适合展示分类变量的数值这一知识点在数据可视化原理中具有重要地位。`,
+            tags: ['数据可视化', '图表设计', '可视化原则', '折线图', '柱状图', '饼图'],
+            difficulty: 2
           },
           {
             id: 'ex-4-1-2',
@@ -562,7 +733,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['柱状图', '折线图', '饼图', '散点图'],
             answer: '折线图',
-            points: 10
+            points: 10,
+            explanation: `【答案】折线图。【解析】折线图展示数据随时间变化的趋势，适合时间序列分析这一知识点在数据可视化原理中具有重要地位。`,
+            tags: ['数据可视化', '图表设计', '可视化原则', '折线图', '柱状图', '饼图'],
+            difficulty: 2
           },
           {
             id: 'ex-4-1-3',
@@ -570,7 +744,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['柱状图', '折线图', '直方图', '散点图'],
             answer: '直方图',
-            points: 10
+            points: 10,
+            explanation: `【答案】直方图。【解析】直方图展示数值变量的分布形态，识别集中趋势和离散程度这一知识点在数据可视化原理中具有重要地位。`,
+            tags: ['数据可视化', '图表设计', '可视化原则', '折线图', '柱状图', '散点图'],
+            difficulty: 2
           },
           {
             id: 'ex-4-1-4',
@@ -578,7 +755,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['折线图', '柱状图', '饼图', '散点图'],
             answer: '散点图',
-            points: 10
+            points: 10,
+            explanation: `【答案】散点图。【解析】散点图展示两个数值变量间的关系，可识别相关性和异常值这一知识点在数据可视化原理中具有重要地位。`,
+            tags: ['数据可视化', '图表设计', '可视化原则', '折线图', '柱状图', '饼图'],
+            difficulty: 2
           },
           {
             id: 'ex-4-1-5',
@@ -586,7 +766,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['折线图', '柱状图', '饼图', '散点图'],
             answer: '饼图',
-            points: 10
+            points: 10,
+            explanation: `【答案】饼图。【解析】饼图展示各部分占总体的比例，类别过多时不宜使用这一知识点在数据可视化原理中具有重要地位。`,
+            tags: ['数据可视化', '图表设计', '可视化原则', '折线图', '柱状图', '饼图'],
+            difficulty: 2
           },
           {
             id: 'ex-4-1-6',
@@ -594,7 +777,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['不超过3个', '不超过6个', '不超过10个', '任意数量'],
             answer: '不超过6个',
-            points: 10
+            points: 10,
+            explanation: `【答案】不超过6个。【解析】饼图展示各部分占总体的比例，类别过多时不宜使用这一知识点在数据可视化原理中具有重要地位。`,
+            tags: ['数据可视化', '图表设计', '可视化原则', '饼图', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-4-1-7',
@@ -602,7 +788,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['柱状图', '折线图', '饼图', '热力图', '流程图'],
             answer: ['柱状图', '折线图', '饼图', '热力图'],
-            points: 15
+            points: 15,
+            explanation: `【答案】柱状图、折线图、饼图等。【解析】折线图展示数据随时间变化的趋势，适合时间序列分析这一知识点在数据可视化原理中具有重要地位。`,
+            tags: ['数据可视化', '图表设计', '可视化原则', '折线图', '柱状图', '饼图'],
+            difficulty: 2
           }
         ]
       },
@@ -617,7 +806,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['heatmap()', 'scatterplot()', 'boxplot()', 'pairplot()'],
             answer: 'heatmap()',
-            points: 10
+            points: 10,
+            explanation: `【答案】heatmap()。【解析】热力图用颜色深浅表示数值大小，适合展示相关性矩阵和空间密度这一知识点在数据可视化原理中具有重要地位。`,
+            tags: ['数据可视化', '图表设计', '可视化原则', '散点图', '箱线图', '热力图'],
+            difficulty: 1
           },
           {
             id: 'ex-4-2-2',
@@ -625,7 +817,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['subplot()', 'plot()', 'scatter()', 'bar()'],
             answer: 'subplot()',
-            points: 10
+            points: 10,
+            explanation: `【答案】subplot()。【解析】柱状图用于对比不同类别数据的大小，适合展示分类变量的数值这一知识点在数据可视化原理中具有重要地位。`,
+            tags: ['数据可视化', '图表设计', '可视化原则', '柱状图', '散点图', '单选题'],
+            difficulty: 1
           },
           {
             id: 'ex-4-2-3',
@@ -633,7 +828,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['plt.title()', 'plt.label()', 'plt.header()', 'plt.caption()'],
             answer: 'plt.title()',
-            points: 10
+            points: 10,
+            explanation: `【答案】plt.title()。【解析】本题考查数据可视化原理核心知识点。正确选项准确描述了该概念的核心内涵。`,
+            tags: ['数据可视化', '图表设计', '可视化原则', '单选题'],
+            difficulty: 1
           },
           {
             id: 'ex-4-2-4',
@@ -641,7 +839,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['plt.bar()', 'plt.plot()', 'plt.hist()', 'plt.scatter()'],
             answer: 'plt.plot()',
-            points: 10
+            points: 10,
+            explanation: `【答案】plt.plot()。【解析】折线图展示数据随时间变化的趋势，适合时间序列分析这一知识点在数据可视化原理中具有重要地位。`,
+            tags: ['数据可视化', '图表设计', '可视化原则', '折线图', '柱状图', '散点图'],
+            difficulty: 1
           },
           {
             id: 'ex-4-2-5',
@@ -649,7 +850,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['heatmap()', 'scatterplot()', 'boxplot()', 'pairplot()'],
             answer: 'boxplot()',
-            points: 10
+            points: 10,
+            explanation: `【答案】boxplot()。【解析】箱线图展示四分位数结构，便于识别离群值和多组数据分布对比这一知识点在数据可视化原理中具有重要地位。`,
+            tags: ['数据可视化', '图表设计', '可视化原则', '散点图', '箱线图', '热力图'],
+            difficulty: 1
           },
           {
             id: 'ex-4-2-6',
@@ -657,7 +861,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['plt.legend()', 'plt.label()', 'plt.note()', 'plt.key()'],
             answer: 'plt.legend()',
-            points: 10
+            points: 10,
+            explanation: `【答案】plt.legend()。【解析】本题考查数据可视化原理核心知识点。正确选项准确描述了该概念的核心内涵。`,
+            tags: ['数据可视化', '图表设计', '可视化原则', '单选题'],
+            difficulty: 1
           },
           {
             id: 'ex-4-2-7',
@@ -665,7 +872,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['lineplot()', 'scatterplot()', 'barplot()', 'histplot()'],
             answer: 'scatterplot()',
-            points: 10
+            points: 10,
+            explanation: `【答案】scatterplot()。【解析】散点图展示两个数值变量间的关系，可识别相关性和异常值这一知识点在数据可视化原理中具有重要地位。`,
+            tags: ['数据可视化', '图表设计', '可视化原则', '折线图', '柱状图', '散点图'],
+            difficulty: 1
           }
         ]
       }
@@ -690,7 +900,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['价格', '部署方式', '响应速度和灵活性', '数据存储方式'],
             answer: '响应速度和灵活性',
-            points: 10
+            points: 10,
+            explanation: `【答案】响应速度和灵活性。【解析】BI将数据转化为洞察，通过报表、仪表盘、OLAP分析支持决策这一知识点在商业智能与报表中具有重要地位。`,
+            tags: ['BI', '报表系统', '数据分析', '商业智能', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-5-1-2',
@@ -698,7 +911,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['数据仓库', 'ETL', '报表工具', '编程语言'],
             answer: '编程语言',
-            points: 10
+            points: 10,
+            explanation: `【答案】编程语言。【解析】BI将数据转化为洞察，通过报表、仪表盘、OLAP分析支持决策这一知识点在商业智能与报表中具有重要地位。`,
+            tags: ['BI', '报表系统', '数据分析', '商业智能', '数据仓库', 'ETL'],
+            difficulty: 1
           },
           {
             id: 'ex-5-1-3',
@@ -706,7 +922,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['本地部署', '云端部署', '混合部署', '手动部署'],
             answer: ['本地部署', '云端部署', '混合部署'],
-            points: 15
+            points: 15,
+            explanation: `【答案】本地部署、云端部署、混合部署。【解析】BI将数据转化为洞察，通过报表、仪表盘、OLAP分析支持决策这一知识点在商业智能与报表中具有重要地位。`,
+            tags: ['BI', '报表系统', '数据分析', '商业智能', '多选题'],
+            difficulty: 2
           },
           {
             id: 'ex-5-1-4',
@@ -714,7 +933,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['功能需求', '性能要求', '成本预算', '技术支持'],
             answer: ['功能需求', '性能要求', '成本预算', '技术支持'],
-            points: 15
+            points: 15,
+            explanation: `【答案】功能需求、性能要求、成本预算等。【解析】BI将数据转化为洞察，通过报表、仪表盘、OLAP分析支持决策这一知识点在商业智能与报表中具有重要地位。`,
+            tags: ['BI', '报表系统', '数据分析', '商业智能', '多选题'],
+            difficulty: 2
           },
           {
             id: 'ex-5-1-5',
@@ -722,7 +944,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['提取、转换、加载', '提取、传输、加载', '提取、转换、存储', '提取、传输、存储'],
             answer: '提取、转换、加载',
-            points: 10
+            points: 10,
+            explanation: `【答案】提取、转换、加载。【解析】ETL即数据抽取/转换/加载，将分散源系统数据经清洗转换后加载到数据仓库这一知识点在商业智能与报表中具有重要地位。`,
+            tags: ['BI', '报表系统', '数据分析', 'ETL', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-5-1-6',
@@ -730,7 +955,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['存储原始数据', '存储处理后的数据', '存储日志文件', '存储配置文件'],
             answer: '存储处理后的数据',
-            points: 10
+            points: 10,
+            explanation: `【答案】存储处理后的数据。【解析】数据仓库是面向主题、集成、相对稳定、反映历史变化的数据集合这一知识点在商业智能与报表中具有重要地位。`,
+            tags: ['BI', '报表系统', '数据分析', '数据仓库', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-5-1-7',
@@ -738,7 +966,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['自助分析', '实时数据', '移动端支持', 'AI辅助分析'],
             answer: ['自助分析', '实时数据', '移动端支持', 'AI辅助分析'],
-            points: 15
+            points: 15,
+            explanation: `【答案】自助分析、实时数据、移动端支持等。【解析】BI将数据转化为洞察，通过报表、仪表盘、OLAP分析支持决策这一知识点在商业智能与报表中具有重要地位。`,
+            tags: ['BI', '报表系统', '数据分析', '商业智能', '多选题'],
+            difficulty: 2
           }
         ]
       },
@@ -753,7 +984,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['SUM', 'CALCULATE', 'FILTER', 'ALL'],
             answer: 'CALCULATE',
-            points: 10
+            points: 10,
+            explanation: `【答案】CALCULATE。【解析】DAX是Power BI的数据分析表达式语言，用于创建度量值和计算列这一知识点在商业智能与报表中具有重要地位。`,
+            tags: ['BI', '报表系统', '数据分析', 'DAX', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-5-2-2',
@@ -761,7 +995,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['一种数据模型结构', '一种图表类型', '一种编程语言', '一种存储方式'],
             answer: '一种数据模型结构',
-            points: 10
+            points: 10,
+            explanation: `【答案】一种数据模型结构。【解析】DAX是Power BI的数据分析表达式语言，用于创建度量值和计算列这一知识点在商业智能与报表中具有重要地位。`,
+            tags: ['BI', '报表系统', '数据分析', '维度建模', 'DAX', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-5-2-3',
@@ -769,7 +1006,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['计算列在数据刷新时计算，度量值在查询时计算', '计算列在查询时计算，度量值在数据刷新时计算', '没有区别', '计算列只能用于文本'],
             answer: '计算列在数据刷新时计算，度量值在查询时计算',
-            points: 10
+            points: 10,
+            explanation: `【答案】计算列在数据刷新时计算，度量值在查询时计算。【解析】DAX是Power BI的数据分析表达式语言，用于创建度量值和计算列这一知识点在商业智能与报表中具有重要地位。`,
+            tags: ['BI', '报表系统', '数据分析', 'DAX', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-5-2-4',
@@ -777,7 +1017,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['SUM', 'CALCULATE', 'FILTER', 'ALL'],
             answer: 'ALL',
-            points: 10
+            points: 10,
+            explanation: `【答案】ALL。【解析】DAX是Power BI的数据分析表达式语言，用于创建度量值和计算列这一知识点在商业智能与报表中具有重要地位。`,
+            tags: ['BI', '报表系统', '数据分析', 'DAX', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-5-2-5',
@@ -785,7 +1028,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['SUM', 'CALCULATE', 'FILTER', 'ALL'],
             answer: 'FILTER',
-            points: 10
+            points: 10,
+            explanation: `【答案】FILTER。【解析】DAX是Power BI的数据分析表达式语言，用于创建度量值和计算列这一知识点在商业智能与报表中具有重要地位。`,
+            tags: ['BI', '报表系统', '数据分析', 'DAX', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-5-2-6',
@@ -793,7 +1039,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['TOTALYTD', 'SAMEPERIODLASTYEAR', 'SUM', 'COUNT'],
             answer: ['TOTALYTD', 'SAMEPERIODLASTYEAR'],
-            points: 15
+            points: 15,
+            explanation: `【答案】TOTALYTD、SAMEPERIODLASTYEAR。【解析】DAX是Power BI的数据分析表达式语言，用于创建度量值和计算列这一知识点在商业智能与报表中具有重要地位。`,
+            tags: ['BI', '报表系统', '数据分析', 'DAX', '多选题'],
+            difficulty: 2
           },
           {
             id: 'ex-5-2-7',
@@ -801,7 +1050,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['SUMX', 'COUNTX', 'MAXX', 'MINX'],
             answer: ['SUMX', 'COUNTX', 'MAXX', 'MINX'],
-            points: 15
+            points: 15,
+            explanation: `【答案】SUMX、COUNTX、MAXX等。【解析】DAX是Power BI的数据分析表达式语言，用于创建度量值和计算列这一知识点在商业智能与报表中具有重要地位。`,
+            tags: ['BI', '报表系统', '数据分析', 'DAX', '多选题'],
+            difficulty: 2
           }
         ]
       }
@@ -826,7 +1078,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['MRR', 'churn率', 'LTV', 'GMV'],
             answer: ['MRR', 'churn率', 'LTV'],
-            points: 10
+            points: 10,
+            explanation: `【答案】MRR、churn率、LTV。【解析】留存率衡量用户持续使用情况，cohort分析按用户分组观察留存曲线这一知识点在商务数据分析实战中具有重要地位。`,
+            tags: ['商务分析', '业务分析', '实战案例', '商业模式', '留存分析', '多选题'],
+            difficulty: 2
           },
           {
             id: 'ex-6-1-2',
@@ -834,7 +1089,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['多维度指标体系', '唯一关键指标', '运营管理工具', '数据模型框架'],
             answer: '唯一关键指标',
-            points: 10
+            points: 10,
+            explanation: `【答案】唯一关键指标。【解析】本题考查商务数据分析实战核心知识点。正确选项准确描述了该概念的核心内涵。`,
+            tags: ['商务分析', '业务分析', '实战案例', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-6-1-3',
@@ -842,7 +1100,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['GMV', '转化率', '客单价', 'MRR'],
             answer: ['GMV', '转化率', '客单价'],
-            points: 15
+            points: 15,
+            explanation: `【答案】GMV、转化率、客单价。【解析】营销分析衡量渠道ROI、用户获取成本、转化率和归因，优化营销投入这一知识点在商务数据分析实战中具有重要地位。`,
+            tags: ['商务分析', '业务分析', '实战案例', '营销分析', '漏斗分析', '多选题'],
+            difficulty: 2
           },
           {
             id: 'ex-6-1-4',
@@ -850,7 +1111,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['DAU', '留存率', 'ARPU', 'LTV'],
             answer: ['DAU', '留存率', 'ARPU', 'LTV'],
-            points: 15
+            points: 15,
+            explanation: `【答案】DAU、留存率、ARPU等。【解析】留存率衡量用户持续使用情况，cohort分析按用户分组观察留存曲线这一知识点在商务数据分析实战中具有重要地位。`,
+            tags: ['商务分析', '业务分析', '实战案例', '留存分析', '多选题'],
+            difficulty: 2
           },
           {
             id: 'ex-6-1-5',
@@ -858,7 +1122,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['指标之间没有关联', '指标之间是独立的', '指标之间存在因果关系', '指标只能单独使用'],
             answer: '指标之间存在因果关系',
-            points: 10
+            points: 10,
+            explanation: `【答案】指标之间存在因果关系。【解析】本题考查商务数据分析实战核心知识点。正确选项准确描述了该概念的核心内涵。`,
+            tags: ['商务分析', '业务分析', '实战案例', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-6-1-6',
@@ -866,7 +1133,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['按字母顺序', '按重要性和影响程度', '按创建时间', '随机排序'],
             answer: '按重要性和影响程度',
-            points: 10
+            points: 10,
+            explanation: `【答案】按重要性和影响程度。【解析】本题考查商务数据分析实战核心知识点。正确选项准确描述了该概念的核心内涵。`,
+            tags: ['商务分析', '业务分析', '实战案例', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-6-1-7',
@@ -874,7 +1144,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['存储数据', '实时监控关键指标', '编写代码', '设计图表'],
             answer: '实时监控关键指标',
-            points: 10
+            points: 10,
+            explanation: `【答案】实时监控关键指标。【解析】本题考查商务数据分析实战核心知识点。正确选项准确描述了该概念的核心内涵。`,
+            tags: ['商务分析', '业务分析', '实战案例', '单选题'],
+            difficulty: 2
           }
         ]
       },
@@ -889,7 +1162,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['销售预测', '客户分群', '库存优化', '市场分析'],
             answer: '客户分群',
-            points: 10
+            points: 10,
+            explanation: `【答案】客户分群。【解析】客户分析包括画像、价值分层（RFM）、生命周期、留存和流失分析这一知识点在商务数据分析实战中具有重要地位。`,
+            tags: ['商务分析', '业务分析', '实战案例', '客户分析', 'RFM分析', '销售分析'],
+            difficulty: 2
           },
           {
             id: 'ex-6-2-2',
@@ -897,7 +1173,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['消费金额', '消费频率', '最近一次消费', '客户价值'],
             answer: '最近一次消费',
-            points: 10
+            points: 10,
+            explanation: `【答案】最近一次消费。【解析】RFM基于Recency最近、Frequency频率、Monetary金额三维度对客户价值分层这一知识点在商务数据分析实战中具有重要地位。`,
+            tags: ['商务分析', '业务分析', '实战案例', '客户分析', 'RFM分析', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-6-2-3',
@@ -905,7 +1184,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['用户注册流程', '购买转化流程', '产品使用流程', '员工离职流程'],
             answer: ['用户注册流程', '购买转化流程', '产品使用流程'],
-            points: 15
+            points: 15,
+            explanation: `【答案】用户注册流程、购买转化流程、产品使用流程。【解析】客户分析包括画像、价值分层（RFM）、生命周期、留存和流失分析这一知识点在商务数据分析实战中具有重要地位。`,
+            tags: ['商务分析', '业务分析', '实战案例', '客户分析', '产品分析', '漏斗分析'],
+            difficulty: 2
           },
           {
             id: 'ex-6-2-4',
@@ -913,7 +1195,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['数据存储方法', '通过对比不同方案来优化业务指标', '编程方法', '数据可视化方法'],
             answer: '通过对比不同方案来优化业务指标',
-            points: 10
+            points: 10,
+            explanation: `【答案】通过对比不同方案来优化业务指标。【解析】A/B测试将用户随机分组接受不同策略，通过统计检验比较效果差异这一知识点在商务数据分析实战中具有重要地位。`,
+            tags: ['商务分析', '业务分析', '实战案例', 'A/B测试', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-6-2-5',
@@ -921,7 +1206,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['次日留存', '7日留存', '30日留存', '90日留存'],
             answer: ['次日留存', '7日留存', '30日留存', '90日留存'],
-            points: 15
+            points: 15,
+            explanation: `【答案】次日留存、7日留存、30日留存等。【解析】留存率衡量用户持续使用情况，cohort分析按用户分组观察留存曲线这一知识点在商务数据分析实战中具有重要地位。`,
+            tags: ['商务分析', '业务分析', '实战案例', '客户分析', '留存分析', '多选题'],
+            difficulty: 2
           },
           {
             id: 'ex-6-2-6',
@@ -929,7 +1217,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['存储用户数据', '了解用户如何使用产品', '编写代码', '设计界面'],
             answer: '了解用户如何使用产品',
-            points: 10
+            points: 10,
+            explanation: `【答案】了解用户如何使用产品。【解析】客户分析包括画像、价值分层（RFM）、生命周期、留存和流失分析这一知识点在商务数据分析实战中具有重要地位。`,
+            tags: ['商务分析', '业务分析', '实战案例', '客户分析', '产品分析', '单选题'],
+            difficulty: 1
           },
           {
             id: 'ex-6-2-7',
@@ -937,7 +1228,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['平均购买频次', '平均客单价', '客户生命周期长度', '客户获取成本'],
             answer: ['平均购买频次', '平均客单价', '客户生命周期长度', '客户获取成本'],
-            points: 15
+            points: 15,
+            explanation: `【答案】平均购买频次、平均客单价、客户生命周期长度等。【解析】客户分析包括画像、价值分层（RFM）、生命周期、留存和流失分析这一知识点在商务数据分析实战中具有重要地位。`,
+            tags: ['商务分析', '业务分析', '实战案例', '客户分析', '获客分析', '财务分析'],
+            difficulty: 2
           }
         ]
       }
@@ -962,7 +1256,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['均值', '中位数', '标准差', '众数'],
             answer: '标准差',
-            points: 10
+            points: 10,
+            explanation: `【答案】标准差。【解析】方差衡量数据与均值的偏离程度，标准差是方差的平方根，更易解释这一知识点在统计分析基础中具有重要地位。`,
+            tags: ['统计学', '统计分析', '数据统计', '均值', '中位数', '众数'],
+            difficulty: 2
           },
           {
             id: 'ex-7-1-2',
@@ -970,7 +1267,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['中位数', '众数', '均值', '方差'],
             answer: '均值',
-            points: 10
+            points: 10,
+            explanation: `【答案】均值。【解析】均值是数据总和除以个数，对极端值敏感，适合近似对称分布的数据这一知识点在统计分析基础中具有重要地位。`,
+            tags: ['统计学', '统计分析', '数据统计', '均值', '中位数', '众数'],
+            difficulty: 2
           },
           {
             id: 'ex-7-1-3',
@@ -978,7 +1278,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['均值', '中位数', '众数', '标准差'],
             answer: ['均值', '中位数', '众数'],
-            points: 15
+            points: 15,
+            explanation: `【答案】均值、中位数、众数。【解析】中位数将数据排序后取中间值，不受极端值影响，适合偏态分布这一知识点在统计分析基础中具有重要地位。`,
+            tags: ['统计学', '统计分析', '数据统计', '均值', '中位数', '众数'],
+            difficulty: 2
           },
           {
             id: 'ex-7-1-4',
@@ -986,7 +1289,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['方差', '标准差', '极差', '中位数'],
             answer: ['方差', '标准差', '极差'],
-            points: 15
+            points: 15,
+            explanation: `【答案】方差、标准差、极差。【解析】方差衡量数据与均值的偏离程度，标准差是方差的平方根，更易解释这一知识点在统计分析基础中具有重要地位。`,
+            tags: ['统计学', '统计分析', '数据统计', '中位数', '离散程度', '多选题'],
+            difficulty: 2
           },
           {
             id: 'ex-7-1-5',
@@ -994,7 +1300,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['均值', '中位数', '众数', '标准差'],
             answer: '中位数',
-            points: 10
+            points: 10,
+            explanation: `【答案】中位数。【解析】中位数将数据排序后取中间值，不受极端值影响，适合偏态分布这一知识点在统计分析基础中具有重要地位。`,
+            tags: ['统计学', '统计分析', '数据统计', '均值', '中位数', '众数'],
+            difficulty: 2
           },
           {
             id: 'ex-7-1-6',
@@ -1002,7 +1311,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['对称分布', '均值=中位数=众数', '呈钟形曲线', '偏态分布'],
             answer: ['对称分布', '均值=中位数=众数', '呈钟形曲线'],
-            points: 15
+            points: 15,
+            explanation: `【答案】对称分布、均值=中位数=众数、呈钟形曲线。【解析】正态分布呈钟形对称，约68%数据在均值±1σ、95%在±2σ、99.7%在±3σ这一知识点在统计分析基础中具有重要地位。`,
+            tags: ['统计学', '统计分析', '数据统计', '均值', '中位数', '众数'],
+            difficulty: 2
           },
           {
             id: 'ex-7-1-7',
@@ -1010,7 +1322,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['样本均值的分布趋近于正态分布', '数据必须是正态分布', '样本量越小越好', '不需要抽样'],
             answer: '样本均值的分布趋近于正态分布',
-            points: 10
+            points: 10,
+            explanation: `【答案】样本均值的分布趋近于正态分布。【解析】常用概率分布：二项（n次成功次数）、泊松（单位时间事件数）、正态（连续随机变量）这一知识点在统计分析基础中具有重要地位。`,
+            tags: ['统计学', '统计分析', '数据统计', '均值', '正态分布', '抽样方法'],
+            difficulty: 2
           }
         ]
       },
@@ -1025,7 +1340,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['接受原假设', '拒绝原假设', '数据无效', '需要更多数据'],
             answer: '拒绝原假设',
-            points: 10
+            points: 10,
+            explanation: `【答案】拒绝原假设。【解析】假设检验验证关于总体的假设，p<0.05通常认为具有统计显著性拒绝原假设这一知识点在统计分析基础中具有重要地位。`,
+            tags: ['统计学', '统计分析', '数据统计', '假设检验', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-7-2-2',
@@ -1033,7 +1351,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['0.01和0.1', '0.05和0.1', '0.05和0.01', '0.5和0.1'],
             answer: '0.05和0.01',
-            points: 10
+            points: 10,
+            explanation: `【答案】0.05和0.01。【解析】假设检验验证关于总体的假设，p<0.05通常认为具有统计显著性拒绝原假设这一知识点在统计分析基础中具有重要地位。`,
+            tags: ['统计学', '统计分析', '数据统计', '假设检验', '单选题'],
+            difficulty: 1
           },
           {
             id: 'ex-7-2-3',
@@ -1041,7 +1362,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['存在差异或有关系', '没有差异或没有关系', '数据错误', '需要更多数据'],
             answer: '没有差异或没有关系',
-            points: 10
+            points: 10,
+            explanation: `【答案】没有差异或没有关系。【解析】本题考查统计分析基础核心知识点。正确选项准确描述了该概念的核心内涵。`,
+            tags: ['统计学', '统计分析', '数据统计', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-7-2-4',
@@ -1049,7 +1373,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['存在差异或有关系', '没有差异或没有关系', '数据错误', '需要更多数据'],
             answer: '存在差异或有关系',
-            points: 10
+            points: 10,
+            explanation: `【答案】存在差异或有关系。【解析】本题考查统计分析基础核心知识点。正确选项准确描述了该概念的核心内涵。`,
+            tags: ['统计学', '统计分析', '数据统计', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-7-2-5',
@@ -1057,7 +1384,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['t检验', '卡方检验', 'ANOVA', '回归分析'],
             answer: 't检验',
-            points: 10
+            points: 10,
+            explanation: `【答案】t检验。【解析】假设检验验证关于总体的假设，p<0.05通常认为具有统计显著性拒绝原假设这一知识点在统计分析基础中具有重要地位。`,
+            tags: ['统计学', '统计分析', '数据统计', '均值', '假设检验', '回归分析'],
+            difficulty: 2
           },
           {
             id: 'ex-7-2-6',
@@ -1065,7 +1395,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['t检验', '卡方检验', 'ANOVA', '回归分析'],
             answer: '卡方检验',
-            points: 10
+            points: 10,
+            explanation: `【答案】卡方检验。【解析】假设检验验证关于总体的假设，p<0.05通常认为具有统计显著性拒绝原假设这一知识点在统计分析基础中具有重要地位。`,
+            tags: ['统计学', '统计分析', '数据统计', '假设检验', '回归分析', '卡方检验'],
+            difficulty: 2
           },
           {
             id: 'ex-7-2-7',
@@ -1073,7 +1406,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['t检验', '卡方检验', 'ANOVA', '回归分析'],
             answer: 'ANOVA',
-            points: 10
+            points: 10,
+            explanation: `【答案】ANOVA。【解析】假设检验验证关于总体的假设，p<0.05通常认为具有统计显著性拒绝原假设这一知识点在统计分析基础中具有重要地位。`,
+            tags: ['统计学', '统计分析', '数据统计', '均值', '假设检验', '回归分析'],
+            difficulty: 2
           },
           {
             id: 'ex-7-2-8',
@@ -1081,7 +1417,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['90%', '95%', '99%', '100%'],
             answer: ['90%', '95%', '99%'],
-            points: 15
+            points: 15,
+            explanation: `【答案】90%、95%、99%。【解析】置信区间给出参数估计的范围，95%置信区间意味着重复抽样有约95%概率覆盖真值这一知识点在统计分析基础中具有重要地位。`,
+            tags: ['统计学', '统计分析', '数据统计', '置信区间', '多选题'],
+            difficulty: 2
           }
         ]
       }
@@ -1106,7 +1445,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['分类', '聚类', '降维', '关联规则'],
             answer: '分类',
-            points: 10
+            points: 10,
+            explanation: `【答案】分类。【解析】监督学习使用带标签数据训练模型，分类预测离散类别，回归预测连续数值这一知识点在机器学习入门中具有重要地位。`,
+            tags: ['机器学习', '算法', '模型', '监督学习', '无监督学习', '分类算法'],
+            difficulty: 2
           },
           {
             id: 'ex-8-1-2',
@@ -1114,7 +1456,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['MSE', 'RMSE', '准确率', 'R² score'],
             answer: '准确率',
-            points: 10
+            points: 10,
+            explanation: `【答案】准确率。【解析】分类评估：准确率=预测正确数/总数；精确率/召回率/F1对类别不平衡场景更重要这一知识点在机器学习入门中具有重要地位。`,
+            tags: ['机器学习', '算法', '模型', '监督学习', '分类算法', '分类评估'],
+            difficulty: 3
           },
           {
             id: 'ex-8-1-3',
@@ -1122,7 +1467,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['欠拟合', '过拟合', '无拟合', '正常现象'],
             answer: '过拟合',
-            points: 10
+            points: 10,
+            explanation: `【答案】过拟合。【解析】过拟合在训练集表现好但测试集差（记忆了噪声），欠拟合都差（模型太简单）这一知识点在机器学习入门中具有重要地位。`,
+            tags: ['机器学习', '算法', '模型', '过拟合与欠拟合', '数据集划分', '单选题'],
+            difficulty: 3
           },
           {
             id: 'ex-8-1-4',
@@ -1130,7 +1478,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['分类', '回归', '聚类', '预测'],
             answer: '聚类',
-            points: 10
+            points: 10,
+            explanation: `【答案】聚类。【解析】无监督学习处理无标签数据，聚类发现分组，降维如PCA可视化高维数据这一知识点在机器学习入门中具有重要地位。`,
+            tags: ['机器学习', '算法', '模型', '监督学习', '无监督学习', '分类算法'],
+            difficulty: 2
           },
           {
             id: 'ex-8-1-5',
@@ -1138,7 +1489,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['线性回归', '逻辑回归', '决策树', 'K-means'],
             answer: ['线性回归', '逻辑回归', '决策树'],
-            points: 15
+            points: 15,
+            explanation: `【答案】线性回归、逻辑回归、决策树。【解析】监督学习使用带标签数据训练模型，分类预测离散类别，回归预测连续数值这一知识点在机器学习入门中具有重要地位。`,
+            tags: ['机器学习', '算法', '模型', '监督学习', '回归算法', '聚类算法'],
+            difficulty: 3
           },
           {
             id: 'ex-8-1-6',
@@ -1146,7 +1500,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['K-means', 'PCA', '层次聚类', '线性回归'],
             answer: ['K-means', 'PCA', '层次聚类'],
-            points: 15
+            points: 15,
+            explanation: `【答案】K-means、PCA、层次聚类。【解析】K-means最常用聚类算法，通过迭代将数据分为K簇，对初始质心敏感这一知识点在机器学习入门中具有重要地位。`,
+            tags: ['机器学习', '算法', '模型', '监督学习', '无监督学习', '回归算法'],
+            difficulty: 3
           },
           {
             id: 'ex-8-1-7',
@@ -1154,7 +1511,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['MSE', 'RMSE', 'R² score', '准确率'],
             answer: ['MSE', 'RMSE', 'R² score'],
-            points: 15
+            points: 15,
+            explanation: `【答案】MSE、RMSE、R² score。【解析】回归评估：MAE平均绝对误差、MSE均方误差、R²决定系数越大越好这一知识点在机器学习入门中具有重要地位。`,
+            tags: ['机器学习', '算法', '模型', '监督学习', '回归算法', '分类评估'],
+            difficulty: 3
           },
           {
             id: 'ex-8-1-8',
@@ -1162,7 +1522,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['训练集', '验证集', '测试集', '数据集'],
             answer: ['训练集', '验证集', '测试集'],
-            points: 15
+            points: 15,
+            explanation: `【答案】训练集、验证集、测试集。【解析】数据划分为训练集训练模型、验证集调参、测试集最终评估，70-30或80-20常见比例这一知识点在机器学习入门中具有重要地位。`,
+            tags: ['机器学习', '算法', '模型', '数据集划分', '多选题'],
+            difficulty: 3
           }
         ]
       },
@@ -1177,7 +1540,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['回归问题', '分类问题', '聚类问题', '降维问题'],
             answer: '分类问题',
-            points: 10
+            points: 10,
+            explanation: `【答案】分类问题。【解析】监督学习使用带标签数据训练模型，分类预测离散类别，回归预测连续数值这一知识点在机器学习入门中具有重要地位。`,
+            tags: ['机器学习', '算法', '模型', '监督学习', '无监督学习', '分类算法'],
+            difficulty: 2
           },
           {
             id: 'ex-8-2-2',
@@ -1185,7 +1551,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['Ridge', 'Lasso', 'ElasticNet', 'SVM'],
             answer: 'Lasso',
-            points: 10
+            points: 10,
+            explanation: `【答案】Lasso。【解析】SVM寻找最大间隔超平面分类，通过核函数（线性/RBF/多项式）处理非线性分类问题这一知识点在机器学习入门中具有重要地位。`,
+            tags: ['机器学习', '算法', '模型', 'SVM', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-8-2-3',
@@ -1193,7 +1562,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['Ridge', 'Lasso', 'ElasticNet', 'SVM'],
             answer: 'Ridge',
-            points: 10
+            points: 10,
+            explanation: `【答案】Ridge。【解析】SVM寻找最大间隔超平面分类，通过核函数（线性/RBF/多项式）处理非线性分类问题这一知识点在机器学习入门中具有重要地位。`,
+            tags: ['机器学习', '算法', '模型', 'SVM', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-8-2-4',
@@ -1201,7 +1573,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['单一决策树', '集成学习算法', '聚类算法', '降维算法'],
             answer: '集成学习算法',
-            points: 10
+            points: 10,
+            explanation: `【答案】集成学习算法。【解析】随机森林是Bagging集成方法，训练多棵决策树投票预测，减少过拟合，稳定性好这一知识点在机器学习入门中具有重要地位。`,
+            tags: ['机器学习', '算法', '模型', '无监督学习', '聚类算法', '决策树'],
+            difficulty: 3
           },
           {
             id: 'ex-8-2-5',
@@ -1209,7 +1584,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['信息增益', '基尼系数', '信息增益比', '准确率'],
             answer: ['信息增益', '基尼系数', '信息增益比'],
-            points: 15
+            points: 15,
+            explanation: `【答案】信息增益、基尼系数、信息增益比。【解析】特征工程将原始数据转化为模型可用的特征，包括缺失值处理、编码、缩放和交互特征这一知识点在机器学习入门中具有重要地位。`,
+            tags: ['机器学习', '算法', '模型', '决策树', '特征工程', '分类评估'],
+            difficulty: 3
           },
           {
             id: 'ex-8-2-6',
@@ -1217,7 +1595,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['最小化预测值与实际值的差', '最大化准确率', '最小化方差', '最大化信息增益'],
             answer: '最小化预测值与实际值的差',
-            points: 10
+            points: 10,
+            explanation: `【答案】最小化预测值与实际值的差。【解析】回归预测连续值，线性回归最基础，随机森林/GBDT/XGBoost是非线性回归常用方法这一知识点在机器学习入门中具有重要地位。`,
+            tags: ['机器学习', '算法', '模型', '监督学习', '回归算法', '分类评估'],
+            difficulty: 2
           },
           {
             id: 'ex-8-2-7',
@@ -1225,7 +1606,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['随机森林', 'XGBoost', 'LightGBM', '线性回归'],
             answer: ['随机森林', 'XGBoost', 'LightGBM'],
-            points: 15
+            points: 15,
+            explanation: `【答案】随机森林、XGBoost、LightGBM。【解析】随机森林是Bagging集成方法，训练多棵决策树投票预测，减少过拟合，稳定性好这一知识点在机器学习入门中具有重要地位。`,
+            tags: ['机器学习', '算法', '模型', '监督学习', '回归算法', '随机森林'],
+            difficulty: 3
           }
         ]
       },
@@ -1240,7 +1624,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['准确率', '肘部法则', '交叉验证', '网格搜索'],
             answer: '肘部法则',
-            points: 10
+            points: 10,
+            explanation: `【答案】肘部法则。【解析】K-means最常用聚类算法，通过迭代将数据分为K簇，对初始质心敏感这一知识点在机器学习入门中具有重要地位。`,
+            tags: ['机器学习', '算法', '模型', '无监督学习', '聚类算法', '分类评估'],
+            difficulty: 2
           },
           {
             id: 'ex-8-3-2',
@@ -1248,7 +1635,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['增加数据', '减少数据', '保留最大方差', '删除所有特征'],
             answer: '保留最大方差',
-            points: 10
+            points: 10,
+            explanation: `【答案】保留最大方差。【解析】无监督学习处理无标签数据，聚类发现分组，降维如PCA可视化高维数据这一知识点在机器学习入门中具有重要地位。`,
+            tags: ['机器学习', '算法', '模型', '无监督学习', '特征工程', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-8-3-3',
@@ -1256,7 +1646,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['基于距离的', '基于密度的', '基于层次的', '基于模型的'],
             answer: '基于密度的',
-            points: 10
+            points: 10,
+            explanation: `【答案】基于密度的。【解析】无监督学习处理无标签数据，聚类发现分组，降维如PCA可视化高维数据这一知识点在机器学习入门中具有重要地位。`,
+            tags: ['机器学习', '算法', '模型', '无监督学习', '聚类算法', '单选题'],
+            difficulty: 3
           },
           {
             id: 'ex-8-3-4',
@@ -1264,7 +1657,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['凝聚式', '分裂式', '基于密度的', '基于模型的'],
             answer: ['凝聚式', '分裂式'],
-            points: 15
+            points: 15,
+            explanation: `【答案】凝聚式、分裂式。【解析】决策树按特征递归分裂，易解释但易过拟合，CART二叉树是常用类型这一知识点在机器学习入门中具有重要地位。`,
+            tags: ['机器学习', '算法', '模型', '无监督学习', '聚类算法', '决策树'],
+            difficulty: 3
           },
           {
             id: 'ex-8-3-5',
@@ -1272,7 +1668,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['线性降维', '非线性降维', '基于距离的', '基于密度的'],
             answer: '非线性降维',
-            points: 10
+            points: 10,
+            explanation: `【答案】非线性降维。【解析】无监督学习处理无标签数据，聚类发现分组，降维如PCA可视化高维数据这一知识点在机器学习入门中具有重要地位。`,
+            tags: ['机器学习', '算法', '模型', '无监督学习', '单选题'],
+            difficulty: 3
           },
           {
             id: 'ex-8-3-6',
@@ -1280,7 +1679,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['主成分分析', '主成分回归', '概率主成分分析', '偏最小二乘'],
             answer: '主成分分析',
-            points: 10
+            points: 10,
+            explanation: `【答案】主成分分析。【解析】监督学习使用带标签数据训练模型，分类预测离散类别，回归预测连续数值这一知识点在机器学习入门中具有重要地位。`,
+            tags: ['机器学习', '算法', '模型', '监督学习', '回归算法', '逻辑回归'],
+            difficulty: 2
           },
           {
             id: 'ex-8-3-7',
@@ -1288,7 +1690,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['K-means', 'DBSCAN', '层次聚类', 'PCA'],
             answer: ['K-means', 'DBSCAN', '层次聚类'],
-            points: 15
+            points: 15,
+            explanation: `【答案】K-means、DBSCAN、层次聚类。【解析】K-means最常用聚类算法，通过迭代将数据分为K簇，对初始质心敏感这一知识点在机器学习入门中具有重要地位。`,
+            tags: ['机器学习', '算法', '模型', '无监督学习', '聚类算法', '多选题'],
+            difficulty: 3
           }
         ]
       }
@@ -1313,7 +1718,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['WHERE', 'GROUP BY', 'HAVING', 'ORDER BY'],
             answer: 'HAVING',
-            points: 10
+            points: 10,
+            explanation: `【答案】HAVING。【解析】HAVING筛选GROUP BY后的分组结果，必须与GROUP BY配合，WHERE在分组前筛选这一知识点在SQL与数据库中具有重要地位。`,
+            tags: ['SQL', '数据库', '数据查询', 'WHERE筛选', '分组聚合', '排序'],
+            difficulty: 2
           },
           {
             id: 'ex-9-1-2',
@@ -1321,7 +1729,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['UNIQUE', 'DISTINCT', 'DIFFERENT', 'SEPARATE'],
             answer: 'DISTINCT',
-            points: 10
+            points: 10,
+            explanation: `【答案】DISTINCT。【解析】子查询嵌套在主查询中，可出现在WHERE/FROM/SELECT中，IN/EXISTS/ANY/ALL配合使用这一知识点在SQL与数据库中具有重要地位。`,
+            tags: ['SQL', '数据库', '数据查询', '子查询', '键与约束', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-9-1-3',
@@ -1329,7 +1740,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['WHERE', 'GROUP BY', 'ORDER BY', 'LIMIT'],
             answer: 'ORDER BY',
-            points: 10
+            points: 10,
+            explanation: `【答案】ORDER BY。【解析】ORDER BY列名 ASC/DESC，ASC升序（默认）、DESC降序，可按多列排序这一知识点在SQL与数据库中具有重要地位。`,
+            tags: ['SQL', '数据库', '数据查询', 'WHERE筛选', '分组聚合', '排序'],
+            difficulty: 2
           },
           {
             id: 'ex-9-1-4',
@@ -1337,7 +1751,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['WHERE', 'GROUP BY', 'ORDER BY', 'LIMIT'],
             answer: 'LIMIT',
-            points: 10
+            points: 10,
+            explanation: `【答案】LIMIT。【解析】LIMIT限制返回行数，MySQL用LIMIT m,n或LIMIT n OFFSET m实现分页；SQL Server用TOP这一知识点在SQL与数据库中具有重要地位。`,
+            tags: ['SQL', '数据库', '数据查询', 'WHERE筛选', '分组聚合', '排序'],
+            difficulty: 2
           },
           {
             id: 'ex-9-1-5',
@@ -1345,7 +1762,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['COUNT', 'SUM', 'AVG', 'MAX', 'MIN'],
             answer: ['COUNT', 'SUM', 'AVG', 'MAX', 'MIN'],
-            points: 15
+            points: 15,
+            explanation: `【答案】COUNT、SUM、AVG等。【解析】COUNT计数、SUM求和、AVG平均、MAX/MIN极值，聚合函数忽略NULL值这一知识点在SQL与数据库中具有重要地位。`,
+            tags: ['SQL', '数据库', '数据查询', '分组聚合', '子查询', '聚合函数'],
+            difficulty: 2
           },
           {
             id: 'ex-9-1-6',
@@ -1353,7 +1773,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['SELECT -> FROM -> WHERE -> GROUP BY -> HAVING -> ORDER BY', 'FROM -> WHERE -> GROUP BY -> HAVING -> SELECT -> ORDER BY', 'FROM -> SELECT -> WHERE -> GROUP BY -> HAVING -> ORDER BY', 'WHERE -> FROM -> GROUP BY -> HAVING -> SELECT -> ORDER BY'],
             answer: 'FROM -> WHERE -> GROUP BY -> HAVING -> SELECT -> ORDER BY',
-            points: 10
+            points: 10,
+            explanation: `【答案】FROM -> WHERE -> GROUP BY -> HAVING -> SELECT -> ORDER BY。【解析】GROUP BY按列分组，配合聚合函数；WHERE在分组前筛行，HAVING在分组后筛组这一知识点在SQL与数据库中具有重要地位。`,
+            tags: ['SQL', '数据库', '数据查询', 'SELECT查询', 'WHERE筛选', '分组聚合'],
+            difficulty: 2
           },
           {
             id: 'ex-9-1-7',
@@ -1361,7 +1784,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['LIKE', 'MATCH', 'SEARCH', 'FIND'],
             answer: 'LIKE',
-            points: 10
+            points: 10,
+            explanation: `【答案】LIKE。【解析】LIKE模糊匹配，%匹配0或多个字符、_匹配单个字符，也可用REGEXP正则匹配这一知识点在SQL与数据库中具有重要地位。`,
+            tags: ['SQL', '数据库', '数据查询', '子查询', '键与约束', '模糊查询'],
+            difficulty: 2
           }
         ]
       },
@@ -1376,7 +1802,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['INNER JOIN', 'LEFT JOIN', 'RIGHT JOIN', 'FULL OUTER JOIN'],
             answer: 'LEFT JOIN',
-            points: 10
+            points: 10,
+            explanation: `【答案】LEFT JOIN。【解析】INNER JOIN返回匹配行，LEFT JOIN保留左表所有行，RIGHT JOIN保留右表，FULL JOIN保留两表这一知识点在SQL与数据库中具有重要地位。`,
+            tags: ['SQL', '数据库', '数据查询', 'JOIN连接', '子查询', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-9-2-2',
@@ -1384,7 +1813,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['SUM()', 'AVG()', 'RANK()', 'COUNT()'],
             answer: 'RANK()',
-            points: 10
+            points: 10,
+            explanation: `【答案】RANK()。【解析】窗口函数在分组内计算但不压缩行数：OVER(PARTITION BY列 ORDER BY列)；ROW_NUMBER/RANK/DENSE_RANK排名这一知识点在SQL与数据库中具有重要地位。`,
+            tags: ['SQL', '数据库', '数据查询', '窗口函数', '聚合函数', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-9-2-3',
@@ -1392,7 +1824,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['NOW()', 'DATE()', 'DATEDIFF()', 'YEAR()'],
             answer: 'DATEDIFF()',
-            points: 10
+            points: 10,
+            explanation: `【答案】DATEDIFF()。【解析】本题考查SQL与数据库核心知识点。正确选项准确描述了该概念的核心内涵。`,
+            tags: ['SQL', '数据库', '数据查询', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-9-2-4',
@@ -1400,7 +1835,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['INNER JOIN', 'LEFT JOIN', 'RIGHT JOIN', 'FULL OUTER JOIN'],
             answer: 'INNER JOIN',
-            points: 10
+            points: 10,
+            explanation: `【答案】INNER JOIN。【解析】INNER JOIN返回匹配行，LEFT JOIN保留左表所有行，RIGHT JOIN保留右表，FULL JOIN保留两表这一知识点在SQL与数据库中具有重要地位。`,
+            tags: ['SQL', '数据库', '数据查询', 'JOIN连接', '子查询', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-9-2-5',
@@ -1408,7 +1846,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['LAG()', 'LEAD()', 'ROW_NUMBER()', 'RANK()'],
             answer: 'LAG()',
-            points: 10
+            points: 10,
+            explanation: `【答案】LAG()。【解析】窗口函数在分组内计算但不压缩行数：OVER(PARTITION BY列 ORDER BY列)；ROW_NUMBER/RANK/DENSE_RANK排名这一知识点在SQL与数据库中具有重要地位。`,
+            tags: ['SQL', '数据库', '数据查询', '窗口函数', '模糊查询', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-9-2-6',
@@ -1416,7 +1857,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['LAG()', 'LEAD()', 'ROW_NUMBER()', 'RANK()'],
             answer: 'LEAD()',
-            points: 10
+            points: 10,
+            explanation: `【答案】LEAD()。【解析】窗口函数在分组内计算但不压缩行数：OVER(PARTITION BY列 ORDER BY列)；ROW_NUMBER/RANK/DENSE_RANK排名这一知识点在SQL与数据库中具有重要地位。`,
+            tags: ['SQL', '数据库', '数据查询', '窗口函数', '模糊查询', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-9-2-7',
@@ -1424,7 +1868,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['ROW_NUMBER()', 'RANK()', 'DENSE_RANK()', 'LAG()', 'LEAD()'],
             answer: ['ROW_NUMBER()', 'RANK()', 'DENSE_RANK()', 'LAG()', 'LEAD()'],
-            points: 15
+            points: 15,
+            explanation: `【答案】ROW_NUMBER()、RANK()、DENSE_RANK()等。【解析】窗口函数在分组内计算但不压缩行数：OVER(PARTITION BY列 ORDER BY列)；ROW_NUMBER/RANK/DENSE_RANK排名这一知识点在SQL与数据库中具有重要地位。`,
+            tags: ['SQL', '数据库', '数据查询', '窗口函数', '模糊查询', '多选题'],
+            difficulty: 3
           }
         ]
       }
@@ -1449,7 +1896,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['依靠直觉', '依靠数据', '依靠经验', '依靠运气'],
             answer: '依靠数据',
-            points: 10
+            points: 10,
+            explanation: `【答案】依靠数据。【解析】数据驱动文化将数据作为决策基础，需要数据素养、工具支持、高层推动和激励机制这一知识点在数据思维与行业应用中具有重要地位。`,
+            tags: ['数据思维', '行业应用', '数据分析', '数据驱动文化', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-10-1-2',
@@ -1457,7 +1907,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['只需要技术', '只需要数据', '数据、技术和文化的转变', '不需要任何改变'],
             answer: '数据、技术和文化的转变',
-            points: 10
+            points: 10,
+            explanation: `【答案】数据、技术和文化的转变。【解析】数据驱动文化将数据作为决策基础，需要数据素养、工具支持、高层推动和激励机制这一知识点在数据思维与行业应用中具有重要地位。`,
+            tags: ['数据思维', '行业应用', '数据分析', '数据驱动文化', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-10-1-3',
@@ -1465,7 +1918,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['娱乐观众', '将技术数据转化为业务洞察', '编写代码', '存储数据'],
             answer: '将技术数据转化为业务洞察',
-            points: 10
+            points: 10,
+            explanation: `【答案】将技术数据转化为业务洞察。【解析】商业洞察是从数据中发现的有价值信息，应回答"所以是什么"，可转化为行动建议这一知识点在数据思维与行业应用中具有重要地位。`,
+            tags: ['数据思维', '行业应用', '数据分析', '商业洞察', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-10-1-4',
@@ -1473,7 +1929,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['随机尝试', '数据驱动的快速迭代', '传统营销', '不依赖数据'],
             answer: '数据驱动的快速迭代',
-            points: 10
+            points: 10,
+            explanation: `【答案】数据驱动的快速迭代。【解析】数据驱动文化将数据作为决策基础，需要数据素养、工具支持、高层推动和激励机制这一知识点在数据思维与行业应用中具有重要地位。`,
+            tags: ['数据思维', '行业应用', '数据分析', '数据驱动文化', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-10-1-5',
@@ -1481,7 +1940,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['OKR与数据无关', 'OKR需要数据来衡量和跟踪', 'OKR只需要定性描述', '数据会干扰OKR'],
             answer: 'OKR需要数据来衡量和跟踪',
-            points: 10
+            points: 10,
+            explanation: `【答案】OKR需要数据来衡量和跟踪。【解析】本题考查数据思维与行业应用核心知识点。正确选项准确描述了该概念的核心内涵。`,
+            tags: ['数据思维', '行业应用', '数据分析', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-10-1-6',
@@ -1489,7 +1951,10 @@ export const initialCourses: Course[] = [
             type: 'single',
             options: ['计算投资回报率', '存储数据', '编写代码', '设计图表'],
             answer: '计算投资回报率',
-            points: 10
+            points: 10,
+            explanation: `【答案】计算投资回报率。【解析】本题考查数据思维与行业应用核心知识点。正确选项准确描述了该概念的核心内涵。`,
+            tags: ['数据思维', '行业应用', '数据分析', '单选题'],
+            difficulty: 2
           },
           {
             id: 'ex-10-1-7',
@@ -1497,7 +1962,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['使用业务语言', '关注业务价值', '提供可操作的建议', '只展示技术细节'],
             answer: ['使用业务语言', '关注业务价值', '提供可操作的建议'],
-            points: 15
+            points: 15,
+            explanation: `【答案】使用业务语言、关注业务价值、提供可操作的建议。【解析】本题考查数据思维与行业应用核心知识点。正确选项准确描述了该概念的核心内涵。`,
+            tags: ['数据思维', '行业应用', '数据分析', '多选题'],
+            difficulty: 3
           }
         ]
       },
@@ -1512,7 +1980,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['用户行为分析', '商品推荐系统', '库存优化', '所有选项'],
             answer: ['用户行为分析', '商品推荐系统', '库存优化'],
-            points: 10
+            points: 10,
+            explanation: `【答案】用户行为分析、商品推荐系统、库存优化。【解析】数据产品将数据能力封装为产品，如推荐系统、用户画像、精准营销、风控评分等这一知识点在数据思维与行业应用中具有重要地位。`,
+            tags: ['数据思维', '行业应用', '数据分析', '电商分析', '物流供应链', '互联网分析'],
+            difficulty: 2
           },
           {
             id: 'ex-10-2-2',
@@ -1520,7 +1991,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['信用评分', '风险控制', '客户流失预测', '欺诈检测'],
             answer: ['信用评分', '风险控制', '客户流失预测', '欺诈检测'],
-            points: 15
+            points: 15,
+            explanation: `【答案】信用评分、风险控制、客户流失预测等。【解析】金融数据分析应用于风控评分、反欺诈、客户分群、营销响应预测和合规监管这一知识点在数据思维与行业应用中具有重要地位。`,
+            tags: ['数据思维', '行业应用', '数据分析', '金融分析', '多选题'],
+            difficulty: 2
           },
           {
             id: 'ex-10-2-3',
@@ -1528,7 +2002,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['用户增长分析', '留存分析', '活动效果评估', '成本效益分析'],
             answer: ['用户增长分析', '留存分析', '活动效果评估', '成本效益分析'],
-            points: 15
+            points: 15,
+            explanation: `【答案】用户增长分析、留存分析、活动效果评估等。【解析】本题考查数据思维与行业应用核心知识点。正确选项准确描述了该概念的核心内涵。`,
+            tags: ['数据思维', '行业应用', '数据分析', '多选题'],
+            difficulty: 2
           },
           {
             id: 'ex-10-2-4',
@@ -1536,7 +2013,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['问题定义', '假设提出', '实验设计', '结果分析', '结论应用'],
             answer: ['问题定义', '假设提出', '实验设计', '结果分析', '结论应用'],
-            points: 15
+            points: 15,
+            explanation: `【答案】问题定义、假设提出、实验设计等。【解析】本题考查数据思维与行业应用核心知识点。正确选项准确描述了该概念的核心内涵。`,
+            tags: ['数据思维', '行业应用', '数据分析', '多选题'],
+            difficulty: 3
           },
           {
             id: 'ex-10-2-5',
@@ -1544,7 +2024,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['KS值', 'AUC', '准确率', '召回率'],
             answer: ['KS值', 'AUC'],
-            points: 15
+            points: 15,
+            explanation: `【答案】KS值、AUC。【解析】好的指标体系包含北极星指标、一级指标、二级指标，层层关联支撑业务这一知识点在数据思维与行业应用中具有重要地位。`,
+            tags: ['数据思维', '行业应用', '数据分析', '指标体系', '多选题'],
+            difficulty: 3
           },
           {
             id: 'ex-10-2-6',
@@ -1552,7 +2035,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['漏斗分析', '留存分析', '用户分群', '渠道分析'],
             answer: ['漏斗分析', '留存分析', '用户分群', '渠道分析'],
-            points: 15
+            points: 15,
+            explanation: `【答案】漏斗分析、留存分析、用户分群等。【解析】本题考查数据思维与行业应用核心知识点。正确选项准确描述了该概念的核心内涵。`,
+            tags: ['数据思维', '行业应用', '数据分析', '多选题'],
+            difficulty: 3
           },
           {
             id: 'ex-10-2-7',
@@ -1560,7 +2046,10 @@ export const initialCourses: Course[] = [
             type: 'multiple',
             options: ['ROI', '转化率', '点击率', '曝光量'],
             answer: ['ROI', '转化率', '点击率', '曝光量'],
-            points: 15
+            points: 15,
+            explanation: `【答案】ROI、转化率、点击率等。【解析】好的指标体系包含北极星指标、一级指标、二级指标，层层关联支撑业务这一知识点在数据思维与行业应用中具有重要地位。`,
+            tags: ['数据思维', '行业应用', '数据分析', '指标体系', '多选题'],
+            difficulty: 3
           }
         ]
       }
@@ -1639,7 +2128,10 @@ export const initialQuizzes: Quiz[] = [
         question: '数据分析的主要目的是什么？',
         options: ['描述性分析', '诊断性分析', '预测性分析', '规范性分析', '以上全部'],
         answer: '以上全部',
-        points: 20
+        points: 20,
+        explanation: `【答案】以上全部。【解析】数据分析的最终目的是支持业务决策，让数据说话这一知识点在数据分析基础中具有重要地位。`,
+        tags: ['数据分析', '业务分析', '分析方法', '描述性分析', '诊断性分析', '预测性分析'],
+        difficulty: 1
       },
       {
         id: 'q1-2',
@@ -1647,7 +2139,10 @@ export const initialQuizzes: Quiz[] = [
         question: '以下哪项不属于数据分析的基本流程？',
         options: ['问题定义', '数据收集', '数据清洗', '数据存储', '数据分析'],
         answer: '数据存储',
-        points: 20
+        points: 20,
+        explanation: `【答案】数据存储。【解析】数据分析标准流程：问题定义→数据收集→数据清洗→数据探索→数据建模→可视化→呈现这一知识点在数据分析基础中具有重要地位。`,
+        tags: ['数据分析', '业务分析', '分析方法', '分析流程', '业务理解', '问题定义'],
+        difficulty: 1
       },
       {
         id: 'q1-3',
@@ -1655,20 +2150,29 @@ export const initialQuizzes: Quiz[] = [
         question: '以下哪些是常用的数据分析工具？（多选）',
         options: ['Excel', 'Python', 'SQL', 'Photoshop'],
         answer: ['Excel', 'Python', 'SQL'],
-        points: 20
+        points: 20,
+        explanation: `【答案】Excel、Python、SQL。【解析】Excel适合基础分析，Python/SQL适合复杂处理，BI工具适合交互式可视化这一知识点在数据分析基础中具有重要地位。`,
+        tags: ['数据分析', '业务分析', '分析方法', '分析工具', '多选题'],
+        difficulty: 2
       },
       {
         id: 'q1-4',
         type: 'true-false',
         question: '数据分析只需要掌握技术技能，不需要业务理解。',
         answer: false,
-        points: 20
+        points: 20,
+        explanation: `【答案】错误。【解析】业务理解是数据分析第一步，需要将模糊需求转化为可分析的数据问题这一知识点在数据分析基础中具有重要地位。`,
+        tags: ['数据分析', '业务分析', '分析方法', '业务理解'],
+        difficulty: 1
       },
       {
         id: 'q1-5',
         type: 'essay',
         question: '请简述数据分析的基本流程，并说明每个步骤的主要任务。',
-        points: 20
+        points: 20,
+        explanation: `本题考查数据分析基础综合应用能力。建议回答框架：定义与背景、核心概念解释3-4个要点、结合实际案例、个人理解总结。评分要点：完整性、准确性、深度、表达。`,
+        tags: ['数据分析', '业务分析', '分析方法', '分析流程', '论述题'],
+        difficulty: 2
       }
     ],
     timeLimit: 30,
@@ -1685,7 +2189,10 @@ export const initialQuizzes: Quiz[] = [
         question: 'VLOOKUP函数的用途是什么？',
         options: ['排序数据', '垂直查找数据', '筛选数据', '计算数据'],
         answer: '垂直查找数据',
-        points: 20
+        points: 20,
+        explanation: `【答案】垂直查找数据。【解析】Ctrl+Shift+L快速筛选数据，可按多条件过滤这一知识点在Excel数据处理中具有重要地位。`,
+        tags: ['Excel', '数据处理', '表格操作', '数据筛选', 'VLOOKUP函数', '统计函数'],
+        difficulty: 1
       },
       {
         id: 'q2-2',
@@ -1693,14 +2200,20 @@ export const initialQuizzes: Quiz[] = [
         question: '在Excel中创建下拉列表应该使用什么功能？',
         options: ['数据有效性', '条件格式', '数据透视表', '公式'],
         answer: '数据有效性',
-        points: 20
+        points: 20,
+        explanation: `【答案】数据有效性。【解析】Ctrl+Shift+L快速筛选数据，可按多条件过滤这一知识点在Excel数据处理中具有重要地位。`,
+        tags: ['Excel', '数据处理', '表格操作', '数据有效性', '数据筛选', '条件函数'],
+        difficulty: 1
       },
       {
         id: 'q2-3',
         type: 'true-false',
         question: '数据透视表只能用于汇总数据，不能用于分析数据。',
         answer: false,
-        points: 20
+        points: 20,
+        explanation: `【答案】错误。【解析】Ctrl+Shift+L快速筛选数据，可按多条件过滤这一知识点在Excel数据处理中具有重要地位。`,
+        tags: ['Excel', '数据处理', '表格操作', '数据筛选', '数据透视表'],
+        difficulty: 1
       },
       {
         id: 'q2-4',
@@ -1708,13 +2221,19 @@ export const initialQuizzes: Quiz[] = [
         question: '以下哪些是Excel中的聚合函数？（多选）',
         options: ['SUM', 'AVERAGE', 'IF', 'MAX', 'MIN'],
         answer: ['SUM', 'AVERAGE', 'MAX', 'MIN'],
-        points: 20
+        points: 20,
+        explanation: `【答案】SUM、AVERAGE、MAX等。【解析】Ctrl+Shift+L快速筛选数据，可按多条件过滤这一知识点在Excel数据处理中具有重要地位。`,
+        tags: ['Excel', '数据处理', '表格操作', '数据筛选', '自动求和', 'IF函数'],
+        difficulty: 1
       },
       {
         id: 'q2-5',
         type: 'essay',
         question: '请说明如何使用数据透视表分析销售数据，并列出至少3个分析维度。',
-        points: 20
+        points: 20,
+        explanation: `本题考查Excel数据处理综合应用能力。建议回答框架：定义与背景、核心概念解释3-4个要点、结合实际案例、个人理解总结。评分要点：完整性、准确性、深度、表达。`,
+        tags: ['Excel', '数据处理', '表格操作', '数据筛选', '数据透视表', '论述题'],
+        difficulty: 2
       }
     ],
     timeLimit: 30,
@@ -1731,7 +2250,10 @@ export const initialQuizzes: Quiz[] = [
         question: 'Pandas中用于读取CSV文件的函数是？',
         options: ['read_csv()', 'read_excel()', 'read_json()', 'read_sql()'],
         answer: 'read_csv()',
-        points: 20
+        points: 20,
+        explanation: `【答案】read_csv()。【解析】pd.read_csv()读取CSV，pd.read_excel()读取Excel文件这一知识点在Python数据分析中具有重要地位。`,
+        tags: ['Python', '编程基础', '数据分析', 'Pandas', '数据读取', '函数定义'],
+        difficulty: 1
       },
       {
         id: 'q3-2',
@@ -1739,7 +2261,10 @@ export const initialQuizzes: Quiz[] = [
         question: '如何检查DataFrame中的缺失值？',
         options: ['isna()', 'duplicated()', 'drop_duplicates()', 'fillna()'],
         answer: 'isna()',
-        points: 20
+        points: 20,
+        explanation: `【答案】isna()。【解析】DataFrame是二维表格，Series是一维数组，是Pandas核心数据结构这一知识点在Python数据分析中具有重要地位。`,
+        tags: ['Python', '编程基础', '数据分析', '数据结构', '数据清洗', '单选题'],
+        difficulty: 2
       },
       {
         id: 'q3-3',
@@ -1747,20 +2272,29 @@ export const initialQuizzes: Quiz[] = [
         question: 'Python中哪些是常用的数据结构？（多选）',
         options: ['列表', '字典', '元组', '集合', '数组'],
         answer: ['列表', '字典', '元组', '集合'],
-        points: 20
+        points: 20,
+        explanation: `【答案】列表、字典、元组等。【解析】列表可变有序，字典键值对，元组不可变，集合自动去重这一知识点在Python数据分析中具有重要地位。`,
+        tags: ['Python', '编程基础', '数据分析', '数据结构', 'NumPy', '数据类型'],
+        difficulty: 2
       },
       {
         id: 'q3-4',
         type: 'true-false',
         question: 'groupby()函数可以按多个列进行分组。',
         answer: true,
-        points: 20
+        points: 20,
+        explanation: `【答案】正确。【解析】groupby分组后配合聚合函数，类似SQL的GROUP BY这一知识点在Python数据分析中具有重要地位。`,
+        tags: ['Python', '编程基础', '数据分析', '数据聚合', '函数定义'],
+        difficulty: 1
       },
       {
         id: 'q3-5',
         type: 'essay',
         question: '请说明如何使用Pandas进行数据清洗，包括处理缺失值和重复值的方法。',
-        points: 20
+        points: 20,
+        explanation: `本题考查Python数据分析综合应用能力。建议回答框架：定义与背景、核心概念解释3-4个要点、结合实际案例、个人理解总结。评分要点：完整性、准确性、深度、表达。`,
+        tags: ['Python', '编程基础', '数据分析', 'Pandas', '数据清洗', '论述题'],
+        difficulty: 2
       }
     ],
     timeLimit: 30,
@@ -1777,7 +2311,10 @@ export const initialQuizzes: Quiz[] = [
         question: '展示数据随时间的变化趋势，应该使用什么图表？',
         options: ['柱状图', '折线图', '饼图', '散点图'],
         answer: '折线图',
-        points: 20
+        points: 20,
+        explanation: `【答案】折线图。【解析】折线图展示数据随时间变化的趋势，适合时间序列分析这一知识点在数据可视化原理中具有重要地位。`,
+        tags: ['数据可视化', '图表设计', '可视化原则', '折线图', '柱状图', '饼图'],
+        difficulty: 2
       },
       {
         id: 'q4-2',
@@ -1785,7 +2322,10 @@ export const initialQuizzes: Quiz[] = [
         question: 'Matplotlib中用于创建子图的函数是？',
         options: ['plot()', 'subplot()', 'scatter()', 'bar()'],
         answer: 'subplot()',
-        points: 20
+        points: 20,
+        explanation: `【答案】subplot()。【解析】柱状图用于对比不同类别数据的大小，适合展示分类变量的数值这一知识点在数据可视化原理中具有重要地位。`,
+        tags: ['数据可视化', '图表设计', '可视化原则', '柱状图', '散点图', '单选题'],
+        difficulty: 1
       },
       {
         id: 'q4-3',
@@ -1793,20 +2333,29 @@ export const initialQuizzes: Quiz[] = [
         question: '以下哪些是常用的可视化图表类型？（多选）',
         options: ['柱状图', '折线图', '饼图', '流程图', '热力图'],
         answer: ['柱状图', '折线图', '饼图', '热力图'],
-        points: 20
+        points: 20,
+        explanation: `【答案】柱状图、折线图、饼图等。【解析】折线图展示数据随时间变化的趋势，适合时间序列分析这一知识点在数据可视化原理中具有重要地位。`,
+        tags: ['数据可视化', '图表设计', '可视化原则', '折线图', '柱状图', '饼图'],
+        difficulty: 2
       },
       {
         id: 'q4-4',
         type: 'true-false',
         question: '饼图适合展示大量类别的数据占比。',
         answer: false,
-        points: 20
+        points: 20,
+        explanation: `【答案】错误。【解析】饼图展示各部分占总体的比例，类别过多时不宜使用这一知识点在数据可视化原理中具有重要地位。`,
+        tags: ['数据可视化', '图表设计', '可视化原则', '饼图'],
+        difficulty: 2
       },
       {
         id: 'q4-5',
         type: 'essay',
         question: '请说明如何选择合适的可视化图表，并列举3个常见场景及其对应的图表类型。',
-        points: 20
+        points: 20,
+        explanation: `本题考查数据可视化原理综合应用能力。建议回答框架：定义与背景、核心概念解释3-4个要点、结合实际案例、个人理解总结。评分要点：完整性、准确性、深度、表达。`,
+        tags: ['数据可视化', '图表设计', '可视化原则', '图表选择', '论述题'],
+        difficulty: 3
       }
     ],
     timeLimit: 30,
@@ -1823,7 +2372,10 @@ export const initialQuizzes: Quiz[] = [
         question: 'DAX中用于修改计算上下文的核心函数是？',
         options: ['SUM', 'CALCULATE', 'FILTER', 'ALL'],
         answer: 'CALCULATE',
-        points: 20
+        points: 20,
+        explanation: `【答案】CALCULATE。【解析】DAX是Power BI的数据分析表达式语言，用于创建度量值和计算列这一知识点在商业智能与报表中具有重要地位。`,
+        tags: ['BI', '报表系统', '数据分析', 'DAX', '单选题'],
+        difficulty: 2
       },
       {
         id: 'q5-2',
@@ -1831,14 +2383,20 @@ export const initialQuizzes: Quiz[] = [
         question: 'BI系统的核心组件不包括以下哪项？',
         options: ['数据仓库', 'ETL', '报表工具', '编程语言'],
         answer: '编程语言',
-        points: 20
+        points: 20,
+        explanation: `【答案】编程语言。【解析】BI将数据转化为洞察，通过报表、仪表盘、OLAP分析支持决策这一知识点在商业智能与报表中具有重要地位。`,
+        tags: ['BI', '报表系统', '数据分析', '商业智能', '数据仓库', 'ETL'],
+        difficulty: 1
       },
       {
         id: 'q5-3',
         type: 'true-false',
         question: '星型模型是BI数据建模中最简单的模型结构。',
         answer: true,
-        points: 20
+        points: 20,
+        explanation: `【答案】正确。【解析】BI将数据转化为洞察，通过报表、仪表盘、OLAP分析支持决策这一知识点在商业智能与报表中具有重要地位。`,
+        tags: ['BI', '报表系统', '数据分析', '商业智能', '维度建模'],
+        difficulty: 2
       },
       {
         id: 'q5-4',
@@ -1846,13 +2404,19 @@ export const initialQuizzes: Quiz[] = [
         question: '以下哪些是DAX的常用函数类型？（多选）',
         options: ['聚合函数', '时间智能函数', '文本函数', '图像处理函数'],
         answer: ['聚合函数', '时间智能函数', '文本函数'],
-        points: 20
+        points: 20,
+        explanation: `【答案】聚合函数、时间智能函数、文本函数。【解析】DAX是Power BI的数据分析表达式语言，用于创建度量值和计算列这一知识点在商业智能与报表中具有重要地位。`,
+        tags: ['BI', '报表系统', '数据分析', 'DAX', '多选题'],
+        difficulty: 2
       },
       {
         id: 'q5-5',
         type: 'essay',
         question: '请说明商业智能系统的基本架构，以及各组件的主要作用。',
-        points: 20
+        points: 20,
+        explanation: `本题考查商业智能与报表综合应用能力。建议回答框架：定义与背景、核心概念解释3-4个要点、结合实际案例、个人理解总结。评分要点：完整性、准确性、深度、表达。`,
+        tags: ['BI', '报表系统', '数据分析', '商业智能', '论述题'],
+        difficulty: 3
       }
     ],
     timeLimit: 30,
@@ -1869,7 +2433,10 @@ export const initialQuizzes: Quiz[] = [
         question: 'RFM模型中的R表示什么？',
         options: ['消费金额', '消费频率', '最近一次消费', '客户价值'],
         answer: '最近一次消费',
-        points: 20
+        points: 20,
+        explanation: `【答案】最近一次消费。【解析】RFM基于Recency最近、Frequency频率、Monetary金额三维度对客户价值分层这一知识点在商务数据分析实战中具有重要地位。`,
+        tags: ['商务分析', '业务分析', '实战案例', '客户分析', 'RFM分析', '单选题'],
+        difficulty: 2
       },
       {
         id: 'q6-2',
@@ -1877,7 +2444,10 @@ export const initialQuizzes: Quiz[] = [
         question: 'SaaS行业的核心指标不包括以下哪项？',
         options: ['MRR', 'Churn率', 'GMV', 'LTV'],
         answer: 'GMV',
-        points: 20
+        points: 20,
+        explanation: `【答案】GMV。【解析】留存率衡量用户持续使用情况，cohort分析按用户分组观察留存曲线这一知识点在商务数据分析实战中具有重要地位。`,
+        tags: ['商务分析', '业务分析', '实战案例', '留存分析', '单选题'],
+        difficulty: 1
       },
       {
         id: 'q6-3',
@@ -1885,20 +2455,29 @@ export const initialQuizzes: Quiz[] = [
         question: '漏斗分析通常用于分析哪些业务场景？（多选）',
         options: ['用户注册流程', '购买转化流程', '产品使用流程', '员工离职流程'],
         answer: ['用户注册流程', '购买转化流程', '产品使用流程'],
-        points: 20
+        points: 20,
+        explanation: `【答案】用户注册流程、购买转化流程、产品使用流程。【解析】客户分析包括画像、价值分层（RFM）、生命周期、留存和流失分析这一知识点在商务数据分析实战中具有重要地位。`,
+        tags: ['商务分析', '业务分析', '实战案例', '客户分析', '产品分析', '漏斗分析'],
+        difficulty: 2
       },
       {
         id: 'q6-4',
         type: 'true-false',
         question: 'A/B测试是一种通过对比不同方案来优化业务指标的方法。',
         answer: true,
-        points: 20
+        points: 20,
+        explanation: `【答案】正确。【解析】A/B测试将用户随机分组接受不同策略，通过统计检验比较效果差异这一知识点在商务数据分析实战中具有重要地位。`,
+        tags: ['商务分析', '业务分析', '实战案例', 'A/B测试'],
+        difficulty: 2
       },
       {
         id: 'q6-5',
         type: 'essay',
         question: '请设计一个电商平台的客户分群分析方案，说明使用的分析方法和预期结果。',
-        points: 20
+        points: 20,
+        explanation: `本题考查商务数据分析实战综合应用能力。建议回答框架：定义与背景、核心概念解释3-4个要点、结合实际案例、个人理解总结。评分要点：完整性、准确性、深度、表达。`,
+        tags: ['商务分析', '业务分析', '实战案例', '客户分析', '论述题'],
+        difficulty: 3
       }
     ],
     timeLimit: 30,
@@ -1915,7 +2494,10 @@ export const initialQuizzes: Quiz[] = [
         question: '以下哪个指标用于衡量数据的离散程度？',
         options: ['均值', '中位数', '标准差', '众数'],
         answer: '标准差',
-        points: 20
+        points: 20,
+        explanation: `【答案】标准差。【解析】方差衡量数据与均值的偏离程度，标准差是方差的平方根，更易解释这一知识点在统计分析基础中具有重要地位。`,
+        tags: ['统计学', '统计分析', '数据统计', '均值', '中位数', '众数'],
+        difficulty: 2
       },
       {
         id: 'q7-2',
@@ -1923,14 +2505,20 @@ export const initialQuizzes: Quiz[] = [
         question: '在假设检验中，p值小于显著性水平表示什么？',
         options: ['接受原假设', '拒绝原假设', '无法判断', '数据无效'],
         answer: '拒绝原假设',
-        points: 20
+        points: 20,
+        explanation: `【答案】拒绝原假设。【解析】假设检验验证关于总体的假设，p<0.05通常认为具有统计显著性拒绝原假设这一知识点在统计分析基础中具有重要地位。`,
+        tags: ['统计学', '统计分析', '数据统计', '假设检验', '单选题'],
+        difficulty: 2
       },
       {
         id: 'q7-3',
         type: 'true-false',
         question: '中心极限定理表明，无论总体分布如何，样本均值的分布都趋近于正态分布。',
         answer: true,
-        points: 20
+        points: 20,
+        explanation: `【答案】正确。【解析】常用概率分布：二项（n次成功次数）、泊松（单位时间事件数）、正态（连续随机变量）这一知识点在统计分析基础中具有重要地位。`,
+        tags: ['统计学', '统计分析', '数据统计', '均值', '正态分布', '抽样方法'],
+        difficulty: 2
       },
       {
         id: 'q7-4',
@@ -1938,13 +2526,19 @@ export const initialQuizzes: Quiz[] = [
         question: '常用的描述统计指标包括哪些？（多选）',
         options: ['均值', '方差', '相关系数', '回归系数'],
         answer: ['均值', '方差'],
-        points: 20
+        points: 20,
+        explanation: `【答案】均值、方差。【解析】均值是数据总和除以个数，对极端值敏感，适合近似对称分布的数据这一知识点在统计分析基础中具有重要地位。`,
+        tags: ['统计学', '统计分析', '数据统计', '均值', '离散程度', '描述性统计'],
+        difficulty: 2
       },
       {
         id: 'q7-5',
         type: 'essay',
         question: '请说明假设检验的基本流程，并解释p值的含义。',
-        points: 20
+        points: 20,
+        explanation: `本题考查统计分析基础综合应用能力。建议回答框架：定义与背景、核心概念解释3-4个要点、结合实际案例、个人理解总结。评分要点：完整性、准确性、深度、表达。`,
+        tags: ['统计学', '统计分析', '数据统计', '假设检验', '论述题'],
+        difficulty: 3
       }
     ],
     timeLimit: 30,
@@ -1961,7 +2555,10 @@ export const initialQuizzes: Quiz[] = [
         question: '以下哪个是监督学习的任务类型？',
         options: ['分类', '聚类', '降维', '关联规则'],
         answer: '分类',
-        points: 20
+        points: 20,
+        explanation: `【答案】分类。【解析】监督学习使用带标签数据训练模型，分类预测离散类别，回归预测连续数值这一知识点在机器学习入门中具有重要地位。`,
+        tags: ['机器学习', '算法', '模型', '监督学习', '无监督学习', '分类算法'],
+        difficulty: 2
       },
       {
         id: 'q8-2',
@@ -1969,7 +2566,10 @@ export const initialQuizzes: Quiz[] = [
         question: 'K-Means聚类中，确定K值的常用方法是？',
         options: ['准确率', '肘部法则', '交叉验证', '网格搜索'],
         answer: '肘部法则',
-        points: 20
+        points: 20,
+        explanation: `【答案】肘部法则。【解析】K-means最常用聚类算法，通过迭代将数据分为K簇，对初始质心敏感这一知识点在机器学习入门中具有重要地位。`,
+        tags: ['机器学习', '算法', '模型', '无监督学习', '聚类算法', '分类评估'],
+        difficulty: 2
       },
       {
         id: 'q8-3',
@@ -1977,20 +2577,29 @@ export const initialQuizzes: Quiz[] = [
         question: '以下哪些是常用的机器学习评估指标？（多选）',
         options: ['准确率', '精确率', '召回率', 'F1-score', 'MSE'],
         answer: ['准确率', '精确率', '召回率', 'F1-score', 'MSE'],
-        points: 20
+        points: 20,
+        explanation: `【答案】准确率、精确率、召回率等。【解析】分类评估：准确率=预测正确数/总数；精确率/召回率/F1对类别不平衡场景更重要这一知识点在机器学习入门中具有重要地位。`,
+        tags: ['机器学习', '算法', '模型', '分类评估', '回归评估', '多选题'],
+        difficulty: 3
       },
       {
         id: 'q8-4',
         type: 'true-false',
         question: '过拟合是指模型在训练集上表现差，在测试集上表现好。',
         answer: false,
-        points: 20
+        points: 20,
+        explanation: `【答案】错误。【解析】数据划分为训练集训练模型、验证集调参、测试集最终评估，70-30或80-20常见比例这一知识点在机器学习入门中具有重要地位。`,
+        tags: ['机器学习', '算法', '模型', '过拟合与欠拟合', '数据集划分'],
+        difficulty: 3
       },
       {
         id: 'q8-5',
         type: 'essay',
         question: '请比较监督学习和无监督学习的区别，并各举一个实际应用案例。',
-        points: 20
+        points: 20,
+        explanation: `本题考查机器学习入门综合应用能力。建议回答框架：定义与背景、核心概念解释3-4个要点、结合实际案例、个人理解总结。评分要点：完整性、准确性、深度、表达。`,
+        tags: ['机器学习', '算法', '模型', '监督学习', '无监督学习', '论述题'],
+        difficulty: 3
       }
     ],
     timeLimit: 30,
@@ -2007,7 +2616,10 @@ export const initialQuizzes: Quiz[] = [
         question: 'SQL中用于过滤分组结果的子句是？',
         options: ['WHERE', 'GROUP BY', 'HAVING', 'ORDER BY'],
         answer: 'HAVING',
-        points: 20
+        points: 20,
+        explanation: `【答案】HAVING。【解析】HAVING筛选GROUP BY后的分组结果，必须与GROUP BY配合，WHERE在分组前筛选这一知识点在SQL与数据库中具有重要地位。`,
+        tags: ['SQL', '数据库', '数据查询', 'WHERE筛选', '分组聚合', '排序'],
+        difficulty: 2
       },
       {
         id: 'q9-2',
@@ -2015,14 +2627,20 @@ export const initialQuizzes: Quiz[] = [
         question: 'LEFT JOIN返回什么结果？',
         options: ['两个表的交集', '左表所有记录和右表匹配记录', '右表所有记录和左表匹配记录', '两个表的所有记录'],
         answer: '左表所有记录和右表匹配记录',
-        points: 20
+        points: 20,
+        explanation: `【答案】左表所有记录和右表匹配记录。【解析】INNER JOIN返回匹配行，LEFT JOIN保留左表所有行，RIGHT JOIN保留右表，FULL JOIN保留两表这一知识点在SQL与数据库中具有重要地位。`,
+        tags: ['SQL', '数据库', '数据查询', 'JOIN连接', '子查询', '单选题'],
+        difficulty: 2
       },
       {
         id: 'q9-3',
         type: 'true-false',
         question: 'SQL窗口函数可以在不分组的情况下计算累计值。',
         answer: true,
-        points: 20
+        points: 20,
+        explanation: `【答案】正确。【解析】GROUP BY按列分组，配合聚合函数；WHERE在分组前筛行，HAVING在分组后筛组这一知识点在SQL与数据库中具有重要地位。`,
+        tags: ['SQL', '数据库', '数据查询', '分组聚合', '窗口函数'],
+        difficulty: 2
       },
       {
         id: 'q9-4',
@@ -2030,13 +2648,19 @@ export const initialQuizzes: Quiz[] = [
         question: '以下哪些是SQL的聚合函数？（多选）',
         options: ['COUNT', 'CONCAT', 'SUM', 'AVG', 'SUBSTRING'],
         answer: ['COUNT', 'SUM', 'AVG'],
-        points: 20
+        points: 20,
+        explanation: `【答案】COUNT、SUM、AVG。【解析】COUNT计数、SUM求和、AVG平均、MAX/MIN极值，聚合函数忽略NULL值这一知识点在SQL与数据库中具有重要地位。`,
+        tags: ['SQL', '数据库', '数据查询', '分组聚合', '子查询', '聚合函数'],
+        difficulty: 2
       },
       {
         id: 'q9-5',
         type: 'essay',
         question: '请说明INNER JOIN和LEFT JOIN的区别，并说明各自适合什么场景。',
-        points: 20
+        points: 20,
+        explanation: `本题考查SQL与数据库综合应用能力。建议回答框架：定义与背景、核心概念解释3-4个要点、结合实际案例、个人理解总结。评分要点：完整性、准确性、深度、表达。`,
+        tags: ['SQL', '数据库', '数据查询', 'JOIN连接', '子查询', '论述题'],
+        difficulty: 3
       }
     ],
     timeLimit: 30,
@@ -2053,7 +2677,10 @@ export const initialQuizzes: Quiz[] = [
         question: '数据驱动决策的核心是什么？',
         options: ['依靠直觉', '依靠数据', '依靠经验', '依靠运气'],
         answer: '依靠数据',
-        points: 20
+        points: 20,
+        explanation: `【答案】依靠数据。【解析】数据驱动文化将数据作为决策基础，需要数据素养、工具支持、高层推动和激励机制这一知识点在数据思维与行业应用中具有重要地位。`,
+        tags: ['数据思维', '行业应用', '数据分析', '数据驱动文化', '单选题'],
+        difficulty: 2
       },
       {
         id: 'q10-2',
@@ -2061,14 +2688,20 @@ export const initialQuizzes: Quiz[] = [
         question: '以下哪个不是数据分析的行业应用领域？',
         options: ['电商', '金融', '医疗', '娱乐'],
         answer: '娱乐',
-        points: 20
+        points: 20,
+        explanation: `【答案】娱乐。【解析】电商数据分析关注GMV、转化率、客单价、复购率、退货率、用户增长和商品策略优化这一知识点在数据思维与行业应用中具有重要地位。`,
+        tags: ['数据思维', '行业应用', '数据分析', '电商分析', '金融分析', '医疗分析'],
+        difficulty: 3
       },
       {
         id: 'q10-3',
         type: 'true-false',
         question: 'A/B测试是验证业务假设的有效方法。',
         answer: true,
-        points: 20
+        points: 20,
+        explanation: `【答案】正确。【解析】本题考查数据思维与行业应用核心知识点。正确选项准确描述了该概念的核心内涵。`,
+        tags: ['数据思维', '行业应用', '数据分析'],
+        difficulty: 3
       },
       {
         id: 'q10-4',
@@ -2076,13 +2709,19 @@ export const initialQuizzes: Quiz[] = [
         question: '数据沟通中需要注意哪些方面？（多选）',
         options: ['技术向业务转化', '数据可视化设计', '报告撰写技巧', '代码优化'],
         answer: ['技术向业务转化', '数据可视化设计', '报告撰写技巧'],
-        points: 20
+        points: 20,
+        explanation: `【答案】技术向业务转化、数据可视化设计、报告撰写技巧。【解析】有效数据沟通需将技术发现转化为业务语言，用故事线串联分析发现，配可视化辅助理解这一知识点在数据思维与行业应用中具有重要地位。`,
+        tags: ['数据思维', '行业应用', '数据分析', '数据沟通', '多选题'],
+        difficulty: 3
       },
       {
         id: 'q10-5',
         type: 'essay',
         question: '请选择一个你熟悉的行业，说明数据分析在该行业中的具体应用场景和价值。',
-        points: 20
+        points: 20,
+        explanation: `本题考查数据思维与行业应用综合应用能力。建议回答框架：定义与背景、核心概念解释3-4个要点、结合实际案例、个人理解总结。评分要点：完整性、准确性、深度、表达。`,
+        tags: ['数据思维', '行业应用', '数据分析', '论述题'],
+        difficulty: 3
       }
     ],
     timeLimit: 30,
@@ -2210,7 +2849,8 @@ ws = wb.active
 red_fill = PatternFill(start_color="FFC7CE", end_color="FFC7CE", fill_type="solid")
 
 print(f"\\nExcel文件已保存到 {excel_file}")
-print("\\n数据清洗完成！可以继续下一步分析。")`
+print("\\n数据清洗完成！可以继续下一步分析。")`,
+        tags: ['数据分析', '业务分析', '分析方法', '数据处理']
       },
       {
         id: 'task-1-2',
@@ -2336,7 +2976,8 @@ print("=" * 60)
 print("1. 销售趋势：8月为销售高峰，7月和9月明显下滑")
 print("2. 重点关注：请查看各产品类别的销售变化，找出下滑最严重的类别")
 print("3. 区域差异：对比各地区表现，识别需要重点改进的区域")
-print("4. 客户结构：分析新老客贡献占比变化，判断客户留存问题")`
+print("4. 客户结构：分析新老客贡献占比变化，判断客户留存问题")`,
+        tags: ['数据分析', '业务分析', '分析方法', '数据处理']
       },
       {
         id: 'task-1-3',
@@ -2474,7 +3115,8 @@ ax6.grid(True, alpha=0.3)
 plt.tight_layout(rect=[0, 0, 1, 0.96])
 plt.savefig("sales_analysis_dashboard.png", dpi=150, bbox_inches="tight")
 print("图表已保存为 sales_analysis_dashboard.png")
-plt.show()`
+plt.show()`,
+        tags: ['数据分析', '业务分析', '分析方法', '数据处理', '数据可视化']
       },
       {
         id: 'task-1-4',
@@ -2594,7 +3236,8 @@ payment_methods = ["全部"] + sorted(df["payment_method"].unique().tolist())
 print("创建交互式分析完成！")
 print("在Jupyter Notebook中可以使用interact创建动态筛选界面。")
 print("\\n当前数据预览:")
-sales_analysis()`
+sales_analysis()`,
+        tags: ['数据分析', '业务分析', '分析方法', '数据处理']
       },
       {
         id: 'task-1-5',
@@ -2764,7 +3407,8 @@ print(report)
 with open("sales_analysis_report.txt", "w", encoding="utf-8") as f:
     f.write(report)
 
-print("\\n报告已保存为 sales_analysis_report.txt")`
+print("\\n报告已保存为 sales_analysis_report.txt")`,
+        tags: ['数据分析', '业务分析', '分析方法', '分析工具', '业务理解', '数据报告', '实战项目']
       }
     ]
   },
@@ -2893,7 +3537,8 @@ axes[1, 1].set_title('渠道分布')
 
 plt.tight_layout()
 plt.savefig('user_behavior_eda.png', dpi=150)
-print('\\nEDA图表已保存为 user_behavior_eda.png')`
+print('\\nEDA图表已保存为 user_behavior_eda.png')`,
+        tags: ['Excel', '数据处理', '表格操作', '数据筛选']
       },
       {
         id: 'task-2-2',
@@ -3004,7 +3649,8 @@ converted_users = df[df['is_converted'] == True]['user_id'].unique()
 converted_paths = user_paths[user_paths['user_id'].isin(converted_users)]
 print('转化用户数:', len(converted_paths))
 print('转化用户Top 5路径:')
-print(converted_paths['path_str'].value_counts().head())`
+print(converted_paths['path_str'].value_counts().head())`,
+        tags: ['Excel', '数据处理', '表格操作', '数据筛选', '图表制作', '数据分析', '数据可视化']
       },
       {
         id: 'task-2-3',
@@ -3111,7 +3757,8 @@ for channel in channels:
     print(f'\\n渠道 {channel}:')
     for stage in funnel_stages:
         if stage in channel_users:
-            print(f'  {stage}: {channel_users[stage]}')`
+            print(f'  {stage}: {channel_users[stage]}')`,
+        tags: ['Excel', '数据处理', '表格操作', '数据筛选', '数据分析']
       },
       {
         id: 'task-2-4',
@@ -3246,7 +3893,8 @@ fig.update_layout(
     title='用户分群特征对比'
 )
 fig.write_html('user_segment_radar.html')
-print('雷达图已保存为 user_segment_radar.html')`
+print('雷达图已保存为 user_segment_radar.html')`,
+        tags: ['Excel', '数据处理', '表格操作', '数据筛选']
       },
       {
         id: 'task-2-5',
@@ -3326,7 +3974,8 @@ plt.title('关联规则：支持度 vs 置信度 vs 提升度')
 plt.colorbar(scatter, label='提升度')
 plt.savefig('association_rules.png', dpi=150)
 plt.show()
-print('关联规则图已保存为 association_rules.png')`
+print('关联规则图已保存为 association_rules.png')`,
+        tags: ['Excel', '数据处理', '表格操作', '数据筛选', '数据分析']
       }
     ]
   },
@@ -3348,7 +3997,8 @@ print('关联规则图已保存为 association_rules.png')`
           '计算每位客户的消费金额（M）',
           '合并RFM特征'
         ],
-        solution: '# Python代码示例\nimport pandas as pd\nfrom datetime import datetime\n\n# 计算RFM\nsnapshot_date = df["date"].max() + pd.Timedelta(days=1)\n\nrfm = df.groupby("customer_id").agg({\n    "date": lambda x: (snapshot_date - x.max()).days,  # Recency\n    "order_id": "nunique",  # Frequency\n    "amount": "sum"  # Monetary\n}).reset_index()\n\nrfm.columns = ["customer_id", "recency", "frequency", "monetary"]\nprint(rfm.head())'
+        solution: '# Python代码示例\nimport pandas as pd\nfrom datetime import datetime\n\n# 计算RFM\nsnapshot_date = df["date"].max() + pd.Timedelta(days=1)\n\nrfm = df.groupby("customer_id").agg({\n    "date": lambda x: (snapshot_date - x.max()).days,  # Recency\n    "order_id": "nunique",  # Frequency\n    "amount": "sum"  # Monetary\n}).reset_index()\n\nrfm.columns = ["customer_id", "recency", "frequency", "monetary"]\nprint(rfm.head())',
+        tags: ['Python', '编程基础', '数据分析', '数据处理']
       },
       {
         id: 'task-3-2',
@@ -3360,7 +4010,8 @@ print('关联规则图已保存为 association_rules.png')`
           '分析各群体特征',
           '制定营销策略'
         ],
-        solution: '# Python代码示例\n# RFM评分（使用四分位数）\nrfm["R_score"] = pd.qcut(rfm["recency"], q=5, labels=[5, 4, 3, 2, 1])\nrfm["F_score"] = pd.qcut(rfm["frequency"].rank(method="first"), q=5, labels=[1, 2, 3, 4, 5])\nrfm["M_score"] = pd.qcut(rfm["monetary"].rank(method="first"), q=5, labels=[1, 2, 3, 4, 5])\n\n# 客户分群\ndef segment_customer(row):\n    if row["R_score"] >= 4 and row["F_score"] >= 4 and row["M_score"] >= 4:\n        return "高价值客户"\n    elif row["R_score"] >= 3 and row["F_score"] >= 3:\n        return "潜力客户"\n    elif row["R_score"] <= 2:\n        return "流失风险客户"\n    else:\n        return "一般客户"\n\nrfm["segment"] = rfm.apply(segment_customer, axis=1)\nprint(rfm["segment"].value_counts())'
+        solution: '# Python代码示例\n# RFM评分（使用四分位数）\nrfm["R_score"] = pd.qcut(rfm["recency"], q=5, labels=[5, 4, 3, 2, 1])\nrfm["F_score"] = pd.qcut(rfm["frequency"].rank(method="first"), q=5, labels=[1, 2, 3, 4, 5])\nrfm["M_score"] = pd.qcut(rfm["monetary"].rank(method="first"), q=5, labels=[1, 2, 3, 4, 5])\n\n# 客户分群\ndef segment_customer(row):\n    if row["R_score"] >= 4 and row["F_score"] >= 4 and row["M_score"] >= 4:\n        return "高价值客户"\n    elif row["R_score"] >= 3 and row["F_score"] >= 3:\n        return "潜力客户"\n    elif row["R_score"] <= 2:\n        return "流失风险客户"\n    else:\n        return "一般客户"\n\nrfm["segment"] = rfm.apply(segment_customer, axis=1)\nprint(rfm["segment"].value_counts())',
+        tags: ['Python', '编程基础', '数据分析']
       },
       {
         id: 'task-3-3',
@@ -3372,7 +4023,8 @@ print('关联规则图已保存为 association_rules.png')`
           '执行K-Means聚类',
           '分析各簇特征并命名'
         ],
-        solution: '# Python代码示例\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.cluster import KMeans\nimport matplotlib.pyplot as plt\n\n# 标准化\nscaler = StandardScaler()\nrfm_scaled = scaler.fit_transform(rfm[["recency", "frequency", "monetary"]])\n\n# 肘部法则确定K值\ninertias = []\nK = range(2, 10)\nfor k in K:\n    kmeans = KMeans(n_clusters=k, random_state=42)\n    kmeans.fit(rfm_scaled)\n    inertias.append(kmeans.inertia_)\n\nplt.plot(K, inertias, "bo-")\nplt.xlabel("K值")\nplt.ylabel("惯性")\nplt.title("肘部法则")\nplt.show()\n\n# K-Means聚类\nkmeans = KMeans(n_clusters=4, random_state=42)\nrfm["cluster"] = kmeans.fit_predict(rfm_scaled)\n\n# 各簇特征\nprint(rfm.groupby("cluster")[["recency", "frequency", "monetary"]].mean())'
+        solution: '# Python代码示例\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.cluster import KMeans\nimport matplotlib.pyplot as plt\n\n# 标准化\nscaler = StandardScaler()\nrfm_scaled = scaler.fit_transform(rfm[["recency", "frequency", "monetary"]])\n\n# 肘部法则确定K值\ninertias = []\nK = range(2, 10)\nfor k in K:\n    kmeans = KMeans(n_clusters=k, random_state=42)\n    kmeans.fit(rfm_scaled)\n    inertias.append(kmeans.inertia_)\n\nplt.plot(K, inertias, "bo-")\nplt.xlabel("K值")\nplt.ylabel("惯性")\nplt.title("肘部法则")\nplt.show()\n\n# K-Means聚类\nkmeans = KMeans(n_clusters=4, random_state=42)\nrfm["cluster"] = kmeans.fit_predict(rfm_scaled)\n\n# 各簇特征\nprint(rfm.groupby("cluster")[["recency", "frequency", "monetary"]].mean())',
+        tags: ['Python', '编程基础', '数据分析', '数据建模']
       }
     ]
   },
@@ -3395,7 +4047,8 @@ print('关联规则图已保存为 association_rules.png')`
           '设置时间索引',
           '分解时间序列成分'
         ],
-        solution: '# Python代码示例\nimport pandas as pd\nimport numpy as np\n\n# 按日聚合\ndaily_sales = df.groupby("date")["sales"].sum().reset_index()\ndaily_sales = daily_sales.set_index("date")\n\n# 填充缺失日期\nidx = pd.date_range(daily_sales.index.min(), daily_sales.index.max())\ndaily_sales = daily_sales.reindex(idx, fill_value=0)\ndaily_sales.index.name = "date"\n\nprint(f"数据范围: {daily_sales.index.min()} 到 {daily_sales.index.max()}")\nprint(f"总天数: {len(daily_sales)}")\nprint(daily_sales.head(10))'
+        solution: '# Python代码示例\nimport pandas as pd\nimport numpy as np\n\n# 按日聚合\ndaily_sales = df.groupby("date")["sales"].sum().reset_index()\ndaily_sales = daily_sales.set_index("date")\n\n# 填充缺失日期\nidx = pd.date_range(daily_sales.index.min(), daily_sales.index.max())\ndaily_sales = daily_sales.reindex(idx, fill_value=0)\ndaily_sales.index.name = "date"\n\nprint(f"数据范围: {daily_sales.index.min()} 到 {daily_sales.index.max()}")\nprint(f"总天数: {len(daily_sales)}")\nprint(daily_sales.head(10))',
+        tags: ['数据可视化', '图表设计', '可视化原则', '折线图', '数据处理']
       },
       {
         id: 'task-4-2',
@@ -3407,7 +4060,8 @@ print('关联规则图已保存为 association_rules.png')`
           '分析周季节性和月季节性',
           '识别异常点'
         ],
-        solution: '# Python代码示例\nfrom statsmodels.tsa.seasonal import seasonal_decompose\n\n# 移动平均\ndaily_sales["MA7"] = daily_sales["sales"].rolling(window=7).mean()\ndaily_sales["MA30"] = daily_sales["sales"].rolling(window=30).mean()\n\n# 时间序列分解\ndecomposition = seasonal_decompose(daily_sales["sales"], model="additive", period=7)\n\n# 提取成分\ntrend = decomposition.trend\nseasonal = decomposition.seasonal\nresidual = decomposition.resid\n\nprint("趋势成分（最近7天）:", trend.tail(7))\nprint("季节成分（最近7天）:", seasonal.tail(7))'
+        solution: '# Python代码示例\nfrom statsmodels.tsa.seasonal import seasonal_decompose\n\n# 移动平均\ndaily_sales["MA7"] = daily_sales["sales"].rolling(window=7).mean()\ndaily_sales["MA30"] = daily_sales["sales"].rolling(window=30).mean()\n\n# 时间序列分解\ndecomposition = seasonal_decompose(daily_sales["sales"], model="additive", period=7)\n\n# 提取成分\ntrend = decomposition.trend\nseasonal = decomposition.seasonal\nresidual = decomposition.resid\n\nprint("趋势成分（最近7天）:", trend.tail(7))\nprint("季节成分（最近7天）:", seasonal.tail(7))',
+        tags: ['数据可视化', '图表设计', '可视化原则', '折线图', '数据处理', '数据分析']
       },
       {
         id: 'task-4-3',
@@ -3419,7 +4073,8 @@ print('关联规则图已保存为 association_rules.png')`
           '进行未来7天的预测',
           '评估预测准确性'
         ],
-        solution: '# Python代码示例\nfrom statsmodels.tsa.arima.model import ARIMA\nfrom sklearn.metrics import mean_absolute_error, mean_squared_error\n\n# 划分数据集\ntrain_size = int(len(daily_sales) * 0.8)\ntrain = daily_sales["sales"][:train_size]\ntest = daily_sales["sales"][train_size:]\n\n# 训练ARIMA模型\nmodel = ARIMA(train, order=(5, 1, 0))\nmodel_fit = model.fit()\n\n# 预测\npredictions = model_fit.forecast(steps=len(test))\nmae = mean_absolute_error(test, predictions)\nrmse = np.sqrt(mean_squared_error(test, predictions))\n\nprint(f"MAE: {mae:.2f}")\nprint(f"RMSE: {rmse:.2f}")'
+        solution: '# Python代码示例\nfrom statsmodels.tsa.arima.model import ARIMA\nfrom sklearn.metrics import mean_absolute_error, mean_squared_error\n\n# 划分数据集\ntrain_size = int(len(daily_sales) * 0.8)\ntrain = daily_sales["sales"][:train_size]\ntest = daily_sales["sales"][train_size:]\n\n# 训练ARIMA模型\nmodel = ARIMA(train, order=(5, 1, 0))\nmodel_fit = model.fit()\n\n# 预测\npredictions = model_fit.forecast(steps=len(test))\nmae = mean_absolute_error(test, predictions)\nrmse = np.sqrt(mean_squared_error(test, predictions))\n\nprint(f"MAE: {mae:.2f}")\nprint(f"RMSE: {rmse:.2f}")',
+        tags: ['数据可视化', '图表设计', '可视化原则', '数据建模']
       }
     ]
   },
@@ -3442,7 +4097,8 @@ print('关联规则图已保存为 association_rules.png')`
           '设计实验分组',
           '确定实验周期'
         ],
-        solution: '# Python代码示例\nfrom scipy import stats\nimport numpy as np\n\n# 假设条件\nbaseline_rate = 0.10  # 基准转化率\nmde = 0.02  # 最小可检测效应 (20%相对提升)\nalpha = 0.05  # 显著性水平\npower = 0.80  # 统计功效\n\n# 计算样本量\np1 = baseline_rate\np2 = baseline_rate * (1 + mde)\n\nz_alpha = stats.norm.ppf(1 - alpha/2)\nz_beta = stats.norm.ppf(power)\n\nn = ((z_alpha * np.sqrt(2 * p1 * (1-p1)) + \n      z_beta * np.sqrt(p1*(1-p1) + p2*(1-p2)))**2 / (p2-p1)**2)\n\nprint(f"每组所需样本量: {int(np.ceil(n))}")\nprint(f"总样本量: {int(np.ceil(n * 2))}")'
+        solution: '# Python代码示例\nfrom scipy import stats\nimport numpy as np\n\n# 假设条件\nbaseline_rate = 0.10  # 基准转化率\nmde = 0.02  # 最小可检测效应 (20%相对提升)\nalpha = 0.05  # 显著性水平\npower = 0.80  # 统计功效\n\n# 计算样本量\np1 = baseline_rate\np2 = baseline_rate * (1 + mde)\n\nz_alpha = stats.norm.ppf(1 - alpha/2)\nz_beta = stats.norm.ppf(power)\n\nn = ((z_alpha * np.sqrt(2 * p1 * (1-p1)) + \n      z_beta * np.sqrt(p1*(1-p1) + p2*(1-p2)))**2 / (p2-p1)**2)\n\nprint(f"每组所需样本量: {int(np.ceil(n))}")\nprint(f"总样本量: {int(np.ceil(n * 2))}")',
+        tags: ['BI', '报表系统', '数据分析', 'KPI', '指标体系']
       },
       {
         id: 'task-5-2',
@@ -3454,7 +4110,8 @@ print('关联规则图已保存为 association_rules.png')`
           '进行统计显著性检验',
           '计算置信区间'
         ],
-        solution: '# Python代码示例\nfrom scipy.stats import chi2_contingency\nimport numpy as np\n\n# 实验数据\n# 对照组\ncontrol_views = 10000\ncontrol_conversions = 500\n\n# 实验组\nexperiment_views = 10000\nexperiment_conversions = 600\n\n# 计算转化率\ncontrol_rate = control_conversions / control_views\nexperiment_rate = experiment_conversions / experiment_views\n\nprint(f"对照组转化率: {control_rate:.4f} ({control_rate*100:.2f}%)")\nprint(f"实验组转化率: {experiment_rate:.4f} ({experiment_rate*100:.2f}%)")\nprint(f"相对提升: {(experiment_rate - control_rate) / control_rate * 100:.2f}%")\n\n# 卡方检验\ncontingency_table = [[control_conversions, control_views - control_conversions],\n                     [experiment_conversions, experiment_views - experiment_conversions]]\nchi2, p_value, dof, expected = chi2_contingency(contingency_table)\n\nprint(f"\\n卡方统计量: {chi2:.4f}")\nprint(f"p值: {p_value:.4f}")'
+        solution: '# Python代码示例\nfrom scipy.stats import chi2_contingency\nimport numpy as np\n\n# 实验数据\n# 对照组\ncontrol_views = 10000\ncontrol_conversions = 500\n\n# 实验组\nexperiment_views = 10000\nexperiment_conversions = 600\n\n# 计算转化率\ncontrol_rate = control_conversions / control_views\nexperiment_rate = experiment_conversions / experiment_views\n\nprint(f"对照组转化率: {control_rate:.4f} ({control_rate*100:.2f}%)")\nprint(f"实验组转化率: {experiment_rate:.4f} ({experiment_rate*100:.2f}%)")\nprint(f"相对提升: {(experiment_rate - control_rate) / control_rate * 100:.2f}%")\n\n# 卡方检验\ncontingency_table = [[control_conversions, control_views - control_conversions],\n                     [experiment_conversions, experiment_views - experiment_conversions]]\nchi2, p_value, dof, expected = chi2_contingency(contingency_table)\n\nprint(f"\\n卡方统计量: {chi2:.4f}")\nprint(f"p值: {p_value:.4f}")',
+        tags: ['BI', '报表系统', '数据分析', '数据处理']
       },
       {
         id: 'task-5-3',
@@ -3466,7 +4123,8 @@ print('关联规则图已保存为 association_rules.png')`
           '评估实际业务价值',
           '提出产品优化建议'
         ],
-        solution: '# Python代码示例\nimport numpy as np\nfrom scipy import stats\n\n# 置信区间计算\np1 = experiment_conversions / experiment_views\np2 = control_conversions / control_views\nse = np.sqrt(p1*(1-p1)/experiment_views + p2*(1-p2)/control_views)\nz = stats.norm.ppf(0.975)\n\nci_lower = (p1 - p2) - z * se\nci_upper = (p1 - p2) + z * se\n\nprint("=" * 50)\nprint("A/B测试结果分析报告")\nprint("=" * 50)\nprint(f"实验组转化率: {p1*100:.2f}%")\nprint(f"对照组转化率: {p2*100:.2f}%")\nprint(f"绝对提升: {(p1-p2)*100:.2f}%")\nprint(f"相对提升: {(p1-p2)/p2*100:.2f}%")\nprint(f"95%置信区间: [{(ci_lower)*100:.2f}%, {(ci_upper)*100:.2f}%]")\nprint(f"p值: {p_value:.4f}")\n\nif p_value < 0.05 and ci_lower > 0:\n    print("\\n结论: 实验组显著优于对照组，建议上线新功能。")\nelse:\n    print("\\n结论: 未观察到显著差异，建议继续测试或调整方案。")'
+        solution: '# Python代码示例\nimport numpy as np\nfrom scipy import stats\n\n# 置信区间计算\np1 = experiment_conversions / experiment_views\np2 = control_conversions / control_views\nse = np.sqrt(p1*(1-p1)/experiment_views + p2*(1-p2)/control_views)\nz = stats.norm.ppf(0.975)\n\nci_lower = (p1 - p2) - z * se\nci_upper = (p1 - p2) + z * se\n\nprint("=" * 50)\nprint("A/B测试结果分析报告")\nprint("=" * 50)\nprint(f"实验组转化率: {p1*100:.2f}%")\nprint(f"对照组转化率: {p2*100:.2f}%")\nprint(f"绝对提升: {(p1-p2)*100:.2f}%")\nprint(f"相对提升: {(p1-p2)/p2*100:.2f}%")\nprint(f"95%置信区间: [{(ci_lower)*100:.2f}%, {(ci_upper)*100:.2f}%]")\nprint(f"p值: {p_value:.4f}")\n\nif p_value < 0.05 and ci_lower > 0:\n    print("\\n结论: 实验组显著优于对照组，建议上线新功能。")\nelse:\n    print("\\n结论: 未观察到显著差异，建议继续测试或调整方案。")',
+        tags: ['BI', '报表系统', '数据分析']
       }
     ]
   },
@@ -3489,7 +4147,8 @@ print('关联规则图已保存为 association_rules.png')`
           '使用聚合函数汇总',
           '使用GROUP BY分组'
         ],
-        solution: '-- 基础查询分析\n-- 1. 查询每月销售额\nSELECT \n    DATE_FORMAT(order_date, "%Y-%m") as month,\n    COUNT(*) as order_count,\n    SUM(amount) as total_sales,\n    AVG(amount) as avg_order_value\nFROM orders\nWHERE order_date >= "2024-01-01"\nGROUP BY DATE_FORMAT(order_date, "%Y-%m")\nORDER BY month;\n\n-- 2. 按产品类别统计\nSELECT \n    p.category_name,\n    COUNT(DISTINCT o.customer_id) as customer_count,\n    SUM(o.amount) as total_sales\nFROM orders o\nJOIN products p ON o.product_id = p.product_id\nGROUP BY p.category_name\nHAVING total_sales > 10000\nORDER BY total_sales DESC;'
+        solution: '-- 基础查询分析\n-- 1. 查询每月销售额\nSELECT \n    DATE_FORMAT(order_date, "%Y-%m") as month,\n    COUNT(*) as order_count,\n    SUM(amount) as total_sales,\n    AVG(amount) as avg_order_value\nFROM orders\nWHERE order_date >= "2024-01-01"\nGROUP BY DATE_FORMAT(order_date, "%Y-%m")\nORDER BY month;\n\n-- 2. 按产品类别统计\nSELECT \n    p.category_name,\n    COUNT(DISTINCT o.customer_id) as customer_count,\n    SUM(o.amount) as total_sales\nFROM orders o\nJOIN products p ON o.product_id = p.product_id\nGROUP BY p.category_name\nHAVING total_sales > 10000\nORDER BY total_sales DESC;',
+        tags: ['商务分析', '业务分析', '实战案例', '客户分析', '数据处理', '数据分析']
       },
       {
         id: 'task-6-2',
@@ -3501,7 +4160,8 @@ print('关联规则图已保存为 association_rules.png')`
           '使用LEFT JOIN保留全部数据',
           '聚合多表关联结果'
         ],
-        solution: '-- 多表关联查询\n-- 查询每个客户的订单详情和产品信息\nSELECT \n    c.customer_name,\n    c.city,\n    o.order_id,\n    o.order_date,\n    p.product_name,\n    p.category_name,\n    oi.quantity,\n    oi.price,\n    (oi.quantity * oi.price) as line_total\nFROM customers c\nINNER JOIN orders o ON c.customer_id = o.customer_id\nINNER JOIN order_items oi ON o.order_id = oi.order_id\nINNER JOIN products p ON oi.product_id = p.product_id\nWHERE o.order_date >= "2024-01-01"\nORDER BY c.customer_name, o.order_date;'
+        solution: '-- 多表关联查询\n-- 查询每个客户的订单详情和产品信息\nSELECT \n    c.customer_name,\n    c.city,\n    o.order_id,\n    o.order_date,\n    p.product_name,\n    p.category_name,\n    oi.quantity,\n    oi.price,\n    (oi.quantity * oi.price) as line_total\nFROM customers c\nINNER JOIN orders o ON c.customer_id = o.customer_id\nINNER JOIN order_items oi ON o.order_id = oi.order_id\nINNER JOIN products p ON oi.product_id = p.product_id\nWHERE o.order_date >= "2024-01-01"\nORDER BY c.customer_name, o.order_date;',
+        tags: ['商务分析', '业务分析', '实战案例']
       },
       {
         id: 'task-6-3',
@@ -3513,7 +4173,8 @@ print('关联规则图已保存为 association_rules.png')`
           '使用LAG()/LEAD()计算变化',
           '使用聚合窗口函数'
         ],
-        solution: '-- 窗口函数分析\n-- 1. 客户月度购买排名\nSELECT \n    customer_id,\n    DATE_FORMAT(order_date, "%Y-%m") as month,\n    SUM(amount) as monthly_sales,\n    ROW_NUMBER() OVER (PARTITION BY DATE_FORMAT(order_date, \"%Y-%m\") \n                        ORDER BY SUM(amount) DESC) as monthly_rank\nFROM orders\nGROUP BY customer_id, DATE_FORMAT(order_date, \"%Y-%m\")\nLIMIT 20;\n\n-- 2. 计算月环比增长\nWITH monthly_sales AS (\n    SELECT \n        DATE_FORMAT(order_date, \"%Y-%m\") as month,\n        SUM(amount) as sales\n    FROM orders\n    GROUP BY DATE_FORMAT(order_date, \"%Y-%m\")\n)\nSELECT \n    month,\n    sales,\n    LAG(sales) OVER (ORDER BY month) as prev_month_sales,\n    sales - LAG(sales) OVER (ORDER BY month) as growth_amount,\n    ROUND((sales - LAG(sales) OVER (ORDER BY month)) / \n          LAG(sales) OVER (ORDER BY month) * 100, 2) as growth_rate\nFROM monthly_sales\nORDER BY month;'
+        solution: '-- 窗口函数分析\n-- 1. 客户月度购买排名\nSELECT \n    customer_id,\n    DATE_FORMAT(order_date, "%Y-%m") as month,\n    SUM(amount) as monthly_sales,\n    ROW_NUMBER() OVER (PARTITION BY DATE_FORMAT(order_date, \"%Y-%m\") \n                        ORDER BY SUM(amount) DESC) as monthly_rank\nFROM orders\nGROUP BY customer_id, DATE_FORMAT(order_date, \"%Y-%m\")\nLIMIT 20;\n\n-- 2. 计算月环比增长\nWITH monthly_sales AS (\n    SELECT \n        DATE_FORMAT(order_date, \"%Y-%m\") as month,\n        SUM(amount) as sales\n    FROM orders\n    GROUP BY DATE_FORMAT(order_date, \"%Y-%m\")\n)\nSELECT \n    month,\n    sales,\n    LAG(sales) OVER (ORDER BY month) as prev_month_sales,\n    sales - LAG(sales) OVER (ORDER BY month) as growth_amount,\n    ROUND((sales - LAG(sales) OVER (ORDER BY month)) / \n          LAG(sales) OVER (ORDER BY month) * 100, 2) as growth_rate\nFROM monthly_sales\nORDER BY month;',
+        tags: ['商务分析', '业务分析', '实战案例', '客户分析', '数据分析']
       }
     ]
   },
@@ -3536,7 +4197,8 @@ print('关联规则图已保存为 association_rules.png')`
           '设置统一的风格',
           '添加标题和说明'
         ],
-        solution: '# Python代码示例\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport pandas as pd\n\n# 设置全局样式\nplt.style.use("seaborn-v0_8-whitegrid")\nsns.set_palette("husl")\n\n# 创建仪表板布局\nfig = plt.figure(figsize=(20, 12))\nfig.suptitle("销售数据分析仪表板", fontsize=24, fontweight="bold", y=1.02)\n\n# 创建子图布局\ngs = fig.add_gridspec(3, 3, hspace=0.3, wspace=0.3)\n\n# 1. KPI卡片区\nax1 = fig.add_subplot(gs[0, 0])\nax2 = fig.add_subplot(gs[0, 1])\nax3 = fig.add_subplot(gs[0, 2])\n\n# 2. 主图表区\nax4 = fig.add_subplot(gs[1, :2])\nax5 = fig.add_subplot(gs[1, 2])\n\n# 3. 底部图表区\nax6 = fig.add_subplot(gs[2, :])\n\nprint("仪表板布局设计完成！")\nprint("请继续添加具体图表内容。")'
+        solution: '# Python代码示例\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport pandas as pd\n\n# 设置全局样式\nplt.style.use("seaborn-v0_8-whitegrid")\nsns.set_palette("husl")\n\n# 创建仪表板布局\nfig = plt.figure(figsize=(20, 12))\nfig.suptitle("销售数据分析仪表板", fontsize=24, fontweight="bold", y=1.02)\n\n# 创建子图布局\ngs = fig.add_gridspec(3, 3, hspace=0.3, wspace=0.3)\n\n# 1. KPI卡片区\nax1 = fig.add_subplot(gs[0, 0])\nax2 = fig.add_subplot(gs[0, 1])\nax3 = fig.add_subplot(gs[0, 2])\n\n# 2. 主图表区\nax4 = fig.add_subplot(gs[1, :2])\nax5 = fig.add_subplot(gs[1, 2])\n\n# 3. 底部图表区\nax6 = fig.add_subplot(gs[2, :])\n\nprint("仪表板布局设计完成！")\nprint("请继续添加具体图表内容。")',
+        tags: ['统计学', '统计分析', '数据统计', '数据可视化']
       },
       {
         id: 'task-7-2',
@@ -3548,7 +4210,8 @@ print('关联规则图已保存为 association_rules.png')`
           '添加趋势指示器',
           '设置颜色编码'
         ],
-        solution: '# Python代码示例\nimport matplotlib.pyplot as plt\nimport numpy as np\nfrom matplotlib.patches import FancyBboxPatch\n\ndef create_kpi_card(ax, title, value, unit="", change=None):\n    # 卡片背景\n    ax.add_patch(FancyBboxPatch((0.1, 0.1), 0.8, 0.8, \n                                 boxstyle="round,pad=0.02\", \n                                 facecolor=\"white\", \n                                 edgecolor=\"gray\",\n                                 linewidth=2,\n                                 transform=ax.transAxes))\n    \n    # 标题\n    ax.text(0.5, 0.75, title, fontsize=12, ha="center", \n            va="center", transform=ax.transAxes, color="gray")\n    \n    # 数值\n    ax.text(0.5, 0.5, f"{value}{unit}", fontsize=24, ha="center\", \n            va="center", transform=ax.transAxes, fontweight="bold")\n    \n    # 变化指示\n    if change is not None:\n        color = "green" if change > 0 else "red"\n        symbol = "↑" if change > 0 else "↓"\n        ax.text(0.5, 0.25, f"{symbol} {abs(change):.1f}%", fontsize=12, \n                ha="center", va="center", transform=ax.transAxes, color=color)\n    \n    ax.set_xlim(0, 1)\n    ax.set_ylim(0, 1)\n    ax.axis("off")\n\n# 创建KPI卡片\nfig, axes = plt.subplots(1, 4, figsize=(16, 4))\ncreate_kpi_card(axes[0], "总销售额", "¥1,234,567", "", 15.2)\ncreate_kpi_card(axes[1], "订单数", "8,901", "笔", 8.5)\ncreate_kpi_card(axes[2], "客单价", "¥138.7", "", -2.3)\ncreate_kpi_card(axes[3], "转化率", "3.45", "%", 0.8)\n\nplt.tight_layout()\nplt.show()'
+        solution: '# Python代码示例\nimport matplotlib.pyplot as plt\nimport numpy as np\nfrom matplotlib.patches import FancyBboxPatch\n\ndef create_kpi_card(ax, title, value, unit="", change=None):\n    # 卡片背景\n    ax.add_patch(FancyBboxPatch((0.1, 0.1), 0.8, 0.8, \n                                 boxstyle="round,pad=0.02\", \n                                 facecolor=\"white\", \n                                 edgecolor=\"gray\",\n                                 linewidth=2,\n                                 transform=ax.transAxes))\n    \n    # 标题\n    ax.text(0.5, 0.75, title, fontsize=12, ha="center", \n            va="center", transform=ax.transAxes, color="gray")\n    \n    # 数值\n    ax.text(0.5, 0.5, f"{value}{unit}", fontsize=24, ha="center\", \n            va="center", transform=ax.transAxes, fontweight="bold")\n    \n    # 变化指示\n    if change is not None:\n        color = "green" if change > 0 else "red"\n        symbol = "↑" if change > 0 else "↓"\n        ax.text(0.5, 0.25, f"{symbol} {abs(change):.1f}%", fontsize=12, \n                ha="center", va="center", transform=ax.transAxes, color=color)\n    \n    ax.set_xlim(0, 1)\n    ax.set_ylim(0, 1)\n    ax.axis("off")\n\n# 创建KPI卡片\nfig, axes = plt.subplots(1, 4, figsize=(16, 4))\ncreate_kpi_card(axes[0], "总销售额", "¥1,234,567", "", 15.2)\ncreate_kpi_card(axes[1], "订单数", "8,901", "笔", 8.5)\ncreate_kpi_card(axes[2], "客单价", "¥138.7", "", -2.3)\ncreate_kpi_card(axes[3], "转化率", "3.45", "%", 0.8)\n\nplt.tight_layout()\nplt.show()',
+        tags: ['统计学', '统计分析', '数据统计', '实战项目']
       },
       {
         id: 'task-7-3',
@@ -3560,7 +4223,8 @@ print('关联规则图已保存为 association_rules.png')`
           '创建交互式柱状图',
           '添加下拉筛选功能'
         ],
-        solution: '# Python代码示例\nimport plotly.express as px\nimport plotly.graph_objects as go\nfrom plotly.subplots import make_subplots\nimport pandas as pd\n\n# 创建交互式仪表板\nfig = make_subplots(\n    rows=2, cols=2,\n    subplot_titles=(\n        "月度销售额趋势\", \n        \"产品类别占比\", \n        \"地区销售对比\", \n        \"Top 10 产品\"\n    ),\n    specs=[\n        [{\"type\": \"scatter\"}, {\"type\": \"pie\"}],\n        [{\"type\": \"bar\"}, {\"type\": \"bar\"}]\n    ]\n)\n\n# 1. 月度趋势\nfig.add_trace(\n    go.Scatter(x=monthly_sales.index, y=monthly_sales.values, \n               mode=\"lines+markers\", name=\"销售额\"),\n    row=1, col=1\n)\n\n# 2. 饼图\nfig.add_trace(\n    go.Pie(labels=category_sales.index, values=category_sales.values,\n           hole=0.4, name=\"销售占比\"),\n    row=1, col=2\n)\n\n# 3. 地区柱状图\nfig.add_trace(\n    go.Bar(x=region_sales.values, y=region_sales.index, \n           orientation=\"h\", name=\"地区销售\"),\n    row=2, col=1\n)\n\n# 更新布局\nfig.update_layout(\n    height=800,\n    width=1200,\n    showlegend=True,\n    title_text=\"销售数据分析仪表板\"\n)\n\nfig.show()'
+        solution: '# Python代码示例\nimport plotly.express as px\nimport plotly.graph_objects as go\nfrom plotly.subplots import make_subplots\nimport pandas as pd\n\n# 创建交互式仪表板\nfig = make_subplots(\n    rows=2, cols=2,\n    subplot_titles=(\n        "月度销售额趋势\", \n        \"产品类别占比\", \n        \"地区销售对比\", \n        \"Top 10 产品\"\n    ),\n    specs=[\n        [{\"type\": \"scatter\"}, {\"type\": \"pie\"}],\n        [{\"type\": \"bar\"}, {\"type\": \"bar\"}]\n    ]\n)\n\n# 1. 月度趋势\nfig.add_trace(\n    go.Scatter(x=monthly_sales.index, y=monthly_sales.values, \n               mode=\"lines+markers\", name=\"销售额\"),\n    row=1, col=1\n)\n\n# 2. 饼图\nfig.add_trace(\n    go.Pie(labels=category_sales.index, values=category_sales.values,\n           hole=0.4, name=\"销售占比\"),\n    row=1, col=2\n)\n\n# 3. 地区柱状图\nfig.add_trace(\n    go.Bar(x=region_sales.values, y=region_sales.index, \n           orientation=\"h\", name=\"地区销售\"),\n    row=2, col=1\n)\n\n# 更新布局\nfig.update_layout(\n    height=800,\n    width=1200,\n    showlegend=True,\n    title_text=\"销售数据分析仪表板\"\n)\n\nfig.show()',
+        tags: ['统计学', '统计分析', '数据统计', '数据可视化']
       }
     ]
   },
@@ -3582,7 +4246,8 @@ print('关联规则图已保存为 association_rules.png')`
           '可视化异常点',
           '分析异常特征'
         ],
-        solution: '# Python代码示例\nimport numpy as np\nimport pandas as pd\n\n# Z-score方法\ndef detect_outliers_zscore(data, threshold=3):\n    z_scores = np.abs((data - data.mean()) / data.std())\n    return z_scores > threshold\n\n# IQR方法\ndef detect_outliers_iqr(data, multiplier=1.5):\n    Q1 = data.quantile(0.25)\n    Q3 = data.quantile(0.75)\n    IQR = Q3 - Q1\n    lower_bound = Q1 - multiplier * IQR\n    upper_bound = Q3 + multiplier * IQR\n    return (data < lower_bound) | (data > upper_bound)\n\n# 检测异常\ndf["z_score_outlier"] = detect_outliers_zscore(df["amount"])\ndf["iqr_outlier"] = detect_outliers_iqr(df["amount"])\n\nprint(f"Z-score异常数: {df[\"z_score_outlier\"].sum()}\")\nprint(f"IQR异常数: {df[\"iqr_outlier\"].sum()}\")\n\n# 异常交易详情\noutliers = df[df["z_score_outlier"]].sort_values("amount", ascending=False)\nprint("\\n异常交易:")\nprint(outliers[[\"transaction_id\", \"amount\", \"customer_id\", \"date\"]].head(10))'
+        solution: '# Python代码示例\nimport numpy as np\nimport pandas as pd\n\n# Z-score方法\ndef detect_outliers_zscore(data, threshold=3):\n    z_scores = np.abs((data - data.mean()) / data.std())\n    return z_scores > threshold\n\n# IQR方法\ndef detect_outliers_iqr(data, multiplier=1.5):\n    Q1 = data.quantile(0.25)\n    Q3 = data.quantile(0.75)\n    IQR = Q3 - Q1\n    lower_bound = Q1 - multiplier * IQR\n    upper_bound = Q3 + multiplier * IQR\n    return (data < lower_bound) | (data > upper_bound)\n\n# 检测异常\ndf["z_score_outlier"] = detect_outliers_zscore(df["amount"])\ndf["iqr_outlier"] = detect_outliers_iqr(df["amount"])\n\nprint(f"Z-score异常数: {df[\"z_score_outlier\"].sum()}\")\nprint(f"IQR异常数: {df[\"iqr_outlier\"].sum()}\")\n\n# 异常交易详情\noutliers = df[df["z_score_outlier"]].sort_values("amount", ascending=False)\nprint("\\n异常交易:")\nprint(outliers[[\"transaction_id\", \"amount\", \"customer_id\", \"date\"]].head(10))',
+        tags: ['机器学习', '算法', '模型', '数据分析']
       },
       {
         id: 'task-8-2',
@@ -3594,7 +4259,8 @@ print('关联规则图已保存为 association_rules.png')`
           '预测异常交易',
           '评估检测效果'
         ],
-        solution: '# Python代码示例\nfrom sklearn.ensemble import IsolationForest\nfrom sklearn.preprocessing import StandardScaler\nimport pandas as pd\nimport numpy as np\n\n# 特征工程\nfeatures = ["amount", "quantity", "hour", "day_of_week"]\nX = df[features].copy()\n\n# 处理缺失值\nX = X.fillna(X.median())\n\n# 标准化\nscaler = StandardScaler()\nX_scaled = scaler.fit_transform(X)\n\n# 训练Isolation Forest\niso_forest = IsolationForest(\n    n_estimators=100,\n    contamination=0.01,  # 假设1%的数据是异常\n    random_state=42\n)\n\ndf["anomaly"] = iso_forest.fit_predict(X_scaled)\ndf["anomaly_score"] = iso_forest.decision_function(X_scaled)\n\n# 异常交易\nanomalies = df[df["anomaly"] == -1]\nprint(f"检测到的异常交易数: {len(anomalies)}\")\nprint(f"异常比例: {len(anomalies) / len(df) * 100:.2f}%\")\nprint("\\n异常交易详情:")\nprint(anomalies[[\"transaction_id\", \"amount\", \"anomaly_score\"]].head(10))'
+        solution: '# Python代码示例\nfrom sklearn.ensemble import IsolationForest\nfrom sklearn.preprocessing import StandardScaler\nimport pandas as pd\nimport numpy as np\n\n# 特征工程\nfeatures = ["amount", "quantity", "hour", "day_of_week"]\nX = df[features].copy()\n\n# 处理缺失值\nX = X.fillna(X.median())\n\n# 标准化\nscaler = StandardScaler()\nX_scaled = scaler.fit_transform(X)\n\n# 训练Isolation Forest\niso_forest = IsolationForest(\n    n_estimators=100,\n    contamination=0.01,  # 假设1%的数据是异常\n    random_state=42\n)\n\ndf["anomaly"] = iso_forest.fit_predict(X_scaled)\ndf["anomaly_score"] = iso_forest.decision_function(X_scaled)\n\n# 异常交易\nanomalies = df[df["anomaly"] == -1]\nprint(f"检测到的异常交易数: {len(anomalies)}\")\nprint(f"异常比例: {len(anomalies) / len(df) * 100:.2f}%\")\nprint("\\n异常交易详情:")\nprint(anomalies[[\"transaction_id\", \"amount\", \"anomaly_score\"]].head(10))',
+        tags: ['机器学习', '算法', '模型', '数据建模']
       },
       {
         id: 'task-8-3',
@@ -3606,7 +4272,8 @@ print('关联规则图已保存为 association_rules.png')`
           '计算业务损失',
           '提出风控建议'
         ],
-        solution: '# Python代码示例\nimport pandas as pd\n\nanomalies = df[df["anomaly"] == -1]\nprint("异常交易总数:", len(anomalies))\nprint("异常交易总金额:", anomalies["amount"].sum())\n\nsuspicious = anomalies.groupby("customer_id").size().sort_values(ascending=False)\nprint(suspicious.head(10))\n\nprint("风控建议:")\nprint("1. 对高频异常交易客户进行人工审核")\nprint("2. 建立实时风控规则")'
+        solution: '# Python代码示例\nimport pandas as pd\n\nanomalies = df[df["anomaly"] == -1]\nprint("异常交易总数:", len(anomalies))\nprint("异常交易总金额:", anomalies["amount"].sum())\n\nsuspicious = anomalies.groupby("customer_id").size().sort_values(ascending=False)\nprint(suspicious.head(10))\n\nprint("风控建议:")\nprint("1. 对高频异常交易客户进行人工审核")\nprint("2. 建立实时风控规则")',
+        tags: ['机器学习', '算法', '模型', '数据分析', '数据报告']
       }
     ]
   },
@@ -3628,7 +4295,8 @@ print('关联规则图已保存为 association_rules.png')`
           '计算各Cohort的用户数',
           '构建Cohort矩阵'
         ],
-        solution: '# Python代码示例\nimport pandas as pd\nimport numpy as np\n\n# 识别用户首次活跃日期（Cohort Index）\ndf["order_date"] = pd.to_datetime(df["order_date"])\nfirst_purchase = df.groupby("customer_id")["order_date"].min().reset_index()\nfirst_purchase.columns = ["customer_id", "first_purchase_date"]\n\n# 合并Cohort信息\ndf = df.merge(first_purchase, on="customer_id")\n\n# 计算Cohort月份\ndf["cohort_month"] = df["first_purchase_date"].dt.to_period("M")\ndf["order_month"] = df["order_date"].dt.to_period("M")\ndf["cohort_index"] = (df["order_month"].astype(int) - df["cohort_month"].astype(int))\n\n# 构建Cohort矩阵\ncohort_data = df.groupby(["cohort_month", "cohort_index"])["customer_id"].nunique().reset_index()\ncohort_pivot = cohort_data.pivot(index="cohort_month", columns="cohort_index", values="customer_id")\n\nprint(\"Cohort用户留存矩阵:\")\nprint(cohort_pivot.head(10))'
+        solution: '# Python代码示例\nimport pandas as pd\nimport numpy as np\n\n# 识别用户首次活跃日期（Cohort Index）\ndf["order_date"] = pd.to_datetime(df["order_date"])\nfirst_purchase = df.groupby("customer_id")["order_date"].min().reset_index()\nfirst_purchase.columns = ["customer_id", "first_purchase_date"]\n\n# 合并Cohort信息\ndf = df.merge(first_purchase, on="customer_id")\n\n# 计算Cohort月份\ndf["cohort_month"] = df["first_purchase_date"].dt.to_period("M")\ndf["order_month"] = df["order_date"].dt.to_period("M")\ndf["cohort_index"] = (df["order_month"].astype(int) - df["cohort_month"].astype(int))\n\n# 构建Cohort矩阵\ncohort_data = df.groupby(["cohort_month", "cohort_index"])["customer_id"].nunique().reset_index()\ncohort_pivot = cohort_data.pivot(index="cohort_month", columns="cohort_index", values="customer_id")\n\nprint(\"Cohort用户留存矩阵:\")\nprint(cohort_pivot.head(10))',
+        tags: ['SQL', '数据库', '数据查询']
       },
       {
         id: 'task-9-2',
@@ -3640,7 +4308,8 @@ print('关联规则图已保存为 association_rules.png')`
           '计算留存率百分比',
           '可视化留存曲线'
         ],
-        solution: '# Python代码示例\n# 计算留存率\ncohort_size = cohort_pivot.iloc[:, 0]\nretention_rate = cohort_pivot.divide(cohort_size, axis=0) * 100\n\n# 格式化显示\nretention_display = retention_rate.round(1).astype(str) + \"%\"\n\nprint(\"留存率矩阵 (%):\")\nprint(retention_display.head(10))\n\n# 平均留存率\navg_retention = retention_rate.mean()\nprint(\"\\n各月份平均留存率:\")\nprint(avg_retention.round(2))'
+        solution: '# Python代码示例\n# 计算留存率\ncohort_size = cohort_pivot.iloc[:, 0]\nretention_rate = cohort_pivot.divide(cohort_size, axis=0) * 100\n\n# 格式化显示\nretention_display = retention_rate.round(1).astype(str) + \"%\"\n\nprint(\"留存率矩阵 (%):\")\nprint(retention_display.head(10))\n\n# 平均留存率\navg_retention = retention_rate.mean()\nprint(\"\\n各月份平均留存率:\")\nprint(avg_retention.round(2))',
+        tags: ['SQL', '数据库', '数据查询']
       },
       {
         id: 'task-9-3',
@@ -3652,7 +4321,8 @@ print('关联规则图已保存为 association_rules.png')`
           '识别留存问题',
           '提出优化建议'
         ],
-        solution: '# Python代码示例\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport pandas as pd\nimport numpy as np\n\n# 设置中文字体\nplt.rcParams["font.sans-serif\"] = ["SimHei"]\nplt.rcParams["axes.unicode_minus\"] = False\n\n# 创建热力图\nfig, ax = plt.subplots(figsize=(15, 8))\n\n# 准备数据（取前12个月）\nretention_heatmap = retention_rate.iloc[:12, :12]\n\n# 绘制热力图\nsns.heatmap(retention_heatmap, \n            annot=True, \n            fmt=\".1f\", \n            cmap=\"YlGnBu\",\n            ax=ax,\n            vmin=0,\n            vmax=100,\n            cbar_kws={\"label\": \"留存率 (%)\"})\n\nax.set_title(\"用户留存率热力图\", fontsize=16, pad=20)\nax.set_xlabel(\"距首次购买月数\", fontsize=12)\nax.set_ylabel(\"用户首次购买月份\", fontsize=12)\n\nplt.tight_layout()\nplt.show()\n\n# 分析结论\nprint(\"\\n留存分析结论:\")\nprint(f\"1. 次月留存率: {retention_rate.iloc[:, 1].mean():.1f}%\")\nprint(f\"2. 3个月留存率: {retention_rate.iloc[:, 3].mean():.1f}%\")\nprint(f\"3. 6个月留存率: {retention_rate.iloc[:, 6].mean():.1f}%\")\nprint(\"\\n建议: 重点关注新用户的前30天运营，优化新手引导流程。\")'
+        solution: '# Python代码示例\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport pandas as pd\nimport numpy as np\n\n# 设置中文字体\nplt.rcParams["font.sans-serif\"] = ["SimHei"]\nplt.rcParams["axes.unicode_minus\"] = False\n\n# 创建热力图\nfig, ax = plt.subplots(figsize=(15, 8))\n\n# 准备数据（取前12个月）\nretention_heatmap = retention_rate.iloc[:12, :12]\n\n# 绘制热力图\nsns.heatmap(retention_heatmap, \n            annot=True, \n            fmt=\".1f\", \n            cmap=\"YlGnBu\",\n            ax=ax,\n            vmin=0,\n            vmax=100,\n            cbar_kws={\"label\": \"留存率 (%)\"})\n\nax.set_title(\"用户留存率热力图\", fontsize=16, pad=20)\nax.set_xlabel(\"距首次购买月数\", fontsize=12)\nax.set_ylabel(\"用户首次购买月份\", fontsize=12)\n\nplt.tight_layout()\nplt.show()\n\n# 分析结论\nprint(\"\\n留存分析结论:\")\nprint(f\"1. 次月留存率: {retention_rate.iloc[:, 1].mean():.1f}%\")\nprint(f\"2. 3个月留存率: {retention_rate.iloc[:, 3].mean():.1f}%\")\nprint(f\"3. 6个月留存率: {retention_rate.iloc[:, 6].mean():.1f}%\")\nprint(\"\\n建议: 重点关注新用户的前30天运营，优化新手引导流程。\")',
+        tags: ['SQL', '数据库', '数据查询', '数据处理', '数据分析', '数据可视化']
       }
     ]
   },
@@ -3674,7 +4344,8 @@ print('关联规则图已保存为 association_rules.png')`
           '理解数据分布',
           '定义分析目标'
         ],
-        solution: '# Python代码示例\nimport pandas as pd\nimport numpy as np\n\n# 加载数据\ndf = pd.read_csv("business_data.csv\")\n\n# 数据概览\nprint(\"=\" * 60)\nprint(\"数据概览\")\nprint(\"=\" * 60)\nprint(f\"\\n数据维度: {df.shape[0]} 行 x {df.shape[1]} 列\")\nprint(f\"\\n列名: {df.columns.tolist()}\")\n\n# 数据类型\nprint(f\"\\n数据类型:\")\nprint(df.dtypes)\n\n# 缺失值\nprint(f\"\\n缺失值统计:\")\nmissing = df.isnull().sum()\nmissing_pct = (missing / len(df) * 100).round(2)\nmissing_df = pd.DataFrame({\"缺失数\": missing, \"缺失率(%)\": missing_pct})\nprint(missing_df[missing_df[\"缺失数\"] > 0])\n\n# 数值统计\nprint(f\"\\n数值统计:\")\nprint(df.describe())'
+        solution: '# Python代码示例\nimport pandas as pd\nimport numpy as np\n\n# 加载数据\ndf = pd.read_csv("business_data.csv\")\n\n# 数据概览\nprint(\"=\" * 60)\nprint(\"数据概览\")\nprint(\"=\" * 60)\nprint(f\"\\n数据维度: {df.shape[0]} 行 x {df.shape[1]} 列\")\nprint(f\"\\n列名: {df.columns.tolist()}\")\n\n# 数据类型\nprint(f\"\\n数据类型:\")\nprint(df.dtypes)\n\n# 缺失值\nprint(f\"\\n缺失值统计:\")\nmissing = df.isnull().sum()\nmissing_pct = (missing / len(df) * 100).round(2)\nmissing_df = pd.DataFrame({\"缺失数\": missing, \"缺失率(%)\": missing_pct})\nprint(missing_df[missing_df[\"缺失数\"] > 0])\n\n# 数值统计\nprint(f\"\\n数值统计:\")\nprint(df.describe())',
+        tags: ['数据思维', '行业应用', '数据分析', '数据处理']
       },
       {
         id: 'task-10-2',
@@ -3686,7 +4357,8 @@ print('关联规则图已保存为 association_rules.png')`
           '时间趋势分析',
           '相关性分析'
         ],
-        solution: '# Python代码示例\nimport pandas as pd\nimport numpy as np\n\n# 1. 用户分析\nprint(\"=\" * 60)\nprint(\"用户分析\")\nprint(\"=\" * 60)\n\n# 用户活跃度分布\nuser_activity = df.groupby("user_id").agg({\n    \"session_id\": \"count\",\n    \"page_views\": \"sum\",\n    \"duration\": \"mean\"\n}).round(2)\nuser_activity.columns = [\"访问次数\", \"浏览页数\", \"平均时长\"]\n\n# 用户分群\nuser_activity[\"用户类型\"] = pd.cut(\n    user_activity[\"访问次数\"],\n    bins=[0, 3, 10, 100],\n    labels=[\"低活跃\", \"中活跃\", \"高活跃\"]\n)\nprint(\"\\n用户类型分布:\")\nprint(user_activity[\"用户类型\"].value_counts())\n\n# 2. 产品分析\nprint(\"\\n\" + \"=\" * 60)\nprint(\"产品分析\")\nprint(\"=\" * 60)\n\nproduct_stats = df.groupby(\"product_name\").agg({\n    \"sales\": \"sum\",\n    \"quantity\": \"sum\",\n    \"customer_id\": \"nunique\"\n}).round(2)\nproduct_stats.columns = [\"销售额\", \"销量\", \"购买客户数\"]\nproduct_stats = product_stats.sort_values(\"销售额\", ascending=False)\nprint(\"\\nTop 10 产品:\")\nprint(product_stats.head(10))\n\n# 3. 时间趋势\nprint(\"\\n\" + \"=\" * 60)\nprint(\"时间趋势分析\")\nprint(\"=\" * 60)\n\ndf[\"date\"] = pd.to_datetime(df[\"date\"])\ndf[\"month\"] = df[\"date\"].dt.to_period(\"M\")\n\nmonthly_trend = df.groupby(\"month\").agg({\n    \"sales\": \"sum\",\n    \"order_id\": \"nunique\",\n    \"customer_id\": \"nunique\"\n}).round(2)\nmonthly_trend.columns = [\"销售额\", \"订单数\", \"客户数\"]\nprint(\"\\n月度趋势:\")\nprint(monthly_trend)\n\n# 4. 相关性分析\nprint(\"\\n\" + \"=\" * 60)\nprint(\"相关性分析\")\nprint(\"=\" * 60)\n\nnumeric_cols = [\"sales\", \"quantity\", \"price\", \"page_views\", \"duration\"]\ncorr_matrix = df[numeric_cols].corr()\nprint(\"\\n相关系数矩阵:\")\nprint(corr_matrix.round(3))'
+        solution: '# Python代码示例\nimport pandas as pd\nimport numpy as np\n\n# 1. 用户分析\nprint(\"=\" * 60)\nprint(\"用户分析\")\nprint(\"=\" * 60)\n\n# 用户活跃度分布\nuser_activity = df.groupby("user_id").agg({\n    \"session_id\": \"count\",\n    \"page_views\": \"sum\",\n    \"duration\": \"mean\"\n}).round(2)\nuser_activity.columns = [\"访问次数\", \"浏览页数\", \"平均时长\"]\n\n# 用户分群\nuser_activity[\"用户类型\"] = pd.cut(\n    user_activity[\"访问次数\"],\n    bins=[0, 3, 10, 100],\n    labels=[\"低活跃\", \"中活跃\", \"高活跃\"]\n)\nprint(\"\\n用户类型分布:\")\nprint(user_activity[\"用户类型\"].value_counts())\n\n# 2. 产品分析\nprint(\"\\n\" + \"=\" * 60)\nprint(\"产品分析\")\nprint(\"=\" * 60)\n\nproduct_stats = df.groupby(\"product_name\").agg({\n    \"sales\": \"sum\",\n    \"quantity\": \"sum\",\n    \"customer_id\": \"nunique\"\n}).round(2)\nproduct_stats.columns = [\"销售额\", \"销量\", \"购买客户数\"]\nproduct_stats = product_stats.sort_values(\"销售额\", ascending=False)\nprint(\"\\nTop 10 产品:\")\nprint(product_stats.head(10))\n\n# 3. 时间趋势\nprint(\"\\n\" + \"=\" * 60)\nprint(\"时间趋势分析\")\nprint(\"=\" * 60)\n\ndf[\"date\"] = pd.to_datetime(df[\"date\"])\ndf[\"month\"] = df[\"date\"].dt.to_period(\"M\")\n\nmonthly_trend = df.groupby(\"month\").agg({\n    \"sales\": \"sum\",\n    \"order_id\": \"nunique\",\n    \"customer_id\": \"nunique\"\n}).round(2)\nmonthly_trend.columns = [\"销售额\", \"订单数\", \"客户数\"]\nprint(\"\\n月度趋势:\")\nprint(monthly_trend)\n\n# 4. 相关性分析\nprint(\"\\n\" + \"=\" * 60)\nprint(\"相关性分析\")\nprint(\"=\" * 60)\n\nnumeric_cols = [\"sales\", \"quantity\", \"price\", \"page_views\", \"duration\"]\ncorr_matrix = df[numeric_cols].corr()\nprint(\"\\n相关系数矩阵:\")\nprint(corr_matrix.round(3))',
+        tags: ['数据思维', '行业应用', '数据分析', '商业洞察', '数据处理']
       },
       {
         id: 'task-10-3',
@@ -3698,7 +4370,8 @@ print('关联规则图已保存为 association_rules.png')`
           '创建可视化图表',
           '格式化报告输出'
         ],
-        solution: '# Python代码示例\nimport pandas as pd\n\nreport = f"""数据分析报告\n\n1. 整体业绩\n   - 总销售额: {df["sales"].sum():.2f}\n   - 累计订单: {len(df["order_id"].unique())}\n   - 活跃客户: {len(df["customer_id"].unique())}\n\n2. 关键发现\n   - 用户活跃度与消费金额呈正相关\n   - 周末订单量较高\n   - 产品集中度较高\n\n3. 建议措施\n   - 建立用户分层运营体系\n   - 优化产品组合\n   - 增加营销活动"""\nprint(report)'
+        solution: '# Python代码示例\nimport pandas as pd\n\nreport = f"""数据分析报告\n\n1. 整体业绩\n   - 总销售额: {df["sales"].sum():.2f}\n   - 累计订单: {len(df["order_id"].unique())}\n   - 活跃客户: {len(df["customer_id"].unique())}\n\n2. 关键发现\n   - 用户活跃度与消费金额呈正相关\n   - 周末订单量较高\n   - 产品集中度较高\n\n3. 建议措施\n   - 建立用户分层运营体系\n   - 优化产品组合\n   - 增加营销活动"""\nprint(report)',
+        tags: ['数据思维', '行业应用', '数据分析', '数据沟通', '数据处理', '数据报告']
       }
     ]
   }

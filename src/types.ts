@@ -30,6 +30,9 @@ export interface Exercise {
   options?: string[];
   answer: string | string[];
   points: number;
+  explanation?: string;
+  tags?: string[];
+  difficulty?: 1 | 2 | 3;
 }
 
 export interface Project {
@@ -48,6 +51,13 @@ export interface ProjectTask {
   description: string;
   steps: string[];
   solution: string;
+  learningObjectives?: string[];
+  prerequisites?: string[];
+  commonMistakes?: string[] | Array<{ mistake: string; solution: string }>;
+  extensions?: string[];
+  learningGoals?: string[];
+  extensionQuestions?: string[];
+  tags?: string[];
 }
 
 export interface Quiz {
@@ -64,8 +74,11 @@ export interface QuizQuestion {
   question: string;
   type: 'single' | 'multiple' | 'truefalse' | 'essay';
   options?: string[];
-  answer: string;
+  answer: string | string[] | boolean;
   points: number;
+  explanation?: string;
+  tags?: string[];
+  difficulty?: 1 | 2 | 3;
 }
 
 export interface Progress {
