@@ -2094,92 +2094,1239 @@ export const initialProjects: Project[] = [
   {
     id: 'project-1',
     title: '销售数据分析',
-    description: '使用Excel对电商平台的销售数据进行清洗、分析和可视化呈现。',
+    description: '你是一家电商公司的数据分析专员，经理发现Q3的销售出现了下滑趋势，需要你对销售数据进行全面分析，找出问题所在并给出改进建议。\n\n【数据集说明】\n字段：订单ID、日期、产品类别、产品名称、地区、城市、客户类型、支付方式、数量、单价、销售额\n数据量：5000条Q3销售记录\n真实业务场景：包含真实的销售波动、季节性特征和客户行为差异',
     difficulty: 1,
     category: 'Excel分析',
-    estimatedTime: '2-3小时',
+    estimatedTime: '3-4小时',
+    datasetUrl: 'https://raw.githubusercontent.com/injtheo/data-analysis-learning/main/datasets/sales_data_q3.csv',
     tasks: [
       {
         id: 'task-1-1',
         title: '数据导入与清洗',
         description: '导入销售数据CSV文件，处理缺失值和异常值，标准化数据格式。',
+        learningObjectives: [
+          '掌握Excel数据导入技巧',
+          '学会识别和处理数据质量问题',
+          '掌握缺失值填充策略',
+          '学会使用条件格式识别异常值'
+        ],
+        prerequisites: [
+          'Excel基础操作',
+          '数据格式规范'
+        ],
+        commonMistakes: [
+          '导入数据时不检查分隔符',
+          '忽略异常值直接分析',
+          '填充缺失值方式不当'
+        ],
+        extensions: [
+          '思考：如果数据量是50万条，Excel还适合吗？',
+          '尝试用Power Query批量处理'
+        ],
         steps: [
           '导入CSV文件并检查数据结构',
           '识别和处理缺失值（使用均值填充或删除）',
           '处理异常值（如负数销售额）',
           '标准化日期格式'
         ],
-        solution: '# Python代码示例\nimport pandas as pd\nimport numpy as np\n\ndf = pd.read_csv("sales_data.csv")\n\n# 检查缺失值\nprint(df.isnull().sum())\n\n# 使用均值填充数值型缺失值\ndf["sales"].fillna(df["sales"].mean(), inplace=True)\n\n# 删除含缺失值的行（如果需要）\ndf.dropna(inplace=True)\n\n# 处理异常值：销售额不能为负\ndf = df[df["sales"] >= 0]\n\n# 标准化日期格式\ndf["date"] = pd.to_datetime(df["date"])\n\nprint(df.info())'
+        solution: `【Excel操作步骤】
+
+1. 导入数据：
+   - 点击"数据"选项卡 → "从文本/CSV"
+   - 选择sales_data_q3.csv文件
+   - 确认数据分隔符为逗号，点击"加载"
+
+2. 检查缺失值：
+   - 在A列右侧插入新列，命名为"缺失值检查"
+   - 使用公式：=COUNTBLANK(A2:G2) 检查每行缺失值数量
+   - 使用条件格式标记出缺失值>0的行
+
+3. 填充缺失值：
+   - 对于销售额列：选中数据 → "开始"选项卡 → "查找和选择" → "定位条件" → "空值"
+   - 输入公式：=AVERAGE(E2:E5000)，按Ctrl+Enter填充
+   - 对数量和单价列重复此操作
+
+4. 处理异常值：
+   - 选中销售额列 → "条件格式" → "突出显示单元格规则" → "小于" → 输入0
+   - 手动检查红色标记的异常值并修正
+
+5. 删除重复项：
+   - 选择所有数据 → "数据"选项卡 → "删除重复项" → 勾选"订单ID" → 确定
+
+【Python自动化代码】
+import pandas as pd
+import numpy as np
+from openpyxl import load_workbook
+from openpyxl.styles import PatternFill
+import os
+
+# 1. 加载数据
+print("正在加载数据...")
+df = pd.read_csv("sales_data_q3.csv")
+print(f"原始数据形状: {df.shape}")
+
+# 2. 检查缺失值
+print("\\n缺失值统计:")
+print(df.isnull().sum())
+
+# 3. 填充缺失值
+print("\\n正在填充缺失值...")
+# 数值列用均值填充
+numeric_cols = ["sales", "quantity", "price"]
+for col in numeric_cols:
+    df[col] = df[col].fillna(df[col].mean())
+
+# 文本列用"未知"填充
+text_cols = ["product_category", "product_name", "region", "city", "customer_type", "payment_method"]
+for col in text_cols:
+    df[col] = df[col].fillna("未知")
+
+# 4. 处理异常值
+print("\\n正在处理异常值...")
+# 删除负数销售额和数量的记录
+df = df[df["sales"] >= 0]
+df = df[df["quantity"] >= 0]
+
+# 5. 删除重复记录
+duplicates_count = df.duplicated(subset=["order_id"]).sum()
+df = df.drop_duplicates(subset=["order_id"])
+print(f"删除了 {duplicates_count} 条重复记录")
+
+# 6. 保存清洗后的数据
+clean_file = "sales_data_cleaned.csv"
+df.to_csv(clean_file, index=False)
+print(f"\\n清洗完成！保存到 {clean_file}")
+print(f"清洗后数据形状: {df.shape}")
+
+# 7. 创建带格式的Excel文件（带条件格式标记）
+excel_file = "sales_data_cleaned.xlsx"
+df.to_excel(excel_file, index=False, sheet_name="清洗后数据")
+
+# 使用openpyxl添加条件格式
+wb = load_workbook(excel_file)
+ws = wb.active
+
+# 标记仍存在的异常值（如需要）
+red_fill = PatternFill(start_color="FFC7CE", end_color="FFC7CE", fill_type="solid")
+
+print(f"\\nExcel文件已保存到 {excel_file}")
+print("\\n数据清洗完成！可以继续下一步分析。")`
       },
       {
         id: 'task-1-2',
         title: '数据汇总分析',
         description: '使用数据透视表和函数对销售数据进行多维度汇总分析。',
+        learningObjectives: [
+          '掌握数据透视表的创建和使用',
+          '学会使用SUMIFS、COUNTIFS等函数',
+          '掌握环比、同比增长率计算',
+          '学会多维度交叉分析'
+        ],
+        prerequisites: [
+          'Excel公式基础',
+          '数据透视表基础'
+        ],
+        commonMistakes: [
+          '数据透视表布局不合理',
+          '忘记更新数据透视表数据源',
+          '计算增长率时使用错误的基数'
+        ],
+        extensions: [
+          '思考：如何用GETPIVOTDATA函数创建动态报表？',
+          '尝试添加计算字段和计算项'
+        ],
         steps: [
           '创建数据透视表，按产品类别汇总销售额',
           '计算各产品类别的销售占比',
           '使用SUMIFS函数按时间范围汇总',
           '分析销售趋势'
         ],
-        solution: '# Python代码示例\n# 按产品类别汇总\ncategory_sales = df.groupby("product_category")["sales"].sum().sort_values(ascending=False)\nprint(category_sales)\n\n# 计算销售占比\ncategory_pct = category_sales / category_sales.sum() * 100\nprint(category_pct)\n\n# 按月汇总\ndf["month"] = df["date"].dt.to_period("M")\nmonthly_sales = df.groupby("month")["sales"].sum()\nprint(monthly_sales)'
+        solution: `【Excel操作步骤】
+
+1. 月度趋势分析：
+   - 选择清洗后的数据 → 插入 → 数据透视表
+   - 行：日期（按月分组）
+   - 值：销售额（求和）、订单ID（计数，重命名为"订单数"）
+   - 添加计算字段：=销售额/订单数 （计算客单价）
+
+2. 产品类别×月份交叉分析：
+   - 新建数据透视表
+   - 行：产品类别
+   - 列：日期（按月分组）
+   - 值：销售额（求和）
+   - 值显示方式：列汇总的百分比（查看占比变化）
+
+3. 地区分析：
+   - 新建数据透视表
+   - 行：地区
+   - 列：日期（按月分组）
+   - 值：销售额（求和）
+
+4. 使用函数计算：
+   - 7月销售额：=SUMIFS(E:E,B:B,">=2024-07-01",B:B,"<=2024-07-31")
+   - 8月销售额：=SUMIFS(E:E,B:B,">=2024-08-01",B:B,"<=2024-08-31")
+   - 9月销售额：=SUMIFS(E:E,B:B,">=2024-09-01",B:B,"<=2024-09-30")
+   - 新客销售额：=SUMIFS(E:E,I:I,"新客")
+   - 老客销售额：=SUMIFS(E:E,I:I,"老客")
+
+【Python自动化代码】
+import pandas as pd
+import numpy as np
+
+df = pd.read_csv("sales_data_cleaned.csv")
+df["date"] = pd.to_datetime(df["date"])
+df["month"] = df["date"].dt.month_name()
+df["month_num"] = df["date"].dt.month
+
+print("=" * 60)
+print("Q3销售数据分析报告")
+print("=" * 60)
+
+# 1. 月度趋势
+print("\\n1. 月度销售趋势:")
+monthly = df.groupby(["month_num", "month"]).agg({
+    "sales": "sum",
+    "order_id": "nunique",
+    "quantity": "sum"
+}).round(2)
+monthly.columns = ["销售额", "订单数", "销量"]
+monthly["客单价"] = (monthly["销售额"] / monthly["订单数"]).round(2)
+monthly = monthly.reset_index().sort_values("month_num").drop("month_num", axis=1)
+monthly["销售额环比"] = monthly["销售额"].pct_change() * 100
+print(monthly.to_string(index=False))
+
+# 2. 产品类别分析
+print("\\n2. 产品类别分析:")
+category_monthly = df.pivot_table(
+    values="sales",
+    index="product_category",
+    columns="month",
+    aggfunc="sum",
+    margins=True,
+    margins_name="总计"
+).round(2)
+print(category_monthly.to_string())
+
+# 3. 地区分析
+print("\\n3. 地区销售分析:")
+region_monthly = df.pivot_table(
+    values="sales",
+    index="region",
+    columns="month",
+    aggfunc="sum"
+).round(2)
+print(region_monthly.to_string())
+
+# 4. 客户类型分析
+print("\\n4. 客户类型分析:")
+customer_analysis = df.groupby("customer_type").agg({
+    "sales": "sum",
+    "order_id": "nunique",
+    "customer_id": "nunique"
+}).round(2)
+customer_analysis.columns = ["销售额", "订单数", "客户数"]
+customer_analysis["客单价"] = (customer_analysis["销售额"] / customer_analysis["订单数"]).round(2)
+customer_analysis["销售占比"] = (customer_analysis["销售额"] / customer_analysis["销售额"].sum() * 100).round(2)
+print(customer_analysis.to_string())
+
+# 5. 关键发现总结
+print("\\n" + "=" * 60)
+print("关键发现:")
+print("=" * 60)
+print("1. 销售趋势：8月为销售高峰，7月和9月明显下滑")
+print("2. 重点关注：请查看各产品类别的销售变化，找出下滑最严重的类别")
+print("3. 区域差异：对比各地区表现，识别需要重点改进的区域")
+print("4. 客户结构：分析新老客贡献占比变化，判断客户留存问题")`
       },
       {
         id: 'task-1-3',
         title: '数据可视化',
         description: '创建专业的销售数据可视化图表，包括趋势图、占比图和对比图。',
+        learningObjectives: [
+          '掌握Excel图表创建技巧',
+          '学会选择合适的图表类型',
+          '掌握图表美化和格式化',
+          '学会组合图表'
+        ],
+        prerequisites: [
+          'Excel图表基础',
+          '数据可视化原则'
+        ],
+        commonMistakes: [
+          '图表类型选择不当',
+          '图表过于复杂信息过载',
+          '忽略图表标题和标签'
+        ],
+        extensions: [
+          '思考：如何让图表更有故事性？',
+          '尝试创建动态图表（使用下拉菜单）'
+        ],
         steps: [
           '创建月度销售趋势折线图',
           '创建产品类别销售占比饼图',
           '创建地区销售对比柱状图',
           '添加数据标签和格式化'
         ],
-        solution: '# Python代码示例\nimport matplotlib.pyplot as plt\n\n# 设置中文字体\nplt.rcParams["font.sans-serif"] = ["SimHei"]\nplt.rcParams["axes.unicode_minus"] = False\n\nfig, axes = plt.subplots(2, 2, figsize=(15, 10))\n\n# 1. 月度销售趋势\naxes[0, 0].plot(monthly_sales.index.astype(str), monthly_sales.values, marker="o")\naxes[0, 0].set_title("月度销售趋势")\naxes[0, 0].set_xlabel("月份")\naxes[0, 0].set_ylabel("销售额")\naxes[0, 0].grid(True)\n\n# 2. 产品类别占比\naxes[0, 1].pie(category_sales.values, labels=category_sales.index, autopct="%1.1f%%")\naxes[0, 1].set_title("产品类别销售占比")\n\n# 3. 地区销售对比\nregion_sales = df.groupby("region")["sales"].sum().sort_values(ascending=True)\naxes[1, 0].barh(region_sales.index, region_sales.values)\naxes[1, 0].set_title("各地区销售对比")\naxes[1, 0].set_xlabel("销售额")\n\nplt.tight_layout()\nplt.savefig("sales_analysis.png", dpi=150)\nplt.show()'
+        solution: `【Excel操作步骤】
+
+1. 月度趋势折线图：
+   - 选择月度汇总数据 → 插入 → 折线图 → 带数据标记的折线图
+   - 设计 → 添加图表元素 → 趋势线 → 线性
+   - 添加数据标签，设置小数点后2位
+   - 图表标题："Q3月度销售趋势"
+
+2. 产品类别圆环图：
+   - 选择产品类别总销售额 → 插入 → 饼图 → 圆环图
+   - 右键 → 添加数据标签 → 设置标签格式 → 勾选"类别名称"和"百分比"
+   - 图表标题："Q3产品类别销售占比"
+
+3. 产品类别×月份簇状柱形图：
+   - 选择产品类别×月份交叉表 → 插入 → 柱形图 → 簇状柱形图
+   - 可切换行列，选择更好的展示方式
+   - 添加数据标签
+
+4. 地区销售条形图：
+   - 选择地区销售数据（先按销售额降序排序）→ 插入 → 条形图 → 簇状条形图
+   - 图表标题："各地区销售对比"
+
+5. 新老客对比图：
+   - 选择新老客月度数据 → 插入 → 柱形图 → 堆积柱形图
+   - 或使用组合图：柱形+折线
+
+【Python可视化代码】
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import matplotlib
+from matplotlib import font_manager
+
+# 设置中文字体
+plt.rcParams["font.sans-serif"] = ["SimHei", "WenQuanYi Micro Hei", "DejaVu Sans"]
+plt.rcParams["axes.unicode_minus"] = False
+
+# 加载数据
+df = pd.read_csv("sales_data_cleaned.csv")
+df["date"] = pd.to_datetime(df["date"])
+df["month"] = df["date"].dt.month_name()
+df["month_num"] = df["date"].dt.month
+month_order = ["July", "August", "September"]
+
+# 创建多图布局
+fig = plt.figure(figsize=(18, 12))
+fig.suptitle("Q3销售数据分析仪表板", fontsize=20, fontweight="bold", y=0.99)
+
+# 1. 月度销售趋势
+ax1 = plt.subplot(2, 3, 1)
+monthly = df.groupby("month_num")["sales"].sum()
+ax1.plot(monthly.index, monthly.values, marker="o", linewidth=3, markersize=10)
+ax1.set_title("月度销售趋势", fontsize=14, fontweight="bold")
+ax1.set_xlabel("月份")
+ax1.set_ylabel("销售额")
+ax1.set_xticks([7, 8, 9], ["7月", "8月", "9月"])
+ax1.grid(True, alpha=0.3)
+for i, v in enumerate(monthly.values):
+    ax1.text(i+7, v, f"¥{v:,.0f}", ha="center", va="bottom")
+
+# 2. 产品类别占比
+ax2 = plt.subplot(2, 3, 2)
+category_sales = df.groupby("product_category")["sales"].sum().sort_values(ascending=True)
+colors = plt.cm.viridis(range(len(category_sales)))
+ax2.barh(category_sales.index, category_sales.values, color=colors)
+ax2.set_title("产品类别销售额", fontsize=14, fontweight="bold")
+ax2.set_xlabel("销售额")
+
+# 3. 产品类别×月份
+ax3 = plt.subplot(2, 3, 3)
+category_monthly = df.pivot_table(values="sales", index="product_category", 
+                                   columns="month_num", aggfunc="sum")
+category_monthly.plot(kind="bar", ax=ax3)
+ax3.set_title("产品类别×月度销售", fontsize=14, fontweight="bold")
+ax3.legend(["7月", "8月", "9月"])
+plt.setp(ax3.xaxis.get_majorticklabels(), rotation=45, ha="right")
+
+# 4. 地区销售
+ax4 = plt.subplot(2, 3, 4)
+region_sales = df.groupby("region")["sales"].sum().sort_values(ascending=True)
+ax4.barh(region_sales.index, region_sales.values, color="steelblue")
+ax4.set_title("地区销售对比", fontsize=14, fontweight="bold")
+ax4.set_xlabel("销售额")
+
+# 5. 新老客对比
+ax5 = plt.subplot(2, 3, 5)
+customer_monthly = df.pivot_table(values="sales", index="customer_type", 
+                                   columns="month_num", aggfunc="sum")
+customer_monthly.plot(kind="bar", stacked=True, ax=ax5)
+ax5.set_title("新客vs老客销售对比", fontsize=14, fontweight="bold")
+ax5.legend(["7月", "8月", "9月"])
+plt.setp(ax5.xaxis.get_majorticklabels(), rotation=0)
+
+# 6. 客单价趋势
+ax6 = plt.subplot(2, 3, 6)
+avg_price = df.groupby("month_num").apply(lambda x: x["sales"].sum() / x["order_id"].nunique())
+ax6.plot(avg_price.index, avg_price.values, marker="s", linewidth=3, 
+         markersize=10, color="orange")
+ax6.set_title("月度客单价趋势", fontsize=14, fontweight="bold")
+ax6.set_xlabel("月份")
+ax6.set_ylabel("客单价")
+ax6.set_xticks([7, 8, 9], ["7月", "8月", "9月"])
+ax6.grid(True, alpha=0.3)
+
+plt.tight_layout(rect=[0, 0, 1, 0.96])
+plt.savefig("sales_analysis_dashboard.png", dpi=150, bbox_inches="tight")
+print("图表已保存为 sales_analysis_dashboard.png")
+plt.show()`
+      },
+      {
+        id: 'task-1-4',
+        title: '数据透视表高级应用',
+        description: '使用切片器、计算字段、时间表等高级功能创建交互式分析报表。',
+        learningObjectives: [
+          '掌握切片器和时间表的使用',
+          '学会创建计算字段和计算项',
+          '掌握值显示方式设置',
+          '学会创建交互式报表'
+        ],
+        prerequisites: [
+          '数据透视表基础',
+          'Excel函数基础'
+        ],
+        commonMistakes: [
+          '切片器没有连接到所有数据透视表',
+          '计算字段公式错误',
+          '值显示方式使用不当'
+        ],
+        extensions: [
+          '思考：如何用数据透视表创建漏斗图？',
+          '尝试创建直方图和时间线'
+        ],
+        steps: [
+          '创建综合数据透视表，添加切片器',
+          '添加计算字段计算客单价',
+          '使用值显示方式查看占比变化',
+          '创建Top N筛选'
+        ],
+        solution: `【Excel操作步骤】
+
+1. 创建综合数据透视表：
+   - 选择数据 → 插入 → 数据透视表
+   - 行：产品类别
+   - 列：日期（按月分组）
+   - 值：销售额（求和）、数量（求和）
+
+2. 添加切片器：
+   - 选中数据透视表 → 数据透视表分析 → 插入切片器
+   - 勾选"地区"、"客户类型"、"支付方式" → 确定
+   - 拖动调整切片器位置和大小
+
+3. 添加计算字段：
+   - 数据透视表分析 → 字段、项目和集 → 计算字段
+   - 名称：客单价
+   - 公式：=销售额/订单数
+   - 点击添加
+
+4. 值显示方式：
+   - 点击销售额字段下拉箭头 → 值显示方式 → 列汇总的百分比
+   - 可以快速看到各月占比变化
+
+5. 多表联动：
+   - 创建第二个数据透视表（如地区分析）
+   - 选中切片器 → 切片器选项 → 报表连接 → 勾选需要联动的数据透视表
+
+6. Top 10筛选：
+   - 点击产品类别行标签下拉箭头 → 值筛选 → 前10项
+   - 选择：按销售额降序排列Top 10
+
+7. 数据透视表布局：
+   - 设计 → 报表布局 → 选择"以大纲形式显示"或"以压缩形式显示"
+
+【Python自动化交互式分析】
+import pandas as pd
+import numpy as np
+from ipywidgets import interact, Dropdown
+
+# 加载数据
+df = pd.read_csv("sales_data_cleaned.csv")
+df["date"] = pd.to_datetime(df["date"])
+df["month"] = df["date"].dt.month_name()
+df["month_num"] = df["date"].dt.month
+
+def sales_analysis(region="全部", customer_type="全部", payment_method="全部"):
+    # 筛选数据
+    data = df.copy()
+    if region != "全部":
+        data = data[data["region"] == region]
+    if customer_type != "全部":
+        data = data[data["customer_type"] == customer_type]
+    if payment_method != "全部":
+        data = data[data["payment_method"] == payment_method]
+    
+    print("=" * 60)
+    print("交互式销售分析")
+    print(f"筛选条件: 地区={region}, 客户类型={customer_type}, 支付方式={payment_method}")
+    print("=" * 60)
+    
+    # 1. 总体指标
+    total_sales = data["sales"].sum()
+    total_orders = data["order_id"].nunique()
+    avg_price = total_sales / total_orders if total_orders > 0 else 0
+    print(f"\\n总体指标:")
+    print(f"  总销售额: ¥{total_sales:,.2f}")
+    print(f"  总订单数: {total_orders:,.0f}")
+    print(f"  平均客单价: ¥{avg_price:,.2f}")
+    
+    # 2. 月度趋势
+    print("\\n月度趋势:")
+    monthly = data.groupby("month_num")["sales"].sum().reindex([7, 8, 9])
+    print(monthly.to_string())
+    
+    # 3. 产品类别
+    print("\\n产品类别Top 5:")
+    category = data.groupby("product_category")["sales"].sum().sort_values(ascending=False).head(5)
+    print(category.to_string())
+    
+    return data
+
+# 创建交互式控件（如果在Jupyter环境中）
+regions = ["全部"] + sorted(df["region"].unique().tolist())
+customer_types = ["全部"] + sorted(df["customer_type"].unique().tolist())
+payment_methods = ["全部"] + sorted(df["payment_method"].unique().tolist())
+
+print("创建交互式分析完成！")
+print("在Jupyter Notebook中可以使用interact创建动态筛选界面。")
+print("\\n当前数据预览:")
+sales_analysis()`
+      },
+      {
+        id: 'task-1-5',
+        title: '综合分析报告与Dashboard',
+        description: '整合分析结果，撰写完整的业务分析报告并创建Excel Dashboard。',
+        learningObjectives: [
+          '掌握数据分析报告撰写结构',
+          '学会用数据讲述业务故事',
+          '掌握Excel Dashboard设计技巧',
+          '学会创建自动更新的分析报告'
+        ],
+        prerequisites: [
+          '已完成前面所有分析任务',
+          '理解业务问题和目标',
+          'Excel图表和数据透视表基础'
+        ],
+        commonMistakes: [
+          '报告只有数据没有洞察和建议',
+          'Dashboard过于复杂，用户不知道看什么',
+          '没有使用数据验证，更新数据源后图表出错'
+        ],
+        extensions: [
+          '思考：如何让你的报告更有说服力？',
+          '尝试使用Power BI创建更高级的交互式Dashboard'
+        ],
+        steps: [
+          '梳理Q3销售的关键发现：下滑的主要原因、关键驱动因素、高风险领域',
+          '按照"背景-发现-分析-建议"结构撰写分析报告',
+          '创建Excel Dashboard新工作表，设计专业的KPI展示区域',
+          '使用公式或数据透视表从原始数据自动提取关键指标到Dashboard',
+          '将之前创建的图表复制到Dashboard，布局要美观、重点突出',
+          '使用条件格式对KPI指标进行颜色编码（绿色=好，红色=需要关注）',
+          '添加切片器到Dashboard，让用户可以自由筛选查看不同维度的数据',
+          '确保Dashboard数据源可以一键更新，图表和指标自动刷新',
+          '对报告进行最后的Review，确保逻辑清晰、数据准确、建议可行'
+        ],
+        solution: `【Excel Dashboard设计步骤】
+
+1. Dashboard布局设计：
+   - 新建工作表，命名为"Sales Dashboard"
+   - 顶部区域：KPI卡片（总销售额、订单数、客单价、完成率）
+   - 中间区域：主要图表（趋势图、类别占比、地区对比）
+   - 底部区域：详细数据或辅助图表
+   - 右侧区域：切片器
+
+2. KPI卡片设计：
+   - 使用公式从原始数据提取：
+     =SUM(清洗后数据!E:E)   (总销售额)
+     =COUNT(清洗后数据!A:A)  (订单数)
+     =KPI1/KPI2              (客单价)
+   - 使用条件格式：低于目标值显示红色，高于显示绿色
+
+3. 图表放置：
+   - 复制前面创建的图表到Dashboard
+   - 调整大小和位置，保持对齐
+   - 统一配色方案
+
+4. 动态更新设置：
+   - 选中图表数据系列 → 右键 → 选择数据
+   - 确保数据范围使用动态命名范围或表格
+   - 使用OFFSET或INDEX公式创建动态范围
+
+5. 添加切片器：
+   - 确保数据透视表和Dashboard在同一工作簿
+   - 复制切片器到Dashboard
+
+【完整分析报告示例】
+
+# Q3销售数据分析报告
+
+## 一、分析背景
+经理发现Q3销售出现下滑趋势，7月和9月表现不理想，8月虽有回升但整体仍需关注。
+
+## 二、关键发现
+
+### 2.1 销售趋势
+- 7月销售额：¥85万，8月：¥120万，9月：¥92万
+- 整体Q3销售呈现"低-高-低"的波动趋势
+- 8月峰值主要来自促销活动拉动
+
+### 2.2 产品分析
+- 产品类别A销售下滑最严重，7-9月下降28%
+- 产品类别B保持稳定增长，是Q3亮点
+- 产品类别C占比从25%降至18%，需要重点关注
+
+### 2.3 客户分析
+- 新客贡献从45%下降至38%，老客保持稳定
+- 新客获取能力下降是销售下滑的主要原因之一
+
+### 2.4 区域分析
+- 华东地区表现最好，保持增长
+- 西南地区下滑35%，是重灾区
+
+## 三、原因分析
+1. 新客获取：营销活动ROI下降，新客成本上升
+2. 产品结构：核心产品增长乏力，新产品未达预期
+3. 区域差异：西南地区人员变动影响销售表现
+4. 季节性：Q3是行业传统淡季，8月促销是特例
+
+## 四、改进建议
+
+### 短期建议（1个月内）
+1. 针对西南地区：开展专项促销活动，支持区域团队
+2. 针对新客获取：优化广告投放渠道，测试新的获客方式
+3. 针对产品A：开展清库存促销，为新产品让路
+
+### 中期建议（1-3个月）
+1. 优化产品结构，重点培育有潜力的产品B
+2. 建立销售预警机制，及时发现下滑趋势
+3. 建立区域销售标杆机制，推广华东地区经验
+
+## 五、后续跟踪
+- 每周跟踪新客获取数据
+- 每月评估西南地区改进效果
+- 每季度回顾产品结构优化进度
+
+【Python报告生成代码】
+import pandas as pd
+import datetime
+
+df = pd.read_csv("sales_data_cleaned.csv")
+df["date"] = pd.to_datetime(df["date"])
+df["month"] = df["date"].dt.month
+
+# 计算关键指标
+total_sales = df["sales"].sum()
+july_sales = df[df["month"] == 7]["sales"].sum()
+aug_sales = df[df["month"] == 8]["sales"].sum()
+sept_sales = df[df["month"] == 9]["sales"].sum()
+
+top_category = df.groupby("product_category")["sales"].sum().sort_values(ascending=False).index[0]
+
+# 生成报告
+report = f"""============================================================
+                    Q3销售数据分析报告
+============================================================
+
+生成时间: {datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
+
+一、整体业绩
+------------------------------------------------------------
+总销售额: ¥{total_sales:,.2f}
+7月: ¥{july_sales:,.2f}
+8月: ¥{aug_sales:,.2f}
+9月: ¥{sept_sales:,.2f}
+
+二、核心发现
+------------------------------------------------------------
+1. 销售趋势：8月为Q3峰值，9月出现下滑
+2. 最佳产品：{top_category}
+3. 新客占比：待分析（建议补充）
+
+三、建议措施
+------------------------------------------------------------
+1. 针对9月下滑进行深入原因分析
+2. 优化Q4营销活动，避免类似下滑
+3. 重点推广高增长产品类别
+
+============================================================
+
+详细分析请查看Excel Dashboard文件。
+"""
+
+print(report)
+
+# 保存报告
+with open("sales_analysis_report.txt", "w", encoding="utf-8") as f:
+    f.write(report)
+
+print("\\n报告已保存为 sales_analysis_report.txt")`
       }
     ]
   },
   {
     id: 'project-2',
     title: '用户行为数据分析',
-    description: '使用Python分析用户行为数据，洞察用户路径和转化漏斗。',
+    description: '你是一家SaaS公司的产品经理，需要分析用户在平台上的行为模式，优化产品功能和提升用户活跃度。\n\n【数据集说明】\n字段：用户ID、时间戳、页面/功能、操作类型、停留时长、设备信息、来源渠道、是否转化\n数据量：10,000+条记录，覆盖30天\n真实用户行为特征：工作日vs周末差异明显、新老用户行为差异、存在典型流失路径',
     difficulty: 2,
     category: 'Python分析',
-    estimatedTime: '3-4小时',
+    estimatedTime: '4-5小时',
+    datasetUrl: 'https://raw.githubusercontent.com/injtheo/data-analysis-learning/main/datasets/user_behavior_saas.csv',
     tasks: [
       {
         id: 'task-2-1',
-        title: '用户路径分析',
-        description: '分析用户在产品中的行为路径，发现常见路径模式。',
-        steps: [
-          '加载用户行为数据',
-          '按用户分组并排序行为序列',
-          '统计各路径的出现频率',
-          '可视化用户路径'
+        title: '数据探索与用户行为概览',
+        description: '加载并探索用户行为数据，理解数据结构和基本特征。',
+        learningObjectives: [
+          '掌握用户行为数据探索方法',
+          '学会使用EDA技术分析行为数据',
+          '理解用户行为数据特征',
+          '学会识别数据质量问题'
         ],
-        solution: '# Python代码示例\n# 用户路径分析\nuser_paths = df.groupby("user_id")["page"].apply(lambda x: " -> ".join(x.astype(str)))\npath_counts = user_paths.value_counts().head(10)\nprint("Top 10 用户路径:")\nprint(path_counts)\n\n# 计算转化率\ndef calculate_conversion(paths, target_pages):\n    conversions = {}\n    for path in paths:\n        pages = path.split(" -> ")\n        for i, page in enumerate(target_pages):\n            if page in pages:\n                conversions[page] = conversions.get(page, 0) + 1\n    return conversions'
+        prerequisites: [
+          'Python数据分析基础',
+          'Pandas数据处理',
+          '数据可视化基础'
+        ],
+        commonMistakes: [
+          '忽略异常值对分析的影响',
+          '不做数据清洗直接分析',
+          '只看整体不看细分群体差异'
+        ],
+        extensions: [
+          '思考：如何判断用户是真人还是机器人？',
+          '如果数据量扩大10倍，如何优化代码性能？'
+        ],
+        steps: [
+          '加载用户行为数据，查看数据结构和字段含义',
+          '检查数据质量：缺失值、异常值、重复记录',
+          '统计基本指标：用户数、行为数、活跃天数',
+          '分析用户活跃度分布：识别高频vs低频用户',
+          '进行时间维度分析：按小时、按天、按周的行为模式',
+          '分析设备和渠道分布：识别主要流量来源',
+          '可视化探索：行为类型分布和热门页面/功能',
+          '数据清洗和预处理，准备后续分析'
+        ],
+        solution: `# -*- coding: utf-8 -*-
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from datetime import datetime, timedelta
+import warnings
+warnings.filterwarnings('ignore')
+
+# 设置中文字体
+plt.rcParams['font.sans-serif'] = ['SimHei', 'WenQuanYi Micro Hei', 'DejaVu Sans']
+plt.rcParams['axes.unicode_minus'] = False
+
+# 1. 加载数据
+print('='*60)
+print('用户行为数据分析')
+print('='*60)
+
+df = pd.read_csv('user_behavior_saas.csv')
+print(f'数据形状: {df.shape[0]} 行, {df.shape[1]} 列')
+
+print('\\n数据预览:')
+print(df.head())
+
+# 2. 数据质量检查
+print('\\n数据质量检查:')
+print('缺失值统计:')
+print(df.isnull().sum())
+
+print('\\n重复记录数:', df.duplicated().sum())
+
+# 3. 基本统计
+print('\\n基本统计指标:')
+print(df.describe(include='all'))
+
+# 4. 用户规模统计
+print('用户数:', df['user_id'].nunique())
+print('行为数:', len(df))
+print('时间范围:', df['timestamp'].min(), '到', df['timestamp'].max())
+
+# 5. 用户活跃度分布
+user_activity = df.groupby('user_id').size().reset_index(name='action_count')
+print('\\n用户活跃度统计:')
+print(user_activity['action_count'].describe())
+
+# 6. 时间分析
+print('\\n行为类型分布:')
+print(df['action_type'].value_counts())
+
+print('\\n页面/功能Top 10:')
+print(df['page'].value_counts().head(10))
+
+# 7. 可视化探索
+fig, axes = plt.subplots(2, 2, figsize=(16, 12))
+
+# 7.1 行为类型分布
+axes[0, 0].pie(df['action_type'].value_counts().values, 
+                  labels=df['action_type'].value_counts().index, 
+                  autopct='%1.1f%%')
+axes[0, 0].set_title('行为类型分布')
+
+# 7.2 用户活跃度分布
+user_activity['action_category'] = pd.cut(user_activity['action_count'], 
+                                           bins=[0, 5, 20, 50, np.inf],
+                                           labels=['极低(<5)', '低(5-20)', '中(20-50)', '高(>50)'])
+axes[0, 1].bar(user_activity['action_category'].value_counts().index, 
+                 user_activity['action_category'].value_counts().values)
+axes[0, 1].set_title('用户活跃度分布')
+axes[0, 1].tick_params(axis='x', rotation=45)
+
+# 7.3 设备分布
+device_counts = df['device'].value_counts()
+axes[1, 0].bar(device_counts.index, device_counts.values)
+axes[1, 0].set_title('设备分布')
+
+# 7.4 渠道分布
+channel_counts = df['channel'].value_counts()
+axes[1, 1].bar(channel_counts.index, channel_counts.values)
+axes[1, 1].set_title('渠道分布')
+
+plt.tight_layout()
+plt.savefig('user_behavior_eda.png', dpi=150)
+print('\\nEDA图表已保存为 user_behavior_eda.png')`
       },
       {
         id: 'task-2-2',
-        title: '转化漏斗分析',
-        description: '构建用户转化漏斗，分析各阶段的转化率。',
-        steps: [
-          '定义转化漏斗阶段',
-          '计算各阶段用户数',
-          '计算阶段转化率',
-          '可视化漏斗图'
+        title: '用户路径分析与桑基图',
+        description: '分析用户行为路径，使用桑基图可视化用户流动。',
+        learningObjectives: [
+          '掌握用户路径分析方法',
+          '学会构建用户行为序列',
+          '掌握桑基图可视化技术',
+          '理解路径优化机会'
         ],
-        solution: '# Python代码示例\n# 转化漏斗\nfunnel_stages = ["首页", "商品页", "加入购物车", "提交订单", "支付成功"]\nfunnel_data = {}\n\nfor stage in funnel_stages:\n    users = df[df["page"] == stage]["user_id"].nunique()\n    funnel_data[stage] = users\n\nprint("漏斗数据:", funnel_data)\n\n# 计算转化率\nfor i in range(1, len(funnel_stages)):\n    rate = funnel_data[funnel_stages[i]] / funnel_data[funnel_stages[i-1]] * 100\n    print(f"{funnel_stages[i-1]} -> {funnel_stages[i]}: {rate:.2f}%")'
+        prerequisites: [
+          '序列数据分析',
+          '数据可视化',
+          '用户行为分析基础'
+        ],
+        commonMistakes: [
+          '过度分析导致性能问题',
+          '路径定义不合理',
+          '不考虑用户分群'
+        ],
+        extensions: [
+          '思考：如何识别最优和最差的用户路径？',
+          '如何预测用户下一步会去哪里？'
+        ],
+        steps: [
+          '对数据按用户和时间排序，构建用户行为序列',
+          '定义关键路径节点，构建用户旅程',
+          '统计Top 10常见用户路径',
+          '分析转化路径与流失路径对比',
+          '使用Plotly绘制交互式桑基图可视化用户流动',
+          '按新老用户分群对比路径差异',
+          '按渠道分组对比不同来源用户的路径差异',
+          '识别路径优化机会点'
+        ],
+        solution: `# -*- coding: utf-8 -*-
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import plotly.graph_objects as go
+from collections import defaultdict
+
+# 1. 加载数据并排序
+df = pd.read_csv('user_behavior_saas.csv')
+df['timestamp'] = pd.to_datetime(df['timestamp'])
+df = df.sort_values(['user_id', 'timestamp'])
+
+print('='*60)
+print('用户路径分析')
+print('='*60)
+
+# 2. 构建用户行为序列
+user_paths = df.groupby('user_id')['page'].apply(list).reset_index()
+user_paths.columns = ['user_id', 'path_list']
+user_paths['path_str'] = user_paths['path_list'].apply(lambda x: ' -> '.join(x))
+
+# 3. Top路径统计
+print('\\nTop 10 用户路径:')
+top_paths = user_paths['path_str'].value_counts().head(10)
+for i, (path, count) in enumerate(top_paths.items(), 1):
+    print(f'{i}. {path}: {count}次')
+
+# 4. 桑基图数据准备
+print('\\n准备桑基图数据...')
+all_pages = df['page'].unique()
+page_to_idx = {page: i for i, page in enumerate(all_pages)}
+idx_to_page = {i: page for i, page in enumerate(all_pages)}
+
+# 统计页面过渡
+transitions = defaultdict(int)
+for path_list in user_paths['path_list']:
+    for i in range(len(path_list)-1):
+        source = path_list[i]
+        target = path_list[i+1]
+        transitions[(source, target)] += 1
+
+# 5. 构建桑基图
+source_indices = []
+target_indices = []
+values = []
+for (source, target), count in transitions.items():
+    if count >= 5:  # 过滤低频过渡
+        source_indices.append(page_to_idx[source])
+        target_indices.append(page_to_idx[target])
+        values.append(count)
+
+# 6. 绘制桑基图
+fig = go.Figure(data=[go.Sankey(
+    node=dict(
+        pad=15,
+        thickness=20,
+        line=dict(color='black', width=0.5),
+        label=list(page_to_idx.keys()),
+    ),
+    link=dict(
+        source=source_indices,
+        target=target_indices,
+        value=values,
+    ))])
+
+fig.update_layout(title_text='用户行为路径桑基图', font_size=12)
+fig.write_html('user_journey_sankey.html')
+print('\\n桑基图已保存为 user_journey_sankey.html')
+
+# 7. 转化与流失路径分析
+print('\\n转化路径分析:')
+converted_users = df[df['is_converted'] == True]['user_id'].unique()
+converted_paths = user_paths[user_paths['user_id'].isin(converted_users)]
+print('转化用户数:', len(converted_paths))
+print('转化用户Top 5路径:')
+print(converted_paths['path_str'].value_counts().head())`
       },
       {
         id: 'task-2-3',
-        title: '用户留存分析',
-        description: '计算用户留存率，分析用户粘性。',
-        steps: [
-          '定义用户首次活跃日期',
-          '计算次日、7日、30日留存率',
-          '分析留存曲线',
-          '按用户群体对比留存'
+        title: '转化漏斗与A/B测试分析',
+        description: '构建用户转化漏斗，进行对比分析。',
+        learningObjectives: [
+          '掌握漏斗分析方法',
+          '学会多维度漏斗分析',
+          '理解转化率计算',
+          '优化机会识别'
         ],
-        solution: '# Python代码示例\n# 留存分析\ndf["date"] = pd.to_datetime(df["date"])\nfirst_active = df.groupby("user_id")["date"].min().reset_index()\nfirst_active.columns = ["user_id", "first_date"]\n\ndf = df.merge(first_active, on="user_id")\ndf["days_since_first"] = (df["date"] - df["first_date"]).dt.days\n\n# 留存率计算\nretention = {}\nfor days in [1, 7, 30]:\n    retained_users = df[df["days_since_first"] == days]["user_id"].nunique()\n    total_users = first_active["user_id"].nunique()\n    retention[f"{days}日"] = retained_users / total_users * 100\n\nprint("留存率:", retention)'
+        prerequisites: [
+          '转化漏斗定义',
+          '统计分析基础',
+          'A/B测试概念'
+        ],
+        commonMistakes: [
+          '漏斗阶段定义不合理',
+          '不考虑样本量',
+          '忽略细分群体'
+        ],
+        extensions: [
+          '思考：如何计算漏斗各阶段的优化潜力？',
+          '如何预测干预后的转化率提升？'
+        ],
+        steps: [
+          '定义用户转化漏斗阶段：访问 -> 注册 -> 激活 -> 留存 -> 付费',
+          '计算各阶段用户数和转化率',
+          '使用Plotly创建交互式漏斗图',
+          '按新老用户分组对比漏斗差异',
+          '按设备类型（手机/平板/电脑）分组对比',
+          '按来源渠道分组对比，识别优质渠道',
+          '计算流失率和改进空间',
+          '识别漏斗优化优先级排序'
+        ],
+        solution: `# -*- coding: utf-8 -*-
+import pandas as pd
+import numpy as np
+import plotly.graph_objects as go
+import plotly.express as px
+import matplotlib.pyplot as plt
+
+df = pd.read_csv('user_behavior_saas.csv')
+df['timestamp'] = pd.to_datetime(df['timestamp'])
+
+print('='*60)
+print('转化漏斗分析')
+print('='*60)
+
+# 1. 定义转化漏斗
+funnel_stages = ['首页', '产品页', '注册页', '注册成功', '首次使用', '付费']
+
+# 2. 计算各阶段用户数
+stage_users = {}
+for stage in funnel_stages:
+    stage_users[stage] = df[df['page'] == stage]['user_id'].nunique()
+
+print('\\n转化漏斗数据:')
+for stage, count in stage_users.items():
+    print(f'{stage}: {count} 用户')
+
+# 3. 计算转化率
+print('\\n阶段转化率:')
+conversion_rates = {}
+for i in range(1, len(funnel_stages)):
+    prev_stage = funnel_stages[i-1]
+    curr_stage = funnel_stages[i]
+    rate = stage_users[curr_stage] / stage_users[prev_stage] * 100
+    conversion_rates[f'{prev_stage}->{curr_stage}'] = rate
+    print(f'{prev_stage} -> {curr_stage}: {rate:.2f}%')
+
+# 4. 绘制交互式漏斗图
+fig = go.Figure(go.Funnel(
+    y=list(stage_users.keys()),
+    x=list(stage_users.values()),
+    textinfo='value+percent initial',
+    marker=dict(color=['#1f77b4', '#2ca02c', '#ff7f0e', '#d62728', '#9467bd', '#8c564b'],
+)))
+
+fig.update_layout(title_text='用户转化漏斗', title_x=0.5)
+fig.write_html('conversion_funnel.html')
+print('\\n漏斗图已保存为 conversion_funnel.html')
+
+# 5. 分群对比
+print('\\n分群对比分析:')
+
+# 5.1 按设备类型
+print('\\n按设备类型:')
+device_types = df['device'].unique()
+for device in device_types:
+    device_data = df[df['device'] == device]
+    device_users = device_data.groupby('page')['user_id'].nunique()
+    print(f'\\n设备 {device}:')
+    for stage in funnel_stages:
+        if stage in device_users:
+            print(f'  {stage}: {device_users[stage]}')
+
+# 5.2 按渠道
+print('\\n按渠道:')
+channels = df['channel'].unique()
+for channel in channels:
+    channel_data = df[df['channel'] == channel]
+    channel_users = channel_data.groupby('page')['user_id'].nunique()
+    print(f'\\n渠道 {channel}:')
+    for stage in funnel_stages:
+        if stage in channel_users:
+            print(f'  {stage}: {channel_users[stage]}')`
+      },
+      {
+        id: 'task-2-4',
+        title: '用户分群画像构建',
+        description: '基于用户行为特征构建用户分群画像。',
+        learningObjectives: [
+          '掌握用户分群方法',
+          '学会用户画像构建',
+          '理解用户分群应用',
+          '掌握雷达图可视化'
+        ],
+        prerequisites: [
+          '聚类分析基础',
+          '特征工程',
+          '用户行为分析'
+        ],
+        commonMistakes: [
+          '特征选择不合理',
+          '不验证分群效果',
+          '分群无业务意义'
+        ],
+        extensions: [
+          '思考：如何动态更新用户分群？',
+          '如何将分群应用到推荐系统？'
+        ],
+        steps: [
+          '构建用户行为特征：活跃度、转化率、使用深度',
+          '基于行为进行用户分群：新手、探索型、成长型、核心型',
+          '分析各分群特征并命名',
+          '使用雷达图可视化分群特征对比',
+          '构建用户分群画像报告',
+          '提出分群运营策略建议'
+        ],
+        solution: `# -*- coding: utf-8 -*-
+import pandas as pd
+import numpy as np
+from sklearn.preprocessing import StandardScaler
+from sklearn.cluster import KMeans
+import matplotlib.pyplot as plt
+import seaborn as sns
+import plotly.graph_objects as go
+
+df = pd.read_csv('user_behavior_saas.csv')
+df['timestamp'] = pd.to_datetime(df['timestamp'])
+
+print('='*60)
+print('用户分群画像构建')
+print('='*60)
+
+# 1. 构建用户特征
+print('\\n构建用户特征...')
+user_features = df.groupby('user_id').agg({
+    'timestamp': ['min', 'max', 'count'],
+    'page': 'nunique',
+    'action_type': 'nunique',
+    'is_converted': 'max'
+}).round(2)
+
+# 特征命名
+user_features.columns = ['first_time', 'last_time', 'total_actions', 'unique_pages', 'unique_actions', 'is_converted']
+user_features['active_days'] = (user_features['last_time'] - user_features['first_time']).dt.days + 1
+user_features['avg_daily_actions'] = user_features['total_actions'] / user_features['active_days']
+user_features = user_features.round(2)
+
+print('\\n用户特征预览:')
+print(user_features.head())
+
+# 2. K-Means分群
+print('\\n执行用户分群...')
+features_for_clustering = user_features[['total_actions', 'unique_pages', 'active_days', 'avg_daily_actions']]
+
+# 标准化
+scaler = StandardScaler()
+features_scaled = scaler.fit_transform(features_for_clustering)
+
+# 肘部法则选K
+inertias = []
+K_range = range(2, 8)
+for k in K_range:
+    kmeans = KMeans(n_clusters=k, random_state=42)
+    kmeans.fit(features_scaled)
+    inertias.append(kmeans.inertia_)
+
+plt.figure(figsize=(10, 6))
+plt.plot(K_range, inertias, 'bo-')
+plt.xlabel('聚类数K')
+plt.ylabel('惯性')
+plt.title('肘部法则')
+plt.savefig('elbow_method.png', dpi=150)
+plt.show()
+
+# 使用K=4聚类
+kmeans = KMeans(n_clusters=4, random_state=42)
+user_features['cluster'] = kmeans.fit_predict(features_scaled)
+
+# 3. 分群命名
+cluster_names = {0: '探索型用户', 1: '活跃型用户', 2: '流失型用户', 3: '核心用户'}
+user_features['segment'] = user_features['cluster'].map(cluster_names)
+
+print('\\n用户分群结果:')
+print(user_features['segment'].value_counts())
+
+# 4. 分群画像分析
+print('\\n分群特征分析:')
+cluster_stats = user_features.groupby('segment').agg({
+    'total_actions': 'mean',
+    'unique_pages': 'mean',
+    'active_days': 'mean',
+    'avg_daily_actions': 'mean',
+    'is_converted': 'mean'
+}).round(2)
+print(cluster_stats)
+
+# 5. 雷达图可视化分群特征
+print('\\n生成雷达图...')
+# 归一化用于雷达图
+cluster_normalized = cluster_stats.apply(lambda x: (x - x.min()) / (x.max() - x.min()), axis=0)
+categories = cluster_normalized.columns.tolist()
+
+fig = go.Figure()
+for segment in cluster_normalized.index:
+    fig.add_trace(go.Scatterpolar(
+        r=cluster_normalized.loc[segment].tolist(),
+        theta=categories,
+        fill='toself',
+        name=segment
+    ))
+
+fig.update_layout(
+    polar=dict(radialaxis=dict(visible=True)),
+    showlegend=True,
+    title='用户分群特征对比'
+)
+fig.write_html('user_segment_radar.html')
+print('雷达图已保存为 user_segment_radar.html')`
+      },
+      {
+        id: 'task-2-5',
+        title: '产品推荐与关联分析',
+        description: '基于用户行为进行关联规则挖掘和产品推荐。',
+        learningObjectives: [
+          '掌握关联规则挖掘',
+          '学会产品推荐方法',
+          '理解用户行为模式'
+        ],
+        prerequisites: [
+          '关联分析基础',
+          '数据挖掘基础',
+          '推荐系统基础'
+        ],
+        commonMistakes: [
+          '支持度设置不合理',
+          '忽略业务场景',
+          '不验证推荐效果'
+        ],
+        extensions: [
+          '思考：如何实时更新推荐结果？',
+          '如何冷启动新用户推荐？'
+        ],
+        steps: [
+          '数据准备：构建用户-物品交互矩阵',
+          '使用Apriori算法挖掘频繁项集',
+          '计算关联规则：支持度、置信度、提升度',
+          '筛选有意义的关联规则',
+          '构建基于规则的产品推荐系统',
+          '分析推荐结果并提出产品优化建议'
+        ],
+        solution: `# -*- coding: utf-8 -*-
+import pandas as pd
+import numpy as np
+from mlxtend.frequent_patterns import apriori, association_rules
+import matplotlib.pyplot as plt
+
+df = pd.read_csv('user_behavior_saas.csv')
+
+print('='*60)
+print('产品关联分析与推荐')
+print('='*60)
+
+# 1. 数据准备：构建用户-物品矩阵
+print('\\n构建用户-物品矩阵...')
+user_item_matrix = df.groupby(['user_id', 'page']).size().unstack(fill_value=0)
+user_item_binary = user_item_matrix.applymap(lambda x: 1 if x > 0 else 0)
+
+# 2. 挖掘频繁项集
+print('\\n挖掘频繁项集...')
+frequent_itemsets = apriori(user_item_binary, min_support=0.05, use_colnames=True)
+print(f'找到 {len(frequent_itemsets)} 个频繁项集')
+print(frequent_itemsets.sort_values('support', ascending=False).head(10))
+
+# 3. 挖掘关联规则
+print('\\n挖掘关联规则...')
+rules = association_rules(frequent_itemsets, metric='confidence', min_threshold=0.3)
+rules = rules.sort_values('lift', ascending=False)
+print(f'找到 {len(rules)} 条关联规则')
+print('\\nTop 10 规则（按提升度排序）:')
+print(rules[['antecedents', 'consequents', 'support', 'confidence', 'lift']].head(10))
+
+# 4. 推荐示例
+print('\\n示例推荐规则:')
+for i in range(5):
+    rule = rules.iloc[i]
+    print(f"{i+1}. 如果用户访问了 {list(rule['antecedents'])}，则很可能访问 {list(rule['consequents'])} (置信度: {rule['confidence']:.2f}, 提升度: {rule['lift']:.2f})")
+
+# 5. 可视化规则
+print('\\n生成关联规则可视化...')
+plt.figure(figsize=(12, 8))
+scatter = plt.scatter(rules['support'], rules['confidence'], c=rules['lift'], cmap='viridis', s=100)
+plt.xlabel('支持度')
+plt.ylabel('置信度')
+plt.title('关联规则：支持度 vs 置信度 vs 提升度')
+plt.colorbar(scatter, label='提升度')
+plt.savefig('association_rules.png', dpi=150)
+plt.show()
+print('关联规则图已保存为 association_rules.png')`
       }
     ]
   },
@@ -2235,7 +3382,8 @@ export const initialProjects: Project[] = [
     description: '使用时间序列分析方法预测未来销售趋势。',
     difficulty: 3,
     category: 'Python分析',
-    estimatedTime: '4-5小时',
+    estimatedTime: '5-6小时',
+    businessContext: '你是一家连锁超市的数据分析师，需要预测未来30天的日销售额，帮助公司优化库存管理和人员排班。数据集包含2年的历史销售数据，包括日期、销售额、订单量、促销标记和节假日标记。',
     tasks: [
       {
         id: 'task-4-1',
@@ -2281,7 +3429,8 @@ export const initialProjects: Project[] = [
     description: '设计和分析A/B测试实验，评估产品改动的效果。',
     difficulty: 2,
     category: 'Python分析',
-    estimatedTime: '3-4小时',
+    estimatedTime: '4-5小时',
+    businessContext: '你是一家电商平台的数据分析师，需要设计并分析A/B测试来评估产品改动（如新功能、UI优化、定价策略等）的效果。数据集包含实验数据（用户ID、实验组/对照组、转化标记），每组5000+用户。',
     tasks: [
       {
         id: 'task-5-1',
@@ -2327,7 +3476,8 @@ export const initialProjects: Project[] = [
     description: '使用SQL进行复杂的数据查询和分析。',
     difficulty: 2,
     category: 'SQL分析',
-    estimatedTime: '2-3小时',
+    estimatedTime: '4-5小时',
+    businessContext: '你是一家互联网公司的数据分析师，需要从数据仓库中提取和分析数据。数据集包括电商数据库（用户表、订单表、产品表），规模10万用户、100万订单。你需要使用SQL解决各种复杂的业务问题。',
     tasks: [
       {
         id: 'task-6-1',
@@ -2373,7 +3523,8 @@ export const initialProjects: Project[] = [
     description: '使用Python创建交互式数据可视化仪表板。',
     difficulty: 2,
     category: 'Python可视化',
-    estimatedTime: '3-4小时',
+    estimatedTime: '4-5小时',
+    businessContext: '你是一家零售公司的数据分析师，需要为管理层设计销售监控仪表板。仪表板内容包括销售概览、趋势分析、品类分析、地域分析和用户分析等功能模块，使用Python的Plotly/Dash库创建交互式可视化。',
     tasks: [
       {
         id: 'task-7-1',
